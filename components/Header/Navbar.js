@@ -3,7 +3,7 @@ import styled from "styled-components";
 import MenuToggleButton from "./MenuToggleButton";
 import NavList from "./NavList";
 import Logo from "./Logo";
-import { FlexBetween } from "@/styles/flex";
+import { FlexBetween } from "@/styles/shared";
 
 const Navbar = ({ isOpened, setIsOpened }) => {
   return (

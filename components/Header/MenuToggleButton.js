@@ -1,11 +1,16 @@
+import Button from "../Button";
 import { MenuIcon, CloseIcon } from "../Icons";
 
 const MenuToggleButton = ({ isOpened, setIsOpened }) => {
   return (
     <span>
-      <button type="button" onClick={() => setIsOpened(!isOpened)}>
+      <Button
+        variant="text"
+        type="button"
+        onClick={() => setIsOpened(!isOpened)}
+      >
         {isOpened ? <CloseIcon /> : <MenuIcon />}
-      </button>
+      </Button>
     </span>
   );
 };

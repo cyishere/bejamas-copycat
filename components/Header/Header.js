@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
-import { FlexBetween } from "@/styles/flex";
+import { FlexBetween } from "@/styles/shared";
 import Navbar from "./Navbar";
 
 const Header = () => {

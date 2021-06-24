@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const MenuIcon = () => (
-  <Wrapper
+  <WrapperMd
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -14,11 +13,11 @@ export const MenuIcon = () => (
       strokeWidth={2}
       d="M4 6h16M4 12h16M4 18h16"
     />
-  </Wrapper>
+  </WrapperMd>
 );
 
 export const CloseIcon = () => (
-  <Wrapper
+  <WrapperMd
     xmlns="http://www.w3.org/2000/svg"
     className="h-6 w-6"
     fill="none"
@@ -31,13 +30,13 @@ export const CloseIcon = () => (
       strokeWidth={2}
       d="M6 18L18 6M6 6l12 12"
     />
-  </Wrapper>
+  </WrapperMd>
 );
 
 export const SearchIcon = () => (
   <Wrapper
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6"
+    className="icon"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -52,6 +51,11 @@ export const SearchIcon = () => (
 );
 
 const Wrapper = styled.svg`
+  width: 1.25rem;
+  height: 1.25rem;
+`;
+
+const WrapperMd = styled.svg`
   width: 2rem;
   height: 1.75rem;
 `;

@@ -1,6 +1,7 @@
 import { COLORS } from "@/styles/constants";
 import Link from "next/link";
 import styled from "styled-components";
+import Button from "../Button";
 import { SearchIcon } from "../Icons";
 
 const NavList = () => {
@@ -32,9 +33,9 @@ const NavList = () => {
         </Link>
       </ListItem>
       <ListItem>
-        <button type="button">
+        <Button variant="text" type="button">
           Search <SearchIcon />
-        </button>
+        </Button>
       </ListItem>
     </Wrapper>
   );

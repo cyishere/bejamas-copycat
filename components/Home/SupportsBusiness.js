@@ -86,7 +86,7 @@ const SupportsBusiness = () => {
       </ContentWithNo>
 
       <FlexColCenter>
-        <Text>Wonder how can we help your business grow with Jamstack?</Text>
+        <p>Wonder how can we help your business grow with Jamstack?</p>
         <ButtonLink variant="primary" href="/estimate-project">
           Let&#39;s talk!
         </ButtonLink>
@@ -98,10 +98,6 @@ const SupportsBusiness = () => {
 const Text = styled.p`
   ${SectionWithBg} & {
     margin-bottom: 3rem;
-  }
-
-  ${FlexColCenter} & {
-    margin-bottom: 1rem;
   }
 `;
 

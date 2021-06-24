@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 import {
   Section,
   SubTitle,
@@ -13,9 +11,10 @@ import {
   Cite,
   GridThree,
   FlexCenter,
+  TextCenter,
+  Number,
 } from "@/styles/shared";
 import { ButtonLink } from "../Button";
-import { FONTS } from "@/styles/constants";
 
 const NeedForSpeed = () => {
   return (
@@ -76,14 +75,5 @@ const NeedForSpeed = () => {
     </Section>
   );
 };
-
-const TextCenter = styled.div`
-  text-align: center;
-`;
-
-const Number = styled.p`
-  font-size: ${FONTS.lg};
-  font-weight: ${FONTS.bold};
-`;
 
 export default NeedForSpeed;

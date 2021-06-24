@@ -32,6 +32,7 @@ export const FlexCol = styled.div`
 export const FlexColCenter = styled(FlexCol)`
   justify-content: center;
   align-items: center;
+  row-gap: 1rem;
 `;
 
 /**
@@ -122,6 +123,37 @@ export const GridThree = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+`;
+
+export const TextCenter = styled.div`
+  text-align: center;
+`;
+
+export const Number = styled.p`
+  font-size: ${FONTS.xl};
+  font-weight: ${FONTS.bold};
+`;
+
+export const GridTwo = styled.div`
+  display: grid;
+  grid-template:
+    "content"
+    "pic";
+  gap: 3rem;
+
+  @media (min-width: 768px) {
+    grid-template:
+      "pic content"
+      "pic content";
+  }
+`;
+
+export const GridContent = styled.div`
+  grid-area: content;
+`;
+
+export const GridPic = styled.div`
+  grid-area: pic;
 `;
 
 /**

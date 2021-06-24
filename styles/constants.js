@@ -37,3 +37,11 @@ export const COLORS = {
   black: "hsl(0,0%,0%)",
   border: "hsla(0, 0%, 0%, 0.05)",
 };
+
+export const STYLES = {
+  linearGradient: `linear-gradient(
+    to bottom,
+    ${COLORS.bgBlueLight},
+    ${COLORS.bgBlueLighter} 85%
+  )`,
+};

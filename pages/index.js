@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import SEO from "@/components/SEO";
 import { Header } from "@/components/Header";
-import { Hero, NeedForSpeed } from "@/components/Home";
+import { Hero, NeedForSpeed, SupportsBusiness } from "@/components/Home";
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
       <Main>
         <Hero />
         <NeedForSpeed />
+        <SupportsBusiness />
       </Main>
     </>
   );

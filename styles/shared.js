@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS, FONTS } from "./constants";
+import { COLORS, FONTS, STYLES } from "./constants";
 
 /**
  * FLEX Set
@@ -22,6 +22,16 @@ export const FlexStart = styled(FlexRow)`
 
 export const FlexCenter = styled(FlexRow)`
   justify-content: center;
+`;
+
+export const FlexCol = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FlexColCenter = styled(FlexCol)`
+  justify-content: center;
+  align-items: center;
 `;
 
 /**
@@ -59,11 +69,7 @@ export const QuoteWrapper = styled.div`
 
 export const QuoteBlock = styled.blockquote`
   padding: 1.5rem 4.75rem 1.5rem 1.75rem;
-  background-image: linear-gradient(
-    to bottom,
-    ${COLORS.bgBlueLight},
-    ${COLORS.bgBlueLighter} 85%
-  );
+  background-image: ${STYLES.linearGradient};
   border-radius: 1rem;
   position: relative;
 
@@ -134,7 +140,32 @@ export const ButtonBase = styled.button`
 export const Section = styled.section`
   margin-bottom: 4.5rem;
 
-  > * {
+  > *:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+`;
+
+export const SectionWithBg = styled(Section)`
+  background-color: ${COLORS.bgGrayLight};
+  margin-left: -3rem;
+  margin-right: -3rem;
+  padding: 3rem;
+`;
+
+export const ContentWithNo = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  ${SectionWithBg} & {
+    margin-bottom: 3.5rem;
+  }
+`;
+
+export const ContentIcon = styled.picture`
+  order: -1;
+`;
+
+export const ContentTitle = styled.h4`
+  font-size: ${FONTS.lg};
 `;

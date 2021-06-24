@@ -1,4 +1,4 @@
-import Button from "../Button";
+import { Button } from "../Button";
 import { MenuIcon, CloseIcon } from "../Icons";
 
 const MenuToggleButton = ({ isOpened, setIsOpened }) => {

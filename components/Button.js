@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Link from "next/link";
+
 import { ButtonBase } from "@/styles/shared";
 import { COLORS } from "@/styles/constants";
 
@@ -20,7 +22,7 @@ const STYLES = {
   },
 };
 
-const Button = ({ variant = "normal", children, ...rest }) => {
+export const Button = ({ variant = "normal", children, ...rest }) => {
   const classes = STYLES[variant];
 
   return (
@@ -30,15 +32,25 @@ const Button = ({ variant = "normal", children, ...rest }) => {
   );
 };
 
+export const ButtonLink = ({ variant = "normal", href, children, ...rest }) => {
+  const classes = STYLES[variant];
+
+  return (
+    <Link href={href}>
+      <Wrapper style={classes} {...rest}>
+        {children}
+      </Wrapper>
+    </Link>
+  );
+};
+
 const Wrapper = styled(ButtonBase)`
   padding: var(--padding);
   background-color: var(--backgroundColor);
   color: var(--color);
-  border-radius: 50%;
+  border-radius: 25px;
 
   .icon {
     margin-left: 0.5rem;
   }
 `;
-
-export default Button;

@@ -53,21 +53,28 @@ const GlobalStyles = createGlobalStyle`
   /* =============== COPYCAT ================ */
   html {
     font-size: 16px;
+  }
+
+  body {
     font-family: ${FONTS.main};
+    line-height: 1.8;
+    color: ${COLORS.textMain};
+    font-weight: ${FONTS.regular};
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${FONTS.heading};
-  }
-
-  button {
-    background: none;
-    border: none;
+    color: ${COLORS.textDark};
+    line-height: 1.2;
   }
 
   a {
     color: ${COLORS.primary};
     text-decoration: none;
+  }
+
+  strong {
+    font-weight: ${FONTS.bold}
   }
 `;
 

@@ -1,7 +1,7 @@
 import { COLORS } from "@/styles/constants";
 import Link from "next/link";
 import styled from "styled-components";
-import Button from "../Button";
+import { Button } from "../Button";
 import { SearchIcon } from "../Icons";
 
 const NavList = () => {

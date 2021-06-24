@@ -1,7 +1,9 @@
 export const FONTS = {
+  // Recoleta, sans-serif
   main: "Poppins, sans-serif",
-  heading: "Recoleta, sans-serif",
+  heading: "Benne, sans-serif",
 
+  // 13px, 14px, 16px, 20px, 24.8px, 33.1958px, 36px, 44.3px, 71.2px
   smaller: "0.8125rem",
   small: "0.875rem",
   base: "1rem",
@@ -10,6 +12,22 @@ export const FONTS = {
   xl: "2rem",
   xxl: "2.25rem",
   big: "4.45rem",
+
+  // font sizes in small screen
+  mbSmaller: "0.625rem",
+  mbBig: "2.77rem",
 };
 
-// 13px, 14px, 16px, 20px, 24.8px, 33.1958px, 36px, 71.2px
+// max-width: 1520px, 990px, 768px,
+
+// colors
+export const COLORS = {
+  textMain: "hsl(211.6,8.2%,45.7%)",
+  textDark: "hsl(212.3,17.8%,28.6%)",
+  bgGrayLight: "hsl(200,42.9%,97.3%)",
+  primary: "hsl(349,68.9%,53.3%)",
+  orange: "hsl(39.5,99.2%,52.5%)",
+  white: "hsl(0,0%,100%)",
+  black: "hsl(0,0%,0%)",
+  border: "hsla(0, 0%, 0%, 0.05)",
+};

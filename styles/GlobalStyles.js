@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { COLORS, FONTS } from "./constants";
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -47,6 +48,26 @@ const GlobalStyles = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+
+  /* =============== COPYCAT ================ */
+  html {
+    font-size: 16px;
+    font-family: ${FONTS.main};
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: ${FONTS.heading};
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+
+  a {
+    color: ${COLORS.primary};
+    text-decoration: none;
   }
 `;
 

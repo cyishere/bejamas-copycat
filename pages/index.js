@@ -8,6 +8,7 @@ import {
   SupportsBusiness,
   Covid,
   BuildWeb,
+  Services,
 } from "@/components/Home";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <SupportsBusiness />
         <Covid />
         <BuildWeb />
+        <Services />
       </Main>
     </>
   );

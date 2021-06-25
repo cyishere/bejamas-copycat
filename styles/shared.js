@@ -37,10 +37,6 @@ export const FlexColCenter = styled(FlexCol)`
 `;
 
 /**
- * TYPEGRAPHY Set
- */
-
-/**
  * QUOTE BLOCK Set
  */
 export const QuoteWrapper = styled.div`

@@ -1,25 +1,26 @@
 import styled from "styled-components";
 
 import {
-  SectionWithBg,
-  SubTitle,
-  Title,
   ContentWithNo,
   ContentTitle,
   ContentIcon,
   FlexColCenter,
 } from "@/styles/shared";
+import { SectionWithBg, SectionHeader } from "../Layout";
+import { SubTitle, Title } from "../Typography";
 import { ButtonLink } from "../Button";
 
 const SupportsBusiness = () => {
   return (
     <SectionWithBg>
-      <Title>How Jamstack supports your business</Title>
-      <SubTitle>Sites with benefits</SubTitle>
-      <Text>
-        We use the power of Jamstack and server-side rendering to ship value to
-        our customers.
-      </Text>
+      <SectionHeader>
+        <Title>How Jamstack supports your business</Title>
+        <SubTitle>Sites with benefits</SubTitle>
+        <Text>
+          We use the power of Jamstack and server-side rendering to ship value
+          to our customers.
+        </Text>
+      </SectionHeader>
 
       <ContentWithNo>
         <ContentTitle>Swift</ContentTitle>

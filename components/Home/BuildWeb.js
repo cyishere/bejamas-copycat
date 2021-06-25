@@ -1,18 +1,21 @@
-// import styled from "styled-components";
-
-import { SectionWithBg, SubTitle, Title, FlexColCenter } from "@/styles/shared";
+import { FlexColCenter } from "@/styles/shared";
+import { SectionWithBg, SectionHeader } from "../Layout";
+import { SubTitle, Title } from "../Typography";
 import { ButtonLink } from "../Button";
 import ToolsLogosGroup from "../ToolsLogosGroup";
 
 const BuildWeb = () => {
   return (
     <SectionWithBg>
-      <Title>Building the Web</Title>
-      <SubTitle>Technologies We Use</SubTitle>
-      <p>
-        Every project is a new story, yet some things stay the same. We pick a
-        dedicated set of tools for each one, for the best performance possible.
-      </p>
+      <SectionHeader>
+        <Title>Building the Web</Title>
+        <SubTitle>Technologies We Use</SubTitle>
+        <p>
+          Every project is a new story, yet some things stay the same. We pick a
+          dedicated set of tools for each one, for the best performance
+          possible.
+        </p>
+      </SectionHeader>
 
       <ToolsLogosGroup />
 

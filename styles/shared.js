@@ -1,3 +1,4 @@
+import { SectionWithBg } from "@/components/Layout";
 import styled from "styled-components";
 
 import { COLORS, FONTS, STYLES } from "./constants";
@@ -38,28 +39,6 @@ export const FlexColCenter = styled(FlexCol)`
 /**
  * TYPEGRAPHY Set
  */
-export const Title = styled.h2`
-  font-size: ${FONTS.xxl};
-`;
-
-export const SubTitle = styled.h3`
-  font-family: ${FONTS.main};
-  font-size: ${FONTS.smaller};
-  font-weight: ${FONTS.bold};
-  text-transform: uppercase;
-  letter-spacing: 2px;
-`;
-
-export const Marker = styled.mark`
-  background-image: linear-gradient(
-    to bottom,
-    ${COLORS.orange},
-    ${COLORS.primary} 70%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-`;
 
 /**
  * QUOTE BLOCK Set
@@ -157,46 +136,6 @@ export const GridPic = styled.div`
 `;
 
 /**
- * TOOLS Group Set
- */
-
-export const ToolsGroupWrapper = styled.div`
-  padding: 1.5rem;
-  border-radius: 1rem;
-  border: 1px dashed ${COLORS.bgGrayLight};
-  background: linear-gradient(${COLORS.bgGrayLight}, ${COLORS.bgGrayLight})
-      padding-box,
-    ${STYLES.linearGradientPrimary} border-box;
-  text-align: center;
-
-  & > *:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-`;
-
-export const ToolsGroupTitle = styled(SubTitle)`
-  background-image: ${STYLES.linearGradientPrimary};
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-`;
-
-export const ToolsGroup = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-`;
-
-export const ToolBox = styled.div`
-  position: relative;
-  transition: transform 0.75s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
-
-/**
  * WRAPPER & BASIC
  */
 export const ButtonBase = styled.button`
@@ -207,25 +146,6 @@ export const ButtonBase = styled.button`
   align-items: center;
   font-size: 1rem;
   cursor: pointer;
-`;
-
-export const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 4.5rem;
-
-  > *:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-`;
-
-export const SectionWithBg = styled(Section)`
-  display: flex;
-  flex-direction: column;
-  background-color: ${COLORS.bgGrayLight};
-  margin-left: -3rem;
-  margin-right: -3rem;
-  padding: 3rem;
 `;
 
 export const ContentWithNo = styled.div`

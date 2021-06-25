@@ -6,7 +6,7 @@ import {
   ToolsGroupTitle,
   ToolsGroup,
   ToolBox,
-} from "@/styles/shared";
+} from "./styles";
 import PartnerLabel from "../PartnerLabel";
 import { staticLogos as data } from "./logos";
 

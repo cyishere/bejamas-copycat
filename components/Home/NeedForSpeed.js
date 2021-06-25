@@ -1,30 +1,30 @@
 import {
-  Section,
-  SubTitle,
-  Title,
   QuoteWrapper,
   QuoteBlock,
   QuoteBlockFooter,
   QuoteAddition,
   Avatar,
-  Marker,
   Cite,
   GridThree,
   FlexCenter,
   TextCenter,
   Number,
 } from "@/styles/shared";
+import { Section, SectionHeader } from "../Layout";
+import { Title, SubTitle, Marker } from "../Typography";
 import { ButtonLink } from "../Button";
 
 const NeedForSpeed = () => {
   return (
     <Section>
-      <Title>Need for Speed</Title>
-      <SubTitle>Core Web Vitals</SubTitle>
-      <p>
-        New <strong>Google ranking factor starting May 2021</strong>.<br />
-        Check if your website passes Core Web Vitals assessment.
-      </p>
+      <SectionHeader>
+        <Title>Need for Speed</Title>
+        <SubTitle>Core Web Vitals</SubTitle>
+        <p>
+          New <strong>Google ranking factor starting May 2021</strong>.<br />
+          Check if your website passes Core Web Vitals assessment.
+        </p>
+      </SectionHeader>
 
       <QuoteWrapper>
         <QuoteBlock>

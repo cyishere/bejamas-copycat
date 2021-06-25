@@ -2,9 +2,6 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import {
-  Section,
-  Title,
-  SubTitle,
   GridTwo,
   GridContent,
   GridPic,
@@ -13,20 +10,23 @@ import {
   QuoteAddition,
   QuoteBlockFooter,
   GridThree,
-  Marker,
   Cite,
   TextCenter,
   Number,
   FlexColCenter,
 } from "@/styles/shared";
+import { Section, SectionHeader } from "../Layout";
+import { SubTitle, Title, Marker } from "../Typography";
 import { FONTS } from "@/styles/constants";
 import { ButtonLink } from "../Button";
 
 const Covid = () => {
   return (
     <Section>
-      <Title>United Nations COVID-19 Response Creative Content Hub</Title>
-      <SubTitle>Featured Jamstack Case Study</SubTitle>
+      <SectionHeader>
+        <Title>United Nations COVID-19 Response Creative Content Hub</Title>
+        <SubTitle>Featured Jamstack Case Study</SubTitle>
+      </SectionHeader>
 
       <GridTwo>
         <GridContent>

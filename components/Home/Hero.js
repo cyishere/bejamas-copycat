@@ -8,12 +8,12 @@ import { FONTS } from "@/styles/constants";
 const Hero = () => {
   return (
     <Section>
-      <SubTitle>Jamstack developer for hire</SubTitle>
       <Title>
         We build
         <br />
         <Marker>fast sites & apps.</Marker>
       </Title>
+      <SubTitle>Jamstack developer for hire</SubTitle>
       <Text>
         Maximize your business potential with performant websites built with the
         latest, innovative technologies.
@@ -24,7 +24,9 @@ const Hero = () => {
         </ButtonLink>
         <ButtonLink href="/services">What we do</ButtonLink>
       </ButtonGroup>
-      <SubTitle>Trusted by inovative companies</SubTitle>
+      <SubTitleWithoutOrder>
+        Trusted by inovative companies
+      </SubTitleWithoutOrder>
       <LogoGroup>
         <Image
           src="/images/logos/backlinko.svg"
@@ -64,11 +66,17 @@ const Text = styled.p`
 `;
 
 const ButtonGroup = styled(FlexStart)`
-  margin-bottom: 3rem;
+  ${Section} & {
+    margin-bottom: 3rem;
+  }
 
   > *:not(:last-child) {
     margin-right: 1rem;
   }
+`;
+
+const SubTitleWithoutOrder = styled(SubTitle)`
+  order: unset;
 `;
 
 const LogoGroup = styled.div`

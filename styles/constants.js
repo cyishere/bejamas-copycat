@@ -44,4 +44,9 @@ export const STYLES = {
     ${COLORS.bgBlueLight},
     ${COLORS.bgBlueLighter} 85%
   )`,
+  linearGradientPrimary: `linear-gradient(
+    to bottom,
+    ${COLORS.orange},
+    ${COLORS.primary} 70%
+  )`,
 };

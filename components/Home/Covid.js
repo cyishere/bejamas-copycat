@@ -25,8 +25,8 @@ import { ButtonLink } from "../Button";
 const Covid = () => {
   return (
     <Section>
-      <SubTitle>Featured Jamstack Case Study</SubTitle>
       <Title>United Nations COVID-19 Response Creative Content Hub</Title>
+      <SubTitle>Featured Jamstack Case Study</SubTitle>
 
       <GridTwo>
         <GridContent>

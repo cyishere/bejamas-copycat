@@ -14,8 +14,8 @@ import { ButtonLink } from "../Button";
 const SupportsBusiness = () => {
   return (
     <SectionWithBg>
-      <SubTitle>Sites with benefits</SubTitle>
       <Title>How Jamstack supports your business</Title>
+      <SubTitle>Sites with benefits</SubTitle>
       <Text>
         We use the power of Jamstack and server-side rendering to ship value to
         our customers.

@@ -21,7 +21,11 @@ export const FONTS = {
   bold: "500",
 };
 
-// max-width: 1520px, 990px, 768px,
+// max-width: 1520px, 990px, 768px, 640px
+export const BREAKPOINTS = {
+  sm: "550px",
+  md: "768px",
+};
 
 // colors
 export const COLORS = {
@@ -36,6 +40,7 @@ export const COLORS = {
   white: "hsl(0,0%,100%)",
   black: "hsl(0,0%,0%)",
   border: "hsla(0, 0%, 0%, 0.05)",
+  redTransparent: "hsla(349, 69%, 53%, 0.15)",
 };
 
 export const STYLES = {
@@ -49,4 +54,5 @@ export const STYLES = {
     ${COLORS.orange},
     ${COLORS.primary} 70%
   )`,
+  redShadow: `0 9px 60px 0 ${COLORS.redTransparent}`,
 };

@@ -8,8 +8,8 @@ const BuildWeb = () => {
   return (
     <SectionWithBg>
       <SectionHeader>
-        <Title>Building the Web</Title>
         <SubTitle>Technologies We Use</SubTitle>
+        <Title>Building the Web</Title>
         <p>
           Every project is a new story, yet some things stay the same. We pick a
           dedicated set of tools for each one, for the best performance

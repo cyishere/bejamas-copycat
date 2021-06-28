@@ -11,18 +11,18 @@ const Hero = () => {
   return (
     <Section>
       <SectionHeader>
+        <SubTitle>Jamstack developer for hire</SubTitle>
         <Title>
           We build
           <br />
           <Marker>fast sites & apps.</Marker>
         </Title>
-        <SubTitle>Jamstack developer for hire</SubTitle>
         <Text>
           Maximize your business potential with performant websites built with
           the latest, innovative technologies.
         </Text>
       </SectionHeader>
-      <ButtonGroup>
+      <ButtonGroup className="button-group">
         <ButtonLink variant="primary" href="/estimate-project">
           Get in touch
         </ButtonLink>
@@ -68,10 +68,6 @@ const Text = styled.p`
 `;
 
 const ButtonGroup = styled(FlexStart)`
-  ${Section} & {
-    margin-bottom: 3rem;
-  }
-
   > *:not(:last-child) {
     margin-right: 1rem;
   }

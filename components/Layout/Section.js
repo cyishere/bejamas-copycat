@@ -12,6 +12,10 @@ export const Wrapper = styled.section`
   > *:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+
+  .button-group {
+    margin-bottom: 3rem;
+  }
 `;
 
 export default Section;

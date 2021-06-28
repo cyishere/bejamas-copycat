@@ -1,4 +1,3 @@
-import { SectionWithBg } from "@/components/Layout";
 import styled from "styled-components";
 
 import { COLORS, FONTS, STYLES } from "./constants";
@@ -142,22 +141,4 @@ export const ButtonBase = styled.button`
   align-items: center;
   font-size: 1rem;
   cursor: pointer;
-`;
-
-export const ContentWithNo = styled.div`
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-
-  ${SectionWithBg} & {
-    margin-bottom: 3.5rem;
-  }
-`;
-
-export const ContentIcon = styled.picture`
-  order: -1;
-`;
-
-export const ContentTitle = styled.h4`
-  font-size: ${FONTS.lg};
 `;

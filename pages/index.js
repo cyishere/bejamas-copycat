@@ -9,6 +9,8 @@ import {
   Covid,
   BuildWeb,
   Services,
+  ClientsFrom,
+  FeaturedBlog,
 } from "@/components/Home";
 
 export default function Home() {
@@ -23,6 +25,8 @@ export default function Home() {
         <Covid />
         <BuildWeb />
         <Services />
+        <ClientsFrom />
+        <FeaturedBlog />
       </Main>
     </>
   );

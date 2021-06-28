@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import Link from "next/link";
 
 import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle } from "../Typography";
-import { GridThree } from "@/styles/shared";
+import { LinkCard } from "../Card";
 import { COLORS, FONTS } from "@/styles/constants";
-
-// TODO < 550px: grid-template-column = 1
 
 const services = [
   {
@@ -36,31 +33,40 @@ const Services = () => {
   return (
     <Section>
       <SectionHeader>
-        <Title>Perfect for SMBs and enterprise</Title>
         <SubTitle>Product We Craft</SubTitle>
+        <Title>Perfect for SMBs and enterprise</Title>
         <p>
           Best things since sliced bread. Shaped with diligence and the highest
           software-craftsmanship.
         </p>
       </SectionHeader>
 
-      <GridThree>
+      <ColumnThree>
         {services.map((service) => (
-          <Link key={service.title} href={service.link}>
-            <a>
-              <ServiceBlock>
-                <ServiceTitle>{service.title}</ServiceTitle>
-                <ServiceCover src={service.image} alt={service.title} />
-                <Text>{service.excerpt}</Text>
-                <p>See more »</p>
-              </ServiceBlock>
-            </a>
-          </Link>
+          <LinkCard key={service.title} href={service.link}>
+            <ServiceBlock>
+              <ServiceTitle>{service.title}</ServiceTitle>
+              <ServiceCover src={service.image} alt={service.title} />
+              <Text>{service.excerpt}</Text>
+              <p>See more »</p>
+            </ServiceBlock>
+          </LinkCard>
         ))}
-      </GridThree>
+      </ColumnThree>
     </Section>
   );
 };
+
+const ColumnThree = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  @media (min-width: 550px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
 
 const ServiceBlock = styled.div`
   display: flex;

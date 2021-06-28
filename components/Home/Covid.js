@@ -24,8 +24,8 @@ const Covid = () => {
   return (
     <Section>
       <SectionHeader>
-        <Title>United Nations COVID-19 Response Creative Content Hub</Title>
         <SubTitle>Featured Jamstack Case Study</SubTitle>
+        <Title>United Nations COVID-19 Response Creative Content Hub</Title>
       </SectionHeader>
 
       <GridTwo>
@@ -70,7 +70,7 @@ const Covid = () => {
               srcSet="/images/blog/case-study-covid-response.avif"
               type="image/avif"
             />
-            <img
+            <Img
               src="/images/blog/case-study-covid-response.jpg"
               alt="Case Study Covid-19 Response"
             />
@@ -98,6 +98,10 @@ const QuoteWrapperHelper = styled(QuoteWrapper)`
 
 const Text = styled.p`
   font-size: ${FONTS.md};
+`;
+
+const Img = styled.img`
+  max-width: 100%;
 `;
 
 export default Covid;

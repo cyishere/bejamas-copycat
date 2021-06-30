@@ -1,3 +1,2 @@
-import LinkCard from "./LinkCard";
-
-export { LinkCard };
+export { default as CardRecTop } from "./CardRecTop";
+export { default as CardSquareTop } from "./CardSquareTop";

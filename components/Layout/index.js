@@ -1,5 +1,3 @@
-import Section from "./Section";
-import SectionWithBg from "./SectionWithBg";
-import SectionHeader from "./SectionHeader";
-
-export { Section, SectionWithBg, SectionHeader };
+export { default as Section } from "./Section";
+export { default as SectionWithBg } from "./SectionWithBg";
+export { default as SectionHeader } from "./SectionHeader";

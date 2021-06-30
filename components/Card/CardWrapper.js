@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { STYLES } from "@/styles/constants";
 
-const LinkCard = ({ children, href }) => {
+const CardWrapper = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <Wrapper>{children}</Wrapper>
@@ -20,4 +20,4 @@ const Wrapper = styled.a`
   }
 `;
 
-export default LinkCard;
+export default CardWrapper;

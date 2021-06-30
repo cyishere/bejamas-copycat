@@ -1,6 +1,4 @@
-import Marker from "./Marker";
-import SubTitle from "./SubTitle";
-import SubTitleColorful from "./SubTitleColorful";
-import Title from "./Title";
-
-export { Marker, SubTitle, SubTitleColorful, Title };
+export { default as Marker } from "./Marker";
+export { default as SubTitle } from "./SubTitle";
+export { default as SubTitleColorful } from "./SubTitleColorful";
+export { default as Title } from "./Title";

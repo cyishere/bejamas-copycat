@@ -1,19 +1,8 @@
-import Hero from "./Hero";
-import NeedForSpeed from "./NeedForSpeed";
-import SupportsBusiness from "./SupportsBusiness";
-import Covid from "./Covid";
-import BuildWeb from "./BuildWeb";
-import Services from "./Services";
-import ClientsFrom from "./ClientsFrom";
-import FeaturedBlog from "./FeaturedBlog";
-
-export {
-  Hero,
-  NeedForSpeed,
-  SupportsBusiness,
-  Covid,
-  BuildWeb,
-  Services,
-  ClientsFrom,
-  FeaturedBlog,
-};
+export { default as Hero } from "./Hero";
+export { default as NeedForSpeed } from "./NeedForSpeed";
+export { default as SupportsBusiness } from "./SupportsBusiness";
+export { default as Covid } from "./Covid";
+export { default as BuildWeb } from "./BuildWeb";
+export { default as Services } from "./Services";
+export { default as ClientsFrom } from "./ClientsFrom";
+export { default as FeaturedBlog } from "./FeaturedBlog";

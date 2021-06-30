@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle } from "../Typography";
-import { LinkCard } from "../Card";
-import { COLORS, FONTS } from "@/styles/constants";
+import { CardRecTop } from "../Card";
 
 const services = [
   {
@@ -43,14 +42,7 @@ const Services = () => {
 
       <ColumnThree>
         {services.map((service) => (
-          <LinkCard key={service.title} href={service.link}>
-            <ServiceBlock>
-              <ServiceTitle>{service.title}</ServiceTitle>
-              <ServiceCover src={service.image} alt={service.title} />
-              <Text>{service.excerpt}</Text>
-              <p>See more »</p>
-            </ServiceBlock>
-          </LinkCard>
+          <CardRecTop key={service.title} item={service} />
         ))}
       </ColumnThree>
     </Section>
@@ -66,31 +58,6 @@ const ColumnThree = styled.div`
   @media (min-width: 550px) {
     grid-template-columns: repeat(3, 1fr);
   }
-`;
-
-const ServiceBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.625rem;
-  overflow: hidden;
-
-  > *:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-`;
-
-const ServiceTitle = styled.h3`
-  font-size: ${FONTS.lg};
-`;
-
-const ServiceCover = styled.img`
-  width: 100%;
-  height: auto;
-  order: -1;
-`;
-
-const Text = styled.p`
-  color: ${COLORS.textMain};
 `;
 
 export default Services;

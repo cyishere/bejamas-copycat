@@ -5,6 +5,7 @@ import { SectionWithBg, SectionHeader } from "../Layout";
 import { SubTitle, Title } from "../Typography";
 import { ButtonLink } from "../Button";
 import ContentWithNumber from "../ContentWithNumber";
+import { TwoColumns } from "../Grid";
 import benefits from "../ContentWithNumber/data";
 
 const SupportsBusiness = () => {
@@ -19,9 +20,11 @@ const SupportsBusiness = () => {
         </Text>
       </SectionHeader>
 
-      {benefits.map((data) => (
-        <ContentWithNumber key={data.title} data={data} />
-      ))}
+      <TwoColumns break="special">
+        {benefits.map((data) => (
+          <ContentWithNumber key={data.title} data={data} />
+        ))}
+      </TwoColumns>
 
       <FlexColCenter>
         <p>Wonder how can we help your business grow with Jamstack?</p>

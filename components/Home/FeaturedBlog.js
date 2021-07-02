@@ -1,15 +1,15 @@
-import styled from "styled-components";
-
 import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle, Marker } from "../Typography";
 import { ButtonLink } from "../Button";
+import { CardSquareTop } from "../Card";
+import { OneNTwoColumns, TwoColumns } from "../Grid";
 import { FlexStart } from "@/styles/shared";
-import { BREAKPOINTS } from "@/styles/constants";
+import posts from "@/data/blogs";
 
 const ClientsFrom = () => {
   return (
     <Section>
-      <OneThirdWrapper>
+      <OneNTwoColumns>
         <SectionHeader>
           <SubTitle>
             <Marker>Jamstack Blog</Marker>
@@ -33,28 +33,14 @@ const ClientsFrom = () => {
           </FlexStart>
         </SectionHeader>
 
-        <TwoColumns></TwoColumns>
-      </OneThirdWrapper>
+        <TwoColumns break="small">
+          {posts.map((post) => (
+            <CardSquareTop key={post.id} item={post} />
+          ))}
+        </TwoColumns>
+      </OneNTwoColumns>
     </Section>
   );
 };
-
-const OneThirdWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-
-  @media (min-width: ${BREAKPOINTS.md}) {
-    grid-template-columns: 1fr 2fr;
-  }
-`;
-
-const TwoColumns = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-
-  @media (min-width: ${BREAKPOINTS.sm}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
 
 export default ClientsFrom;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS, FONTS, STYLES } from "./constants";
+import { BREAKPOINTS, COLORS, FONTS, STYLES } from "./constants";
 
 /**
  * FLEX Set
@@ -108,25 +108,25 @@ export const Number = styled.p`
   font-weight: ${FONTS.bold};
 `;
 
-export const GridTwo = styled.div`
+export const TwoColumnsWithPic = styled.div`
   display: grid;
   grid-template:
     "content"
-    "pic";
+    "pic" / 1fr;
   gap: 3rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${BREAKPOINTS.md}) {
     grid-template:
       "pic content"
-      "pic content";
+      "pic content" / 1fr 1fr;
   }
 `;
 
-export const GridContent = styled.div`
+export const ColumnContent = styled.div`
   grid-area: content;
 `;
 
-export const GridPic = styled.div`
+export const ColumnPic = styled.div`
   grid-area: pic;
 `;
 

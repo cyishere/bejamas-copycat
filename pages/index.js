@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import SEO from "@/components/SEO";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import {
   Hero,
   NeedForSpeed,
@@ -15,7 +15,7 @@ import {
 
 export default function Home() {
   return (
-    <>
+    <Wrapper>
       <SEO />
       <Header />
       <Main>
@@ -28,9 +28,14 @@ export default function Home() {
         <ClientsFrom />
         <FeaturedBlog />
       </Main>
-    </>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  max-width: 1400px;
+  margin: 0 auto;
+`;
 
 const Main = styled.main`
   padding-left: 3rem;

@@ -14,6 +14,7 @@ export const Wrapper = styled.section`
   margin-right: -3rem;
   padding: 3rem;
   margin-bottom: 4.5rem;
+  max-width: calc(1400px - 6rem);
 
   > *:not(:last-child) {
     margin-bottom: 1.5rem;

@@ -25,6 +25,7 @@ export const FONTS = {
 export const BREAKPOINTS = {
   sm: "550px",
   md: "768px",
+  xmd: "846px",
 };
 
 // colors

@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import {
-  GridTwo,
-  GridContent,
-  GridPic,
+  TwoColumnsWithPic,
+  ColumnContent,
+  ColumnPic,
   QuoteBlock,
   QuoteWrapper,
   QuoteAddition,
@@ -28,8 +28,8 @@ const Covid = () => {
         <Title>United Nations COVID-19 Response Creative Content Hub</Title>
       </SectionHeader>
 
-      <GridTwo>
-        <GridContent>
+      <TwoColumnsWithPic>
+        <ColumnContent>
           <QuoteWrapperHelper>
             <QuoteBlock>
               <Text>
@@ -62,9 +62,9 @@ const Covid = () => {
               <p>to launch the MVP</p>
             </TextCenter>
           </GridThree>
-        </GridContent>
+        </ColumnContent>
 
-        <GridPic>
+        <ColumnPic>
           <picture>
             <source
               srcSet="/images/blog/case-study-covid-response.avif"
@@ -75,8 +75,8 @@ const Covid = () => {
               alt="Case Study Covid-19 Response"
             />
           </picture>
-        </GridPic>
-      </GridTwo>
+        </ColumnPic>
+      </TwoColumnsWithPic>
 
       <FlexColCenter>
         <ButtonLink variant="primary" href="/blog/case-study-united-nations/">
@@ -91,7 +91,7 @@ const Covid = () => {
 };
 
 const QuoteWrapperHelper = styled(QuoteWrapper)`
-  ${GridContent} & {
+  ${ColumnContent} & {
     margin-bottom: 1.5rem;
   }
 `;

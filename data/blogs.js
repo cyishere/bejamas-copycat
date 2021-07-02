@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     title: "Does Your Business Need a Custom Web Development Solution?",
     publishedAt: "December 2, 2020",
     excerpt: `In today’s day and age, every business needs a website. But not all of them need a custom web development solution.`,
@@ -11,6 +12,7 @@ export default [
     link: "/blog/custom-web-development",
   },
   {
+    id: 2,
     title: "10 Headless CMS Options for your Jamstack Website",
     publishedAt: "March 31, 2020",
     excerpt: `Throughout 2019 the headless CMS trend showed no signs of slowing. In 2020 you can expect the trend to grow beyond buzzword popularity as more and more brands turn to headless options for their content management.`,
@@ -22,6 +24,7 @@ export default [
     link: "/blog/headless-cms",
   },
   {
+    id: 3,
     title: "9 Best eCommerce Solutions for Jamstack Websites",
     publishedAt: "June 22, 2020",
     excerpt: `Yes, you can give your audience a modern, personal, and fast shopping experience with Jamstack eCommerce.`,
@@ -33,6 +36,7 @@ export default [
     link: "/blog/jamstack-ecommerce",
   },
   {
+    id: 4,
     title: "11 Modern Jamstack Hosting and Cloud Deployment Platforms",
     publishedAt: "April 20, 2021",
     excerpt: `Let's take a look at a couple of Jamstack hosting and cloud deployment platforms that are favored by the community.`,
@@ -44,6 +48,7 @@ export default [
     link: "/blog/jamstack-hosting-deployment",
   },
   {
+    id: 5,
     title: "Jamstack Explained",
     publishedAt: "December 15, 2020",
     excerpt: `Jamstack is not about a specific technology. It is a modern web development architecture that emphasizes the use of CDNs and decoupling services.`,
@@ -55,6 +60,7 @@ export default [
     link: "/blog/jamstack",
   },
   {
+    id: 6,
     title: "Beginner's Guide to Static Site Generators",
     publishedAt: "November 18, 2020",
     excerpt: `World of static sites has grown beyond HTML, CSS, and occasional JS, and much of it is owed to static site generators.`,

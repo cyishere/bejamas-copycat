@@ -14,6 +14,8 @@ const CardWrapper = ({ href, children }) => {
 const Wrapper = styled.a`
   border-radius: 0.625rem;
   padding: 1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
 
   &:hover {
     box-shadow: ${STYLES.redShadow};

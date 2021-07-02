@@ -7,7 +7,7 @@ const ThreeColumns = ({ children }) => {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 3rem;
 
   @media (min-width: 550px) {
     grid-template-columns: repeat(3, 1fr);

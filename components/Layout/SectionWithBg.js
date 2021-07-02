@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS } from "@/styles/constants";
+import { BREAKPOINTS, COLORS } from "@/styles/constants";
 
 const SectionWithBg = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -18,6 +18,12 @@ export const Wrapper = styled.section`
 
   > *:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: ${BREAKPOINTS.md}) {
+    border-radius: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 `;
 

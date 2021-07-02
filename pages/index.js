@@ -12,6 +12,7 @@ import {
   ClientsFrom,
   FeaturedBlog,
 } from "@/components/Home";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <ClientsFrom />
         <FeaturedBlog />
       </Main>
+      <Footer />
     </Wrapper>
   );
 }

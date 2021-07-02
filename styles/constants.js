@@ -26,6 +26,9 @@ export const BREAKPOINTS = {
   sm: "550px",
   md: "768px",
   xmd: "846px",
+  xxmd: "990px",
+  lg: "1024px",
+  xl: "1200px",
 };
 
 // colors

@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 import { SectionWithBg, SectionHeader } from "../Layout";
 import { Title, SubTitle } from "../Typography";
 
@@ -13,15 +15,23 @@ const ClientsFrom = () => {
           Worked in sync with customers in 8 different time-zones.
         </p>
       </SectionHeader>
-      <picture>
+      <Pic>
         <source srcSet="/images/decorates/map-filled.avif" type="image/avif" />
-        <img
+        <Img
           src="/images/decorates/map-filled.png"
           alt="Clients all over the world"
         />
-      </picture>
+      </Pic>
     </SectionWithBg>
   );
 };
+
+const Pic = styled.picture`
+  width: 100%;
+`;
+
+const Img = styled.img`
+  width: 100%;
+`;
 
 export default ClientsFrom;

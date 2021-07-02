@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { BREAKPOINTS, COLORS, FONTS, STYLES } from "./constants";
 
 /**
- * FLEX Set
- */
+ * Flex Style Set
+ ---------------------------------------------- */
 export const FlexRow = styled.div`
   display: flex;
   flex-direction: row;
@@ -36,8 +36,8 @@ export const FlexColCenter = styled(FlexCol)`
 `;
 
 /**
- * QUOTE BLOCK Set
- */
+ * Quote Block
+ ---------------------------------------------- */
 export const QuoteWrapper = styled.div`
   padding-top: 4.5rem;
 `;
@@ -91,8 +91,8 @@ export const Cite = styled.cite`
 `;
 
 /**
- * GRID Set
- */
+ * Grid Style Set
+ ---------------------------------------------- */
 export const GridThree = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -131,8 +131,8 @@ export const ColumnPic = styled.div`
 `;
 
 /**
- * WRAPPER & BASIC
- */
+ * Basic Style Set
+ ---------------------------------------------- */
 export const ButtonBase = styled.button`
   border: none;
   display: flex;

@@ -30,7 +30,7 @@ const Covid = () => {
 
       <ThisTwoColumns>
         <ColumnContent>
-          <QuoteWrapperHelper>
+          <QuoteWrapper>
             <QuoteBlock>
               <Text>
                 Bejamas worked both responsively and collaboratively to{" "}
@@ -46,7 +46,7 @@ const Covid = () => {
                 </QuoteAddition>
               </QuoteBlockFooter>
             </QuoteBlock>
-          </QuoteWrapperHelper>
+          </QuoteWrapper>
 
           <GridThree>
             <TextCenter>
@@ -78,29 +78,20 @@ const Covid = () => {
         </ColumnPic>
       </ThisTwoColumns>
 
-      <FlexColCenter>
+      <FlexColCenterHelper>
         <ButtonLink variant="primary" href="/blog/case-study-united-nations/">
           Read full case study
         </ButtonLink>
         <Link href="/blog/case-studies/">
           <a>See 13 more case studies »</a>
         </Link>
-      </FlexColCenter>
+      </FlexColCenterHelper>
     </Section>
   );
 };
 
 const ThisTwoColumns = styled(TwoColumnsWithPic)`
   padding-top: 4.5rem;
-  margin-bottom: 6rem;
-`;
-
-const QuoteWrapperHelper = styled(QuoteWrapper)`
-  margin-top: -4.5rem;
-
-  ${ColumnContent} & {
-    margin-bottom: 1.5rem;
-  }
 `;
 
 const Text = styled.p`
@@ -113,6 +104,10 @@ const Text = styled.p`
 
 const Img = styled.img`
   max-width: 100%;
+`;
+
+const FlexColCenterHelper = styled(FlexColCenter)`
+  margin-top: 3rem;
 `;
 
 export default Covid;

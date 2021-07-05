@@ -1,4 +1,9 @@
+import styled from "styled-components";
+
 import {
+  TwoColumnsWithPic,
+  ColumnContent,
+  ColumnPic,
   QuoteWrapper,
   QuoteBlock,
   QuoteBlockFooter,
@@ -26,54 +31,71 @@ const NeedForSpeed = () => {
         </p>
       </SectionHeader>
 
-      <QuoteWrapper>
-        <QuoteBlock>
-          <p>
-            We decided to work with Bejamas to help move us over to Next.js. The
-            move made a <Marker>tremendous difference in our load times</Marker>{" "}
-            and <Marker>Core Web Vitals scores.</Marker>
-          </p>
-          <QuoteBlockFooter>
-            <Avatar>
-              <source
-                srcSet="/images/avatars/brian-dean-avatar-2.avif"
-                type="image/avif"
-              />
-              <img
-                src="/images/avatars/brian-dean-avatar-2.jpg"
-                alt="Brian Dean"
-              />
-            </Avatar>
-            <QuoteAddition>
-              Brian Dean
-              <Cite>SEO Expert, Founder of Backlinko.com</Cite>
-            </QuoteAddition>
-          </QuoteBlockFooter>
-        </QuoteBlock>
-      </QuoteWrapper>
+      <ThisTwoColumns>
+        <ColumnPic>
+          <img src="/images/decorates/placeholder.jpg" alt="" />
+        </ColumnPic>
 
-      <GridThree>
-        <TextCenter>
-          <Number>3x</Number>
-          <p>Faster loading</p>
-        </TextCenter>
-        <TextCenter>
-          <Number>1.3M+</Number>
-          <p>Monthly visits</p>
-        </TextCenter>
-        <TextCenter>
-          <Number>450+</Number>
-          <p>Static pages</p>
-        </TextCenter>
-      </GridThree>
+        <ColumnContent>
+          <QuoteWrapper>
+            <QuoteBlock>
+              <p>
+                We decided to work with Bejamas to help move us over to Next.js.
+                The move made a{" "}
+                <Marker>tremendous difference in our load times</Marker> and{" "}
+                <Marker>Core Web Vitals scores.</Marker>
+              </p>
+              <QuoteBlockFooter>
+                <Avatar>
+                  <source
+                    srcSet="/images/avatars/brian-dean-avatar-2.avif"
+                    type="image/avif"
+                  />
+                  <img
+                    src="/images/avatars/brian-dean-avatar-2.jpg"
+                    alt="Brian Dean"
+                  />
+                </Avatar>
+                <QuoteAddition>
+                  Brian Dean
+                  <Cite>SEO Expert, Founder of Backlinko.com</Cite>
+                </QuoteAddition>
+              </QuoteBlockFooter>
+            </QuoteBlock>
+          </QuoteWrapper>
 
-      <FlexCenter>
+          <GridThree>
+            <TextCenter>
+              <Number>3x</Number>
+              <p>Faster loading</p>
+            </TextCenter>
+            <TextCenter>
+              <Number>1.3M+</Number>
+              <p>Monthly visits</p>
+            </TextCenter>
+            <TextCenter>
+              <Number>450+</Number>
+              <p>Static pages</p>
+            </TextCenter>
+          </GridThree>
+        </ColumnContent>
+      </ThisTwoColumns>
+
+      <FlexCenterHelper>
         <ButtonLink variant="primary" href="/blog/backlinko-case-study">
           Read Backlinko Case Study
         </ButtonLink>
-      </FlexCenter>
+      </FlexCenterHelper>
     </Section>
   );
 };
+
+const ThisTwoColumns = styled(TwoColumnsWithPic)`
+  padding-top: 4.5rem;
+`;
+
+const FlexCenterHelper = styled(FlexCenter)`
+  margin-top: 3rem;
+`;
 
 export default NeedForSpeed;

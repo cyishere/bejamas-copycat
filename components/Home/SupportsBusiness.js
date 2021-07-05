@@ -7,6 +7,7 @@ import { ButtonLink } from "../Button";
 import ContentWithNumber from "../ContentWithNumber";
 import { TwoColumns } from "../Grid";
 import benefits from "@/data/benefits";
+import { BREAKPOINTS } from "@/styles/constants";
 
 const SupportsBusiness = () => {
   return (
@@ -20,11 +21,11 @@ const SupportsBusiness = () => {
         </Text>
       </SectionHeader>
 
-      <TwoColumns break="special" counter>
+      <ThisTwoColumns break="special" counter>
         {benefits.map((data) => (
           <ContentWithNumber key={data.title} data={data} />
         ))}
-      </TwoColumns>
+      </ThisTwoColumns>
 
       <FlexColCenter>
         <p>Wonder how can we help your business grow with Jamstack?</p>
@@ -38,6 +39,12 @@ const SupportsBusiness = () => {
 
 const Text = styled.p`
   margin-bottom: 3rem;
+`;
+
+const ThisTwoColumns = styled(TwoColumns)`
+  @media (min-width: ${BREAKPOINTS.xmd}) {
+    column-gap: 6rem;
+  }
 `;
 
 export default SupportsBusiness;

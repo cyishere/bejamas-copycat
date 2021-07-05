@@ -39,6 +39,7 @@ export const FlexColCenter = styled(FlexCol)`
  * Quote Block
  ---------------------------------------------- */
 export const QuoteWrapper = styled.div`
+  margin-top: -4.5rem;
   padding-top: 4.5rem;
 `;
 
@@ -109,6 +110,7 @@ export const GridThree = styled.div`
 
 export const TextCenter = styled.div`
   text-align: center;
+  font-size: ${FONTS.base};
 `;
 
 export const Number = styled.p`
@@ -132,6 +134,10 @@ export const TwoColumnsWithPic = styled.div`
 
 export const ColumnContent = styled.div`
   grid-area: content;
+
+  > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const ColumnPic = styled.div`

@@ -24,6 +24,13 @@ const Wrapper = styled.div`
         : THRESHOLD.normal}) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  ${(props) =>
+    props.counter
+      ? `
+    counter-reset: numbers;
+  `
+      : null}
 `;
 
 export default TwoColumns;

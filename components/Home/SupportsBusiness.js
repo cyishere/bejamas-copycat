@@ -20,7 +20,7 @@ const SupportsBusiness = () => {
         </Text>
       </SectionHeader>
 
-      <TwoColumns break="special">
+      <TwoColumns break="special" counter>
         {benefits.map((data) => (
           <ContentWithNumber key={data.title} data={data} />
         ))}

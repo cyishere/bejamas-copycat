@@ -129,16 +129,3 @@ export const ColumnContent = styled.div`
 export const ColumnPic = styled.div`
   grid-area: pic;
 `;
-
-/**
- * Basic Style Set
- ---------------------------------------------- */
-export const ButtonBase = styled.button`
-  border: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  cursor: pointer;
-`;

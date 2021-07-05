@@ -1,8 +1,7 @@
-import styled from "styled-components";
 import Link from "next/link";
 
-import { ButtonBase } from "@/styles/shared";
 import { COLORS } from "@/styles/constants";
+import { Wrapper } from "./Button.styles";
 
 const STYLES = {
   text: {
@@ -43,14 +42,3 @@ export const ButtonLink = ({ variant = "normal", href, children, ...rest }) => {
     </Link>
   );
 };
-
-const Wrapper = styled(ButtonBase)`
-  padding: var(--padding);
-  background-color: var(--backgroundColor);
-  color: var(--color);
-  border-radius: 25px;
-
-  .icon {
-    margin-left: 0.5rem;
-  }
-`;

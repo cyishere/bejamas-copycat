@@ -1,60 +1,74 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+import { TwoColumns } from "../Grid";
 import { FlexStart } from "@/styles/shared";
 import { SubTitle, Marker } from "../Typography";
 import { Section, SectionHeader } from "../Layout";
 import { ButtonLink } from "../Button";
-import { FONTS } from "@/styles/constants";
+import { BREAKPOINTS, FONTS } from "@/styles/constants";
 
 const Hero = () => {
   return (
     <Section>
-      <SectionHeader>
-        <SubTitle>Jamstack developer for hire</SubTitle>
-        <Title>
-          We build
-          <br />
-          <Marker>fast sites & apps.</Marker>
-        </Title>
-        <Text>
-          Maximize your business potential with performant websites built with
-          the latest, innovative technologies.
-        </Text>
-      </SectionHeader>
-      <ButtonGroup className="button-group">
-        <ButtonLink variant="primary" href="/estimate-project">
-          Get in touch
-        </ButtonLink>
-        <ButtonLink href="/services">What we do</ButtonLink>
-      </ButtonGroup>
-      <SubTitle>Trusted by inovative companies</SubTitle>
-      <LogoGroup>
-        <Image
-          src="/images/logos/backlinko.svg"
-          alt="Backlinko"
-          width={114}
-          height={28}
-        />
-        <Image
-          src="/images/logos/newfront.svg"
-          alt="Newfront"
-          width={100}
-          height={21}
-        />
-        <Image
-          src="/images/logos/mambu.svg"
-          alt="MAMBU"
-          width={100}
-          height={20}
-        />
-        <Image
-          src="/images/logos/armorblox.svg"
-          alt="Armorblox"
-          width={100}
-          height={20}
-        />
-      </LogoGroup>
+      <TwoColumns>
+        <GridColumn>
+          <SectionHeader special>
+            <SubTitle>Jamstack developer for hire</SubTitle>
+            <Title>
+              We build
+              <br />
+              <Marker>fast sites & apps.</Marker>
+            </Title>
+            <Text>
+              Maximize your business potential with performant websites built
+              with the latest, innovative technologies.
+            </Text>
+          </SectionHeader>
+          <ButtonGroup className="button-group">
+            <ButtonLink variant="primary" href="/estimate-project">
+              Get in touch
+            </ButtonLink>
+            <ButtonLink href="/services">What we do</ButtonLink>
+          </ButtonGroup>
+          <SubTitle>Trusted by inovative companies</SubTitle>
+          <LogoGroup>
+            <Image
+              src="/images/logos/backlinko.svg"
+              alt="Backlinko"
+              width={114}
+              height={28}
+            />
+            <Image
+              src="/images/logos/newfront.svg"
+              alt="Newfront"
+              width={100}
+              height={21}
+            />
+            <Image
+              src="/images/logos/mambu.svg"
+              alt="MAMBU"
+              width={100}
+              height={20}
+            />
+            <Image
+              src="/images/logos/armorblox.svg"
+              alt="Armorblox"
+              width={100}
+              height={20}
+            />
+          </LogoGroup>
+        </GridColumn>
+
+        <GridColumn hidden>
+          <Image
+            src="/images/decorates/jar.jpg"
+            alt="Bejamas"
+            width={668}
+            height={620}
+          />
+        </GridColumn>
+      </TwoColumns>
     </Section>
   );
 };
@@ -77,6 +91,27 @@ const LogoGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
+`;
+
+const GridColumn = styled.div`
+  > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  ${ButtonGroup} {
+    margin-bottom: 3rem;
+  }
+
+  ${(props) =>
+    props.hidden
+      ? `
+    display: none;
+
+    @media (min-width: ${BREAKPOINTS.md}) {
+      display: block;
+    }
+  `
+      : null}
 `;
 
 export default Hero;

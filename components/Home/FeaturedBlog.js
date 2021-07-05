@@ -10,7 +10,7 @@ const ClientsFrom = () => {
   return (
     <Section>
       <OneNTwoColumns>
-        <SectionHeader>
+        <SectionHeader special>
           <SubTitle>
             <Marker>Jamstack Blog</Marker>
           </SubTitle>

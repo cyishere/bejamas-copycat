@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
-const SectionHeader = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+import { BREAKPOINTS } from "@/styles/constants";
+
+const SectionHeader = ({ children, ...rest }) => {
+  return <Wrapper {...rest}>{children}</Wrapper>;
 };
 
 const Wrapper = styled.header`
@@ -16,6 +18,15 @@ const Wrapper = styled.header`
   & > *:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+
+  ${(props) =>
+    !props.special
+      ? `
+    @media (min-width: ${BREAKPOINTS.md}) {
+      text-align: center;
+    }
+  `
+      : null}
 `;
 
 export default SectionHeader;

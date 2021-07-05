@@ -14,7 +14,7 @@ const TwoColumns = ({ children, ...props }) => {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 3rem;
 
   @media (min-width: ${(props) =>
       props.break === "small"

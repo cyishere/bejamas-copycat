@@ -8,7 +8,7 @@ import {
   ToolBox,
 } from "./styles";
 import PartnerLabel from "../PartnerLabel";
-import { staticLogos as data } from "./logos";
+import { staticLogos as data } from "@/data/logos";
 
 const StaticGenerator = () => {
   return (

@@ -8,7 +8,7 @@ import {
   ToolBox,
 } from "./styles";
 import PartnerLabel from "../PartnerLabel";
-import { deployLogos as data } from "./logos";
+import { deployLogos as data } from "@/data/logos";
 
 const Deployment = () => {
   return (

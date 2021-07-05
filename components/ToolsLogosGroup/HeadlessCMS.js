@@ -8,7 +8,7 @@ import {
   ToolBox,
 } from "./styles";
 import PartnerLabel from "../PartnerLabel";
-import { headlessLogos as data } from "./logos";
+import { headlessLogos as data } from "@/data/logos";
 
 const HeadlessCMS = () => {
   return (

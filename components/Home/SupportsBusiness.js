@@ -6,7 +6,7 @@ import { SubTitle, Title } from "../Typography";
 import { ButtonLink } from "../Button";
 import ContentWithNumber from "../ContentWithNumber";
 import { TwoColumns } from "../Grid";
-import benefits from "../ContentWithNumber/data";
+import benefits from "@/data/benefits";
 
 const SupportsBusiness = () => {
   return (

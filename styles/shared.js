@@ -35,6 +35,11 @@ export const FlexColCenter = styled(FlexCol)`
   row-gap: 1rem;
 `;
 
+export const FlexEvenly = styled(FlexRow)`
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
 /**
  * Quote Block
  ---------------------------------------------- */

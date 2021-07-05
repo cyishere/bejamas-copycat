@@ -1,4 +1,4 @@
-import { COLORS } from "@/styles/constants";
+import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
 import Link from "next/link";
 import styled from "styled-components";
 import { Button } from "../Button";
@@ -33,9 +33,10 @@ const NavList = () => {
         </Link>
       </ListItem>
       <ListItem>
-        <Button variant="text" type="button">
-          Search <SearchIcon />
-        </Button>
+        <ButtonHelper variant="text" type="button">
+          <span>Search</span>
+          <SearchIcon />
+        </ButtonHelper>
       </ListItem>
     </Wrapper>
   );
@@ -44,14 +45,24 @@ const NavList = () => {
 const Wrapper = styled.ul`
   display: flex;
   flex-direction: column;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    flex-direction: row;
+    font-size: ${FONTS.base};
+  }
 `;
 
 const ListItem = styled.li`
   display: block;
   padding: 1.5rem;
+  line-height: 1;
 
   &:not(:last-child) {
     border-bottom: 1px solid ${COLORS.border};
+
+    @media (min-width: ${BREAKPOINTS.xxmd}) {
+      border: none;
+    }
   }
 
   a {
@@ -59,6 +70,16 @@ const ListItem = styled.li`
 
     &:hover {
       color: ${COLORS.primary};
+    }
+  }
+`;
+
+const ButtonHelper = styled(Button)`
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    font-size: ${FONTS.base};
+
+    span {
+      display: none;
     }
   }
 `;

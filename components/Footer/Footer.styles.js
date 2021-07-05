@@ -24,6 +24,7 @@ export const Wrapper = styled.footer`
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 3rem;
+    padding: 5rem 9rem;
   }
 `;
 
@@ -163,6 +164,7 @@ export const FooterNav = styled.nav`
 
   @media (min-width: ${BREAKPOINTS.md}) {
     grid-template-columns: repeat(3, 1fr);
+    font-size: ${FONTS.base};
   }
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {

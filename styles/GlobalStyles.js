@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { COLORS, FONTS } from "./constants";
+import { BREAKPOINTS, COLORS, FONTS } from "./constants";
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -75,6 +75,12 @@ const GlobalStyles = createGlobalStyle`
 
   strong {
     font-weight: ${FONTS.bold}
+  }
+
+  @media screen and (min-width: ${BREAKPOINTS.md}) {
+    body {
+      font-size: ${FONTS.md}
+    }
   }
 `;
 

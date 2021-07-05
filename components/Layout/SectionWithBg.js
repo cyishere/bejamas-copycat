@@ -24,6 +24,7 @@ export const Wrapper = styled.section`
     border-radius: 1rem;
     margin-left: 0rem;
     margin-right: 0rem;
+    padding: 6rem 12rem;
   }
 `;
 

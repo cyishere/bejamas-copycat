@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FONTS } from "@/styles/constants";
+import { BREAKPOINTS, FONTS } from "@/styles/constants";
 
 const SubTitle = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -11,6 +11,10 @@ export const Wrapper = styled.h3`
   font-weight: ${FONTS.bold};
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @media (min-width: ${BREAKPOINTS.md}) {
+    font-size: ${FONTS.small};
+  }
 `;
 
 export default SubTitle;

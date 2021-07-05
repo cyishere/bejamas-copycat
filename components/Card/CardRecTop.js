@@ -41,6 +41,7 @@ const Cover = styled.img`
 
 const Text = styled.p`
   color: ${COLORS.textMain};
+  font-size: ${FONTS.base};
 `;
 
 export default CardRecTop;

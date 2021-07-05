@@ -9,6 +9,9 @@ const SectionHeader = ({ children, ...rest }) => {
 const Wrapper = styled.header`
   display: flex;
   flex-direction: column;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
 
   h3 {
     order: -1;

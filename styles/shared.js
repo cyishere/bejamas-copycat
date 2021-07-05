@@ -57,6 +57,14 @@ export const QuoteBlock = styled.blockquote`
     right: 1rem;
     color: ${COLORS.blueLight};
   }
+
+  @media (min-width: ${BREAKPOINTS.md}) {
+    padding: 3rem 6rem 3rem 5rem;
+
+    &::before {
+      right: -3rem;
+    }
+  }
 `;
 
 export const QuoteBlockFooter = styled.footer`

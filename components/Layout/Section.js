@@ -1,7 +1,8 @@
+import { BREAKPOINTS } from "@/styles/constants";
 import styled from "styled-components";
 
-const Section = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+const Section = ({ children, ...rest }) => {
+  return <Wrapper {...rest}>{children}</Wrapper>;
 };
 
 export const Wrapper = styled.section`
@@ -16,6 +17,15 @@ export const Wrapper = styled.section`
   .button-group {
     margin-bottom: 3rem;
   }
+
+  ${(props) =>
+    !props.special
+      ? `
+    @media (min-width: ${BREAKPOINTS.md}) {
+      padding: 6rem;
+    }
+  `
+      : null}
 `;
 
 export default Section;

@@ -48,6 +48,7 @@ const Date = styled.time`
 const Text = styled.p`
   margin-bottom: 3rem;
   color: ${COLORS.textMain};
+  font-size: ${FONTS.base};
 `;
 
 export default CardSquareTop;

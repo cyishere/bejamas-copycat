@@ -10,7 +10,7 @@ import { BREAKPOINTS, FONTS } from "@/styles/constants";
 
 const Hero = () => {
   return (
-    <Section>
+    <Section special>
       <TwoColumns>
         <GridColumn>
           <SectionHeader special>
@@ -75,6 +75,10 @@ const Hero = () => {
 
 const Title = styled.h1`
   font-size: ${FONTS.mbBig};
+
+  @media (min-width: ${BREAKPOINTS.md}) {
+    font-size: ${FONTS.big};
+  }
 `;
 
 const Text = styled.p`

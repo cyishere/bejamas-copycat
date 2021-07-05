@@ -17,6 +17,7 @@ const ClientsFrom = () => {
       </SectionHeader>
       <Pic>
         <source srcSet="/images/decorates/map-filled.avif" type="image/avif" />
+        <source srcSet="/images/decorates/map-filled.webp" type="image/webp" />
         <Img
           src="/images/decorates/map-filled.png"
           alt="Clients all over the world"

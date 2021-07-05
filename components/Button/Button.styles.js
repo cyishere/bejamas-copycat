@@ -1,3 +1,4 @@
+import { BREAKPOINTS } from "@/styles/constants";
 import styled from "styled-components";
 
 export const ButtonBase = styled.button`
@@ -8,6 +9,10 @@ export const ButtonBase = styled.button`
   align-items: center;
   font-size: 1rem;
   cursor: pointer;
+
+  @media (min-width: ${BREAKPOINTS.xl}) {
+    font-size: 1.125rem;
+  }
 `;
 
 export const Wrapper = styled(ButtonBase)`

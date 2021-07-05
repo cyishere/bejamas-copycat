@@ -17,7 +17,7 @@ import {
 } from "@/styles/shared";
 import { Section, SectionHeader } from "../Layout";
 import { SubTitle, Title, Marker } from "../Typography";
-import { FONTS } from "@/styles/constants";
+import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { ButtonLink } from "../Button";
 
 const Covid = () => {
@@ -28,7 +28,7 @@ const Covid = () => {
         <Title>United Nations COVID-19 Response Creative Content Hub</Title>
       </SectionHeader>
 
-      <TwoColumnsWithPic>
+      <ThisTwoColumns>
         <ColumnContent>
           <QuoteWrapperHelper>
             <QuoteBlock>
@@ -76,7 +76,7 @@ const Covid = () => {
             />
           </picture>
         </ColumnPic>
-      </TwoColumnsWithPic>
+      </ThisTwoColumns>
 
       <FlexColCenter>
         <ButtonLink variant="primary" href="/blog/case-study-united-nations/">
@@ -90,7 +90,14 @@ const Covid = () => {
   );
 };
 
+const ThisTwoColumns = styled(TwoColumnsWithPic)`
+  padding-top: 4.5rem;
+  margin-bottom: 6rem;
+`;
+
 const QuoteWrapperHelper = styled(QuoteWrapper)`
+  margin-top: -4.5rem;
+
   ${ColumnContent} & {
     margin-bottom: 1.5rem;
   }
@@ -98,6 +105,10 @@ const QuoteWrapperHelper = styled(QuoteWrapper)`
 
 const Text = styled.p`
   font-size: ${FONTS.md};
+
+  @media (min-width: ${BREAKPOINTS.md}) {
+    font-size: ${FONTS.lg};
+  }
 `;
 
 const Img = styled.img`

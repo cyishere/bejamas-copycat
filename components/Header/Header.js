@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
-import { BREAKPOINTS } from "@/styles/constants";
 
+import { BREAKPOINTS } from "@/styles/constants";
+import { FlexBetween } from "@/styles/shared";
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
-import { FlexBetween } from "@/styles/shared";
 import NavbarSmallScreen from "./NavbarSmallScreen";
 import NavbarWideScreen from "./NavbarWideScreen";
 import { ButtonLink } from "../Button";
@@ -14,6 +14,21 @@ const Header = () => {
   const isWideScreen = useMediaQuery({ minWidth: BREAKPOINTS.xxmd });
 
   const [isOpened, setIsOpened] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleVisible = () => {
+    if (window.scrollY > 650) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleVisible);
+
+    return () => document.removeEventListener("scroll", handleVisible);
+  }, []);
 
   if (isWideScreen) {
     return (
@@ -26,9 +41,13 @@ const Header = () => {
           <NavbarWideScreen />
 
           <StartRight>
-            <ButtonLink variant="primary" href="/estimate-project">
+            <ButtonHelper
+              variant="primary"
+              href="/estimate-project"
+              isVisible={isVisible}
+            >
               Get in touch
-            </ButtonLink>
+            </ButtonHelper>
           </StartRight>
         </Grid>
       </Wrapper>
@@ -73,6 +92,20 @@ const Grid = styled.div`
 
 const StartRight = styled.div`
   text-align: right;
+`;
+
+const ButtonHelper = styled(ButtonLink)`
+  transition: transform 0.5s ease;
+  transform: scale(0);
+
+  ${(props) =>
+    props.isVisible
+      ? `
+    transform: scale(1);
+  `
+      : `
+    transform: scale(0);
+  `}
 `;
 
 export default Header;

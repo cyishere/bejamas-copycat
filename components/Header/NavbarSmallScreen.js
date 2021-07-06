@@ -5,7 +5,7 @@ import NavList from "./NavList";
 import Logo from "./Logo";
 import { FlexBetween } from "@/styles/shared";
 
-const Navbar = ({ isOpened, setIsOpened }) => {
+const NavbarSmallScreen = ({ isOpened, setIsOpened }) => {
   return (
     <Wrapper>
       <NavList />
@@ -33,4 +33,4 @@ const Footer = styled(FlexBetween)`
   padding: 0 1.5rem;
 `;
 
-export default Navbar;
+export default NavbarSmallScreen;

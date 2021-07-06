@@ -5,9 +5,9 @@ import { BREAKPOINTS } from "@/styles/constants";
 
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
-import { FlexBetween, FlexStart } from "@/styles/shared";
-import Navbar from "./Navbar";
-import NavList from "./NavList";
+import { FlexBetween } from "@/styles/shared";
+import NavbarSmallScreen from "./NavbarSmallScreen";
+import NavbarWideScreen from "./NavbarWideScreen";
 import { ButtonLink } from "../Button";
 
 const Header = () => {
@@ -18,19 +18,19 @@ const Header = () => {
   if (isWideScreen) {
     return (
       <Wrapper>
-        <FlexStartHelper>
-          <LogoWrapper>
+        <Grid>
+          <div>
             <Logo isWideScreen={isWideScreen} />
-          </LogoWrapper>
+          </div>
 
-          <NavWrapper>
-            <NavList />
-          </NavWrapper>
+          <NavbarWideScreen />
 
-          <ButtonLink variant="primary" href="/estimate-project">
-            Get in touch
-          </ButtonLink>
-        </FlexStartHelper>
+          <StartRight>
+            <ButtonLink variant="primary" href="/estimate-project">
+              Get in touch
+            </ButtonLink>
+          </StartRight>
+        </Grid>
       </Wrapper>
     );
   }
@@ -46,7 +46,7 @@ const Header = () => {
       </FlexBetween>
 
       {isOpened ? (
-        <Navbar isOpened={isOpened} setIsOpened={setIsOpened} />
+        <NavbarSmallScreen isOpened={isOpened} setIsOpened={setIsOpened} />
       ) : null}
     </Wrapper>
   );
@@ -56,21 +56,23 @@ const Wrapper = styled.header`
   padding: 1.5rem 3rem;
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
+    width: calc(1400px - 6rem);
     padding: 1rem 3rem;
     margin-bottom: 5rem;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.95);
   }
 `;
 
-const FlexStartHelper = styled(FlexStart)`
+const Grid = styled.div`
   width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
 `;
 
-const LogoWrapper = styled.div`
-  flex: 200px;
-`;
-
-const NavWrapper = styled.nav`
-  flex: auto;
+const StartRight = styled.div`
+  text-align: right;
 `;
 
 export default Header;

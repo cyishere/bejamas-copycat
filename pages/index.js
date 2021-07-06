@@ -13,24 +13,27 @@ import {
   FeaturedBlog,
 } from "@/components/Home";
 import Footer from "@/components/Footer";
+import { BREAKPOINTS } from "@/styles/constants";
 
 export default function Home() {
   return (
-    <Wrapper>
+    <>
       <SEO />
-      <Header />
-      <Main>
-        <Hero />
-        <NeedForSpeed />
-        <SupportsBusiness />
-        <Covid />
-        <BuildWeb />
-        <Services />
-        <ClientsFrom />
-        <FeaturedBlog />
-      </Main>
-      <Footer />
-    </Wrapper>
+      <Wrapper>
+        <Header />
+        <Main>
+          <Hero />
+          <NeedForSpeed />
+          <SupportsBusiness />
+          <Covid />
+          <BuildWeb />
+          <Services />
+          <ClientsFrom />
+          <FeaturedBlog />
+        </Main>
+        <Footer />
+      </Wrapper>
+    </>
   );
 }
 
@@ -42,4 +45,8 @@ const Wrapper = styled.div`
 const Main = styled.main`
   padding-left: 3rem;
   padding-right: 3rem;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    padding-top: 185px;
+  }
 `;

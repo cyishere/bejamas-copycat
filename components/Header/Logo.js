@@ -2,20 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Logo = ({ isWideScreen }) => {
-  if (isWideScreen) {
-    return (
-      <Link href="/">
-        <a>
-          <Image
-            src="/images/logos/bejamas-logo-full.svg"
-            alt="Bejamas"
-            width={170}
-            height={52}
-          />
-        </a>
-      </Link>
-    );
-  }
+  const width = isWideScreen ? 170 : 100;
+  const height = isWideScreen ? 52 : 30;
 
   return (
     <Link href="/">
@@ -23,8 +11,8 @@ const Logo = ({ isWideScreen }) => {
         <Image
           src="/images/logos/bejamas-logo-full.svg"
           alt="Bejamas"
-          width={100}
-          height={30}
+          width={width}
+          height={height}
         />
       </a>
     </Link>

@@ -6,8 +6,7 @@ import { BREAKPOINTS } from "@/styles/constants";
 import { FlexBetween } from "@/styles/shared";
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
-import NavbarSmallScreen from "./NavbarSmallScreen";
-import NavbarWideScreen from "./NavbarWideScreen";
+import { NavbarSmallScreen, NavbarWideScreen } from "./Navbar";
 import { ButtonLink } from "../Button";
 
 const Header = () => {

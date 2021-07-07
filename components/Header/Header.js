@@ -24,7 +24,7 @@ const Header = () => {
             <Logo isWideScreen={isWideScreen} />
           </div>
 
-          <NavbarWideScreen isVisible={isVisible} />
+          <NavbarWideScreen />
 
           <StartRight>
             <GetInTouchButton isVisible={isVisible} />

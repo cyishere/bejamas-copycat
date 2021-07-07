@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { TwoColumns } from "../Grid";
+import { TwoColumns, GridColumn } from "../Grid";
 import { FlexStart } from "@/styles/shared";
 import { SubTitle, Marker } from "../Typography";
 import { Section, SectionHeader } from "../Layout";
@@ -89,33 +89,16 @@ const ButtonGroup = styled(FlexStart)`
   > *:not(:last-child) {
     margin-right: 1rem;
   }
+
+  ${GridColumn} & {
+    margin-bottom: 3rem;
+  }
 `;
 
 const LogoGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
-`;
-
-const GridColumn = styled.div`
-  > *:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-
-  ${ButtonGroup} {
-    margin-bottom: 3rem;
-  }
-
-  ${(props) =>
-    props.hidden
-      ? `
-    display: none;
-
-    @media (min-width: ${BREAKPOINTS.md}) {
-      display: block;
-    }
-  `
-      : null}
 `;
 
 export default Hero;

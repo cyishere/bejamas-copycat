@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 import {
-  TwoColumnsWithPic,
-  ColumnContent,
-  ColumnPic,
   QuoteWrapper,
   QuoteBlock,
   QuoteBlockFooter,
@@ -15,6 +12,7 @@ import {
   TextCenter,
   Number,
 } from "@/styles/shared";
+import { TwoColumns, GridColumn } from "../Grid";
 import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle, Marker } from "../Typography";
 import { ButtonLink } from "../Button";
@@ -31,12 +29,12 @@ const NeedForSpeed = () => {
         </p>
       </SectionHeader>
 
-      <ThisTwoColumns>
-        <ColumnPic>
+      <TwoColumnsHelper>
+        <GridColumn hidden>
           <img src="/images/decorates/placeholder.jpg" alt="" />
-        </ColumnPic>
+        </GridColumn>
 
-        <ColumnContent>
+        <GridColumn>
           <QuoteWrapper>
             <QuoteBlock>
               <p>
@@ -78,8 +76,8 @@ const NeedForSpeed = () => {
               <p>Static pages</p>
             </TextCenter>
           </GridThree>
-        </ColumnContent>
-      </ThisTwoColumns>
+        </GridColumn>
+      </TwoColumnsHelper>
 
       <FlexCenterHelper>
         <ButtonLink variant="primary" href="/blog/backlinko-case-study">
@@ -90,7 +88,7 @@ const NeedForSpeed = () => {
   );
 };
 
-const ThisTwoColumns = styled(TwoColumnsWithPic)`
+const TwoColumnsHelper = styled(TwoColumns)`
   padding-top: 4.5rem;
 `;
 

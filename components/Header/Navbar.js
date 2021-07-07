@@ -26,7 +26,7 @@ export const NavbarWideScreen = () => {
 };
 
 const SmallWrapper = styled.nav`
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 10;

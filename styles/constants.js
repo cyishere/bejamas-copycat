@@ -58,5 +58,6 @@ export const STYLES = {
     ${COLORS.orange},
     ${COLORS.primary} 70%
   )`,
+  linearGradientBlur: `linear-gradient(317deg,rgba(148,142,154,0.35),rgba(239,235,243,0.49) 60%,rgba(94,78,97,0.77) 160%)`,
   redShadow: `0 9px 60px 0 ${COLORS.redTransparent}`,
 };

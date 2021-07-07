@@ -1,33 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
 import { BREAKPOINTS } from "@/styles/constants";
-import { FlexBetween } from "@/styles/shared";
 import Logo from "./Logo";
-import MenuToggleButton from "./MenuToggleButton";
 import { NavbarSmallScreen, NavbarWideScreen } from "./Navbar";
-import { ButtonLink } from "../Button";
+import useScrollVisible from "@/utils/useScrollVisible";
+import GetInTouchButton from "./GetInTouchButton";
+import SmallHeaderAtBottom from "./SmallHeaderAtBottom";
+import SmallHeaderAtTop from "./SmallHeaderAtTop";
 
 const Header = () => {
   const isWideScreen = useMediaQuery({ minWidth: BREAKPOINTS.xxmd });
 
   const [isOpened, setIsOpened] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleVisible = () => {
-    if (window.scrollY > 650) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("scroll", handleVisible);
-
-    return () => document.removeEventListener("scroll", handleVisible);
-  }, []);
+  const isVisible = useScrollVisible();
 
   if (isWideScreen) {
     return (
@@ -37,16 +24,10 @@ const Header = () => {
             <Logo isWideScreen={isWideScreen} />
           </div>
 
-          <NavbarWideScreen />
+          <NavbarWideScreen isVisible={isVisible} />
 
           <StartRight>
-            <ButtonHelper
-              variant="primary"
-              href="/estimate-project"
-              isVisible={isVisible}
-            >
-              Get in touch
-            </ButtonHelper>
+            <GetInTouchButton isVisible={isVisible} />
           </StartRight>
         </Grid>
       </Wrapper>
@@ -54,19 +35,23 @@ const Header = () => {
   }
 
   return (
-    <Wrapper>
-      <FlexBetween>
-        <div>
-          <Logo isWideScreen={isWideScreen} />
-        </div>
+    <>
+      <SmallHeaderAtTop
+        isWideScreen={isWideScreen}
+        isOpened={isOpened}
+        setIsOpened={setIsOpened}
+      />
 
-        <MenuToggleButton isOpened={isOpened} setIsOpened={setIsOpened} />
-      </FlexBetween>
+      <SmallHeaderAtBottom
+        isOpened={isOpened}
+        setIsOpened={setIsOpened}
+        isVisible={isVisible}
+      />
 
       {isOpened ? (
         <NavbarSmallScreen isOpened={isOpened} setIsOpened={setIsOpened} />
       ) : null}
-    </Wrapper>
+    </>
   );
 };
 
@@ -91,20 +76,6 @@ const Grid = styled.div`
 
 const StartRight = styled.div`
   text-align: right;
-`;
-
-const ButtonHelper = styled(ButtonLink)`
-  transition: transform 0.5s ease;
-  transform: scale(0);
-
-  ${(props) =>
-    props.isVisible
-      ? `
-    transform: scale(1);
-  `
-      : `
-    transform: scale(0);
-  `}
 `;
 
 export default Header;

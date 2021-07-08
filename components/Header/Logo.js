@@ -1,22 +1,26 @@
+import styled from "styled-components";
 import Link from "next/link";
-import Image from "next/image";
 
-const Logo = ({ isWideScreen }) => {
-  const width = isWideScreen ? 170 : 100;
-  const height = isWideScreen ? 52 : 30;
+import { BREAKPOINTS } from "@/styles/constants";
 
+const Logo = () => {
   return (
     <Link href="/">
       <a>
-        <Image
-          src="/images/logos/bejamas-logo-full.svg"
-          alt="Bejamas"
-          width={width}
-          height={height}
-        />
+        <Img src="/images/logos/bejamas-logo-full.svg" alt="Bejamas" />
       </a>
     </Link>
   );
 };
+
+const Img = styled.img`
+  width: 100px;
+  height: 30px;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    width: 170px;
+    height: 52px;
+  }
+`;
 
 export default Logo;

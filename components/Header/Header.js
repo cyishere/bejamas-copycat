@@ -21,7 +21,7 @@ const Header = () => {
       <Wrapper>
         <Grid>
           <div>
-            <Logo isWideScreen={isWideScreen} />
+            <Logo />
           </div>
 
           <NavbarWideScreen />
@@ -36,11 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <SmallHeaderAtTop
-        isWideScreen={isWideScreen}
-        isOpened={isOpened}
-        setIsOpened={setIsOpened}
-      />
+      <SmallHeaderAtTop isOpened={isOpened} setIsOpened={setIsOpened} />
 
       <SmallHeaderAtBottom
         isOpened={isOpened}
@@ -56,7 +52,7 @@ const Header = () => {
 };
 
 const Wrapper = styled.header`
-  padding: 1.5rem 3rem;
+  padding: 0 3rem;
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     width: calc(1400px - 6rem);

@@ -4,12 +4,12 @@ import { FlexBetween } from "@/styles/shared";
 import MenuToggleButton from "./MenuToggleButton";
 import Logo from "./Logo";
 
-const SmallHeaderAtTop = ({ isWideScreen, isOpened, setIsOpened }) => {
+const SmallHeaderAtTop = ({ isOpened, setIsOpened }) => {
   return (
     <Wrapper>
       <FlexBetween>
         <div>
-          <Logo isWideScreen={isWideScreen} />
+          <Logo />
         </div>
 
         <MenuToggleButton isOpened={isOpened} setIsOpened={setIsOpened} />

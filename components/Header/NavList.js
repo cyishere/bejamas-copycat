@@ -2,20 +2,30 @@ import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
 import Link from "next/link";
 import styled from "styled-components";
 import { Button } from "../Button";
-import { SearchIcon } from "../Icons";
+import { SearchIcon, ChevronDownIcon } from "../Icons";
+import Dropdown from "./Dropdown";
+import { serviceLinks, blogLinks, blogSubLinks } from "@/data/headerLinks";
 
 const NavList = () => {
   return (
     <Wrapper>
       <ListItem>
-        <Link href="/services">
-          <a>Services</a>
+        <Link href="/services" passHref>
+          <ItemAnchor>
+            Services <ChevronDownIcon />
+          </ItemAnchor>
         </Link>
+
+        <Dropdown menuLists={serviceLinks} />
       </ListItem>
       <ListItem>
-        <Link href="/jamstack">
-          <a>Jamstack</a>
+        <Link href="/jamstack" passHref>
+          <ItemAnchor>
+            Jamstack <ChevronDownIcon />
+          </ItemAnchor>
         </Link>
+
+        <Dropdown menuLists={blogLinks} subLinks={blogSubLinks} />
       </ListItem>
       <ListItem>
         <Link href="/about">
@@ -56,6 +66,7 @@ const ListItem = styled.li`
   display: block;
   padding: 1.5rem;
   line-height: 1;
+  position: relative;
 
   &:not(:last-child) {
     border-bottom: 1px solid ${COLORS.border};
@@ -65,13 +76,26 @@ const ListItem = styled.li`
     }
   }
 
-  a {
+  > a {
     color: ${COLORS.textDark};
 
     &:hover {
       color: ${COLORS.primary};
     }
   }
+
+  &:hover {
+    .dropdown {
+      display: block;
+    }
+  }
+`;
+
+const ItemAnchor = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
 `;
 
 const ButtonHelper = styled(Button)`

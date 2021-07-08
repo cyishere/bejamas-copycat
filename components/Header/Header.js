@@ -53,15 +53,12 @@ const Header = () => {
 
 const Wrapper = styled.header`
   padding: 0 3rem;
-
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
-    width: calc(1400px - 6rem);
-    padding: 1rem 3rem;
-    margin-bottom: 5rem;
-    position: fixed;
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.95);
-  }
+  width: calc(1400px - 6rem);
+  padding: 1rem 3rem;
+  margin-bottom: 5rem;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
 `;
 
 const Grid = styled.div`

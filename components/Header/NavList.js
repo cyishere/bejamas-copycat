@@ -110,6 +110,10 @@ const TextIconWrapper = styled.span`
     justify-content: center;
     margin-bottom: 0;
   }
+
+  > a {
+    color: ${COLORS.textDark};
+  }
 `;
 
 const ButtonHelper = styled(Button)`

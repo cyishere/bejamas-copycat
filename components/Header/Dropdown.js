@@ -4,6 +4,87 @@ import Link from "next/link";
 import { BREAKPOINTS, COLORS, FONTS, STYLES } from "@/styles/constants";
 import { ChevronRightIcon } from "../Icons";
 
+const ListItem = ({ item }) => (
+  <List>
+    <Link href={item.link} passHref>
+      <ListItemWrapper>
+        <Title>
+          {item.title}
+          <ChevronRightIcon />
+        </Title>
+        <p>{item.desc}</p>
+      </ListItemWrapper>
+    </Link>
+  </List>
+);
+
+const List = styled.li`
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
+const ListItemWrapper = styled.a`
+  display: block;
+  padding: 1.5rem;
+  background-color: ${COLORS.textMain};
+  color: ${COLORS.white};
+  border: 1px solid ${COLORS.white};
+
+  p {
+    display: none;
+  }
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    border-radius: 0.5rem;
+    box-shadow: ${STYLES.lgShadow};
+    transition: all 0.5s ease;
+    color: ${COLORS.textMain};
+    background-color: ${COLORS.white};
+    border: none;
+
+    p {
+      display: block;
+    }
+  }
+
+  &:hover {
+    background-color: ${COLORS.primary};
+
+    p {
+      color: ${COLORS.bgGrayLight};
+    }
+  }
+`;
+
+const Title = styled.h3`
+  font-family: ${FONTS.main};
+  font-size: ${FONTS.base};
+  font-weight: ${FONTS.regular};
+  color: ${COLORS.white};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    font-size: ${FONTS.md};
+    font-weight: ${FONTS.bold};
+    margin-bottom: 0.5rem;
+    color: ${COLORS.textDark};
+    justify-content: flex-start;
+
+    .icon {
+      display: none;
+    }
+  }
+
+  ${ListItemWrapper}:hover & {
+    color: ${COLORS.white};
+  }
+`;
+
 const Dropdown = ({ menuLists, subLinks = [], isShown }) => {
   console.log("isShown:", isShown);
 
@@ -60,103 +141,47 @@ const DropdownWrapper = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const SubTitle = styled.h4`
+  font-size: ${FONTS.small};
   font-family: ${FONTS.main};
-  text-transform: uppercase;
   font-weight: ${FONTS.bold};
-  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    font-size: ${FONTS.base};
+  }
 `;
 
 const SubListItem = styled.li`
-  padding: 0.5rem 0;
-`;
-
-const Anchor = styled.a`
-  color: ${COLORS.textMain};
-  display: flex;
-  align-items: center;
-
-  &:hover {
-    color: ${COLORS.black};
-  }
-`;
-
-const ListItem = ({ item }) => (
-  <Link href={item.link} passHref>
-    <ListItemWrapper>
-      <Title>
-        {item.title}
-        <ChevronRightIcon />
-      </Title>
-      <p>{item.desc}</p>
-    </ListItemWrapper>
-  </Link>
-);
-
-const ListItemWrapper = styled.a`
-  display: block;
-  padding: 1.5rem;
-  background-color: ${COLORS.textMain};
-  color: ${COLORS.white};
-  border: 1px solid ${COLORS.white};
-
-  p {
-    display: none;
-  }
-
   @media (min-width: ${BREAKPOINTS.xxmd}) {
-    border-radius: 0.5rem;
-    box-shadow: ${STYLES.lgShadow};
-    transition: all 0.5s ease;
-    color: ${COLORS.textMain};
-    background-color: ${COLORS.white};
-    border: none;
-
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-
-    p {
-      display: block;
-    }
-  }
-
-  &:hover {
-    background-color: ${COLORS.primary};
-
-    p {
-      color: ${COLORS.bgGrayLight};
-    }
+    padding: 0.5rem 0;
   }
 `;
 
-const Title = styled.h3`
-  font-family: ${FONTS.main};
-  font-size: ${FONTS.base};
-  font-weight: ${FONTS.regular};
-  color: ${COLORS.white};
+const Anchor = styled(ListItemWrapper)`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
-    font-size: ${FONTS.md};
-    font-weight: ${FONTS.bold};
-    margin-bottom: 0.5rem;
-    color: ${COLORS.textDark};
+    box-shadow: none;
+    color: ${COLORS.textMain};
+    padding: 0 0 0 1rem;
     justify-content: flex-start;
 
-    .icon {
-      display: none;
+    &:hover {
+      color: ${COLORS.black};
+      background-color: ${COLORS.white};
     }
-  }
-
-  ${ListItemWrapper}:hover & {
-    color: ${COLORS.white};
   }
 `;
 

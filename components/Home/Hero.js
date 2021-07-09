@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { TwoColumns, GridColumn } from "../Grid";
+import { TwoColumns, GridColumn, GridColumnWrapper } from "../Grid";
 import { FlexStart } from "@/styles/shared";
 import { SubTitle, Marker } from "../Typography";
 import { Section, SectionHeader } from "../Layout";
@@ -90,7 +90,7 @@ const ButtonGroup = styled(FlexStart)`
     margin-right: 1rem;
   }
 
-  ${GridColumn} & {
+  ${GridColumnWrapper} & {
     margin-bottom: 3rem;
   }
 `;

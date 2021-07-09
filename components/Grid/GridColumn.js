@@ -6,7 +6,7 @@ const GridColumn = ({ children, ...rest }) => {
   return <Wrapper {...rest}>{children}</Wrapper>;
 };
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   > *:not(:last-child) {
     margin-bottom: 1.5rem;
   }

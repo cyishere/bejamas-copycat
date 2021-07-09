@@ -9,30 +9,34 @@ import Dropdown from "./Dropdown";
 import { serviceLinks, blogLinks, blogSubLinks } from "@/data/headerLinks";
 
 const NavList = () => {
-  const [isShown, setIsShown] = useState(false);
-  console.log("isShown:", isShown);
+  const [servicesShow, setServicesShow] = useState(false);
+  const [jamstackShow, setJamstackShow] = useState(false);
 
   return (
     <Wrapper>
       <ListItem>
-        <TextIconWrapper onClick={() => setIsShown(!isShown)}>
+        <TextIconWrapper onClick={() => setServicesShow(!servicesShow)}>
           <Link href="/services" passHref>
             <a>Services</a>
           </Link>
           <ChevronDownIcon />
         </TextIconWrapper>
 
-        <Dropdown menuLists={serviceLinks} isShown={isShown} />
+        <Dropdown menuLists={serviceLinks} servicesShow={servicesShow} />
       </ListItem>
       <ListItem>
-        <TextIconWrapper>
+        <TextIconWrapper onClick={() => setJamstackShow(!jamstackShow)}>
           <Link href="/jamstack" passHref>
             <a>Jamstack</a>
           </Link>
           <ChevronDownIcon />
         </TextIconWrapper>
 
-        <Dropdown menuLists={blogLinks} subLinks={blogSubLinks} />
+        <Dropdown
+          menuLists={blogLinks}
+          subLinks={blogSubLinks}
+          jamstackShow={jamstackShow}
+        />
       </ListItem>
       <ListItem>
         <Link href="/about">
@@ -104,7 +108,6 @@ const TextIconWrapper = styled.span`
   justify-content: space-between;
   align-items: center;
   column-gap: 0.75rem;
-  margin-bottom: 1.5rem;
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     justify-content: center;

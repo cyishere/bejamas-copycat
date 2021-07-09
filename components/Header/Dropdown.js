@@ -85,11 +85,13 @@ const Title = styled.h3`
   }
 `;
 
-const Dropdown = ({ menuLists, subLinks = [], isShown }) => {
-  console.log("isShown:", isShown);
-
+const Dropdown = ({ menuLists, subLinks = [], servicesShow, jamstackShow }) => {
   return (
-    <DropdownWrapper className="dropdown" isShown={isShown}>
+    <DropdownWrapper
+      className={`dropdown ${servicesShow ? "services" : ""} ${
+        jamstackShow ? "jamstack" : ""
+      }`}
+    >
       <ul>
         {menuLists.map((item) => (
           <ListItem key={item.id} item={item} />
@@ -121,7 +123,16 @@ const Dropdown = ({ menuLists, subLinks = [], isShown }) => {
 };
 
 const DropdownWrapper = styled.div`
+  display: none;
+  margin-top: 1.5rem;
+
+  &.services,
+  &.jamstack {
+    display: block;
+  }
+
   @media (min-width: ${BREAKPOINTS.xxmd}) {
+    margin-top: 0;
     background-color: ${COLORS.white};
     border-radius: 1rem;
     box-shadow: ${STYLES.xlShadow};
@@ -131,7 +142,11 @@ const DropdownWrapper = styled.div`
     top: 4rem;
     left: -1rem;
     width: max-content;
-    display: ${(props) => (props.isShown ? "block" : "none")};
+
+    &.services,
+    &.jamstack {
+      display: none;
+    }
 
     > *:not(:last-child) {
       margin-bottom: 1.5rem;

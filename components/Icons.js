@@ -36,7 +36,7 @@ export const CloseIcon = () => (
 export const ChevronDownIcon = () => (
   <Wrapper
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5"
+    className="icon"
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -51,7 +51,7 @@ export const ChevronDownIcon = () => (
 export const ChevronRightIcon = () => (
   <Wrapper
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5"
+    className="icon"
     viewBox="0 0 20 20"
     fill="currentColor"
   >

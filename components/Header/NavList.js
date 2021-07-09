@@ -1,29 +1,36 @@
-import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
+import { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+
+import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
 import { Button } from "../Button";
 import { SearchIcon, ChevronDownIcon } from "../Icons";
 import Dropdown from "./Dropdown";
 import { serviceLinks, blogLinks, blogSubLinks } from "@/data/headerLinks";
 
 const NavList = () => {
+  const [isShown, setIsShown] = useState(false);
+  console.log("isShown:", isShown);
+
   return (
     <Wrapper>
       <ListItem>
-        <Link href="/services" passHref>
-          <ItemAnchor>
-            Services <ChevronDownIcon />
-          </ItemAnchor>
-        </Link>
+        <TextIconWrapper onClick={() => setIsShown(!isShown)}>
+          <Link href="/services" passHref>
+            <a>Services</a>
+          </Link>
+          <ChevronDownIcon />
+        </TextIconWrapper>
 
-        <Dropdown menuLists={serviceLinks} />
+        <Dropdown menuLists={serviceLinks} isShown={isShown} />
       </ListItem>
       <ListItem>
-        <Link href="/jamstack" passHref>
-          <ItemAnchor>
-            Jamstack <ChevronDownIcon />
-          </ItemAnchor>
-        </Link>
+        <TextIconWrapper>
+          <Link href="/jamstack" passHref>
+            <a>Jamstack</a>
+          </Link>
+          <ChevronDownIcon />
+        </TextIconWrapper>
 
         <Dropdown menuLists={blogLinks} subLinks={blogSubLinks} />
       </ListItem>
@@ -63,7 +70,6 @@ const Wrapper = styled.ul`
 `;
 
 const ListItem = styled.li`
-  display: block;
   padding: 1.5rem;
   line-height: 1;
   position: relative;
@@ -84,18 +90,26 @@ const ListItem = styled.li`
     }
   }
 
-  &:hover {
-    .dropdown {
-      display: block;
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    &:hover {
+      .dropdown {
+        display: block;
+      }
     }
   }
 `;
 
-const ItemAnchor = styled.a`
+const TextIconWrapper = styled.span`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   column-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    justify-content: center;
+    margin-bottom: 0;
+  }
 `;
 
 const ButtonHelper = styled(Button)`

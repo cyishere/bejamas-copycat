@@ -6,9 +6,8 @@ import { ButtonLink } from "../Button";
 import { CardSquareTop } from "../Card";
 import { OneNTwoColumns, TwoColumns } from "../Grid";
 import { FlexStart } from "@/styles/shared";
-import posts from "@/data/blogs";
 
-const ClientsFrom = () => {
+const ClientsFrom = ({ blogs: posts }) => {
   return (
     <Section>
       <OneNTwoColumns>
@@ -39,7 +38,7 @@ const ClientsFrom = () => {
 
         <TwoColumns break="small">
           {posts.map((post) => (
-            <CardSquareTop key={post.id} item={post} />
+            <CardSquareTop key={post._id} item={post} />
           ))}
         </TwoColumns>
       </OneNTwoColumns>

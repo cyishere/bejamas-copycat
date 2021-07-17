@@ -2,22 +2,19 @@ import styled from "styled-components";
 
 import CardWrapper from "./CardWrapper";
 import { COLORS, FONTS } from "@/styles/constants";
+import { urlFor } from "@/utils/sanity";
 
 const CardSquareTop = ({ item }) => {
-  const { link, cover, title, excerpt, publishedAt } = item;
+  const { link, image, title, excerpt, publishedAt } = item;
 
   return (
     <CardWrapper href={link}>
       <Cover>
-        <picture>
-          <source srcSet={cover.avif} type="image/avif" />
-          <source srcSet={cover.webp} type="image/webp" />
-          <img src={cover.img} alt={title} />
-        </picture>
+        <img src={urlFor(image).url()} alt={title} />
       </Cover>
 
       <Title>{title}</Title>
-      <Date>{publishedAt}</Date>
+      <DateZone>{new Date(publishedAt).toDateString()}</DateZone>
       <Text>{excerpt}</Text>
       <p>Read article »</p>
     </CardWrapper>
@@ -40,7 +37,7 @@ const Title = styled.h3`
   margin-bottom: 1rem;
 `;
 
-const Date = styled.time`
+const DateZone = styled.time`
   font-size: ${FONTS.small};
   margin-bottom: 1rem;
 `;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import CardWrapper from "./CardWrapper";
 import { COLORS, FONTS } from "@/styles/constants";
+import { urlFor } from "@/utils/sanity";
 
 const CardRecTop = ({ item }) => {
   const { link, title, image, excerpt } = item;
@@ -10,7 +11,7 @@ const CardRecTop = ({ item }) => {
     <CardWrapper href={link}>
       <Block>
         <Title>{title}</Title>
-        <Cover src={image} alt={title} />
+        <Cover src={urlFor(image).url()} alt={title} />
         <Text>{excerpt}</Text>
         <p>See more »</p>
       </Block>

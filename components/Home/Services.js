@@ -2,9 +2,9 @@ import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle } from "../Typography";
 import { CardRecTop } from "../Card";
 import { ThreeColumns } from "../Grid";
-import services from "@/data/services";
+// import services from "@/data/services";
 
-const Services = () => {
+const Services = ({ services }) => {
   return (
     <Section>
       <SectionHeader>
@@ -18,7 +18,7 @@ const Services = () => {
 
       <ThreeColumns>
         {services.map((service) => (
-          <CardRecTop key={service.title} item={service} />
+          <CardRecTop key={service._id} item={service} />
         ))}
       </ThreeColumns>
     </Section>

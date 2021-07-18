@@ -1,3 +1,5 @@
+import { GetStaticProps } from "next";
+
 import BasicLayout from "@/components/Layout/BasicLayout";
 import {
   Hero,
@@ -11,8 +13,14 @@ import {
 } from "@/components/Home";
 import { sanityClient } from "@/utils/sanity";
 import { getBlogs, getServices } from "@/utils/queries";
+import { dataTypes } from "@/utils/types";
 
-export default function Home({ services, blogs }) {
+interface homeProps {
+  services: dataTypes[];
+  blogs: dataTypes[];
+}
+
+const Home: React.FC<homeProps> = ({ services, blogs }) => {
   return (
     <BasicLayout>
       <Hero />
@@ -25,10 +33,12 @@ export default function Home({ services, blogs }) {
       <FeaturedBlog blogs={blogs} />
     </BasicLayout>
   );
-}
+};
 
-export async function getStaticProps() {
-  const services = await sanityClient.fetch(getServices);
+export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const services: dataTypes[] = await sanityClient.fetch(getServices);
 
   const updatedServices = services.map((service) => {
     return {
@@ -37,7 +47,7 @@ export async function getStaticProps() {
     };
   });
 
-  const blogs = await sanityClient.fetch(getBlogs);
+  const blogs: dataTypes[] = await sanityClient.fetch(getBlogs);
 
   const updatedBlogs = blogs.map((blog) => {
     return {
@@ -49,4 +59,4 @@ export async function getStaticProps() {
   return {
     props: { services: updatedServices, blogs: updatedBlogs },
   };
-}
+};

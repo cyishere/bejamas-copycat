@@ -22,6 +22,7 @@ export interface dataTypes {
     };
   };
   publishedAt?: string;
+  slug?: string;
 }
 
 export interface cardProps {

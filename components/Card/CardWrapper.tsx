@@ -3,7 +3,11 @@ import Link from "next/link";
 
 import { STYLES } from "@/styles/constants";
 
-const CardWrapper = ({ href, children }) => {
+interface cardProps {
+  href: string;
+}
+
+const CardWrapper: React.FC<cardProps> = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <Wrapper>{children}</Wrapper>

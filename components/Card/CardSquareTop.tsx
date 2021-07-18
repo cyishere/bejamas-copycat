@@ -3,18 +3,19 @@ import styled from "styled-components";
 import CardWrapper from "./CardWrapper";
 import { COLORS, FONTS } from "@/styles/constants";
 import { urlFor } from "@/utils/sanity";
+import { cardProps } from "@/utils/types";
 
-const CardSquareTop = ({ item }) => {
+const CardSquareTop: React.FC<cardProps> = ({ item }) => {
   const { link, image, title, excerpt, publishedAt } = item;
 
   return (
     <CardWrapper href={link}>
       <Cover>
-        <img src={urlFor(image).url()} alt={title} />
+        <img src={urlFor(image).url() as string} alt={title} />
       </Cover>
 
       <Title>{title}</Title>
-      <DateZone>{new Date(publishedAt).toDateString()}</DateZone>
+      <DateZone>{new Date(publishedAt!).toDateString()}</DateZone>
       <Text>{excerpt}</Text>
       <p>Read article »</p>
     </CardWrapper>

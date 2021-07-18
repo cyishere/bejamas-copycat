@@ -3,15 +3,16 @@ import styled from "styled-components";
 import CardWrapper from "./CardWrapper";
 import { COLORS, FONTS } from "@/styles/constants";
 import { urlFor } from "@/utils/sanity";
+import { cardProps } from "@/utils/types";
 
-const CardRecTop = ({ item }) => {
+const CardRecTop: React.FC<cardProps> = ({ item }) => {
   const { link, title, image, excerpt } = item;
 
   return (
     <CardWrapper href={link}>
       <Block>
         <Title>{title}</Title>
-        <Cover src={urlFor(image).url()} alt={title} />
+        <Cover src={urlFor(image).url() as string} alt={title} />
         <Text>{excerpt}</Text>
         <p>See more »</p>
       </Block>

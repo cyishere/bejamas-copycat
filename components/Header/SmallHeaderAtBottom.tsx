@@ -5,15 +5,20 @@ import { STYLES } from "@/styles/constants";
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
 import GetInTouchButton from "./GetInTouchButton";
+import { headerProps } from "@/utils/types";
 
-const SmallHeaderAtBottom = ({ isOpened, setIsOpened, isVisible }) => {
+const SmallHeaderAtBottom: React.FC<headerProps> = ({
+  isOpened,
+  setIsOpened,
+  isVisible,
+}) => {
   return (
     <Wrapper isVisible={isVisible}>
       <FlexBetween>
         <FlexStartHelder>
           <MenuToggleButton isOpened={isOpened} setIsOpened={setIsOpened} />
 
-          <GetInTouchButton isVisible={isVisible} />
+          <GetInTouchButton isVisible={isVisible!} />
         </FlexStartHelder>
 
         <Logo />
@@ -22,7 +27,7 @@ const SmallHeaderAtBottom = ({ isOpened, setIsOpened, isVisible }) => {
   );
 };
 
-const Wrapper = styled.header`
+const Wrapper = styled.header<headerProps>`
   padding: 1rem 3rem;
   position: fixed;
   left: 0;

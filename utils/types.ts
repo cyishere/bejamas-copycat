@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface benefitTypes {
   title: string;
   icons: {
@@ -28,4 +30,22 @@ export interface cardProps {
 
 export interface SectionProps {
   readonly special?: boolean;
+}
+
+export interface headerProps {
+  isOpened?: boolean;
+  setIsOpened?: Dispatch<SetStateAction<boolean>>;
+  isVisible?: boolean;
+}
+
+export interface linkType {
+  id: number;
+  title: string;
+  desc: string;
+  link: string;
+}
+
+export interface blogSubLinksType {
+  category: string;
+  links: { title: string; link: string }[];
 }

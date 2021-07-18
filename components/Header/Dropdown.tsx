@@ -3,8 +3,16 @@ import Link from "next/link";
 
 import { BREAKPOINTS, COLORS, FONTS, STYLES } from "@/styles/constants";
 import { ChevronRightIcon } from "../Icons";
+import { blogSubLinksType, linkType } from "@/utils/types";
 
-const ListItem = ({ item }) => (
+/**
+ * Sub Component
+ */
+interface listItemProps {
+  item: linkType;
+}
+
+const ListItem: React.FC<listItemProps> = ({ item }) => (
   <List>
     <Link href={item.link} passHref>
       <ListItemWrapper>
@@ -85,7 +93,22 @@ const Title = styled.h3`
   }
 `;
 
-const Dropdown = ({ menuLists, subLinks = [], servicesShow, jamstackShow }) => {
+/**
+ * Main Component
+ */
+interface dropdownProps {
+  menuLists: linkType[];
+  subLinks?: blogSubLinksType[];
+  servicesShow?: boolean;
+  jamstackShow?: boolean;
+}
+
+const Dropdown: React.FC<dropdownProps> = ({
+  menuLists,
+  subLinks = [],
+  servicesShow,
+  jamstackShow,
+}) => {
   return (
     <DropdownWrapper
       className={`dropdown ${servicesShow ? "services" : ""} ${

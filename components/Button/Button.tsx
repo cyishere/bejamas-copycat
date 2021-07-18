@@ -22,7 +22,7 @@ const STYLES = {
   } as CSSProperties,
 };
 
-interface buttonProps {
+interface buttonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: "text" | "normal" | "primary";
   href?: string;
 }

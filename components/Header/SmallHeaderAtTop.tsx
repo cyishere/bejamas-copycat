@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { FlexBetween } from "@/styles/shared";
 import MenuToggleButton from "./MenuToggleButton";
 import Logo from "./Logo";
+import { headerProps } from "@/utils/types";
 
-const SmallHeaderAtTop = ({ isOpened, setIsOpened }) => {
+const SmallHeaderAtTop: React.FC<headerProps> = ({ isOpened, setIsOpened }) => {
   return (
     <Wrapper>
       <FlexBetween>

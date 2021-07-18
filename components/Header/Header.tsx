@@ -12,6 +12,7 @@ import SmallHeaderAtTop from "./SmallHeaderAtTop";
 
 const Header = () => {
   const isWideScreen = useMediaQuery({ minWidth: BREAKPOINTS.xxmd });
+  console.log("isWideScreen:", isWideScreen);
 
   const [isOpened, setIsOpened] = useState(false);
   const isVisible = useScrollVisible();

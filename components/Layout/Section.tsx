@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 import { BREAKPOINTS } from "@/styles/constants";
-import { SectionProps } from "@/utils/types";
+import { sectionProps } from "@/utils/types";
 
-const Section: React.FC<SectionProps> = ({ children, ...rest }) => {
+const Section: React.FC<sectionProps> = ({ children, ...rest }) => {
   return <Wrapper {...rest}>{children}</Wrapper>;
 };
 
-export const Wrapper = styled.section<SectionProps>`
+export const Wrapper = styled.section<sectionProps>`
   display: flex;
   flex-direction: column;
   margin-bottom: 4.5rem;

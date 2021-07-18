@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { STYLES } from "@/styles/constants";
 import SubTitle from "./SubTitle";
 
-const SubTitleColorful = ({ children }) => {
+const SubTitleColorful: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

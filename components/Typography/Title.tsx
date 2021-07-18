@@ -1,7 +1,8 @@
 import styled from "styled-components";
+
 import { FONTS } from "@/styles/constants";
 
-const Title = ({ children }) => {
+const Title: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

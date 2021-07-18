@@ -1,7 +1,8 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS, FONTS } from "@/styles/constants";
 
-const SubTitle = ({ children }) => {
+const SubTitle: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

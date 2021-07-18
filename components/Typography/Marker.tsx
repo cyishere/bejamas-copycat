@@ -1,7 +1,8 @@
 import styled from "styled-components";
+
 import { COLORS } from "@/styles/constants";
 
-const Marker = ({ children }) => {
+const Marker: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

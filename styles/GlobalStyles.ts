@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { BREAKPOINTS, COLORS, FONTS } from "./constants";
+import { BREAKPOINTS, FONTS } from "./constants";
 
 const GlobalStyles = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -58,18 +58,18 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${FONTS.main};
     line-height: 1.8;
-    color: ${COLORS.textMain};
+    color: ${({ theme }) => theme.colors.textMain};
     font-weight: ${FONTS.regular};
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${FONTS.heading};
-    color: ${COLORS.textDark};
+    color: ${({ theme }) => theme.colors.textDark};
     line-height: 1.2;
   }
 
   a {
-    color: ${COLORS.primary};
+    color: ${({ theme }) => theme.colors.primary};
     text-decoration: none;
   }
 

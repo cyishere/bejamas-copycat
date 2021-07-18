@@ -31,8 +31,10 @@ export const BREAKPOINTS = {
   xl: "1200px",
 };
 
-// colors
-export const COLORS = {
+/**
+ * Colors ===================================
+ */
+export const COLORS_LIGHT = {
   textMain: "hsl(211.6,8.2%,45.7%)",
   textDark: "hsl(212.3,17.8%,28.6%)",
   bgGrayLight: "hsl(200,42.9%,97.3%)",
@@ -47,19 +49,54 @@ export const COLORS = {
   redTransparent: "hsla(349, 69%, 53%, 0.15)",
 };
 
+export const COLORS_DARK = {
+  textMain: "hsl(211.6,8.2%,45.7%)",
+  textDark: "hsl(212.3,17.8%,28.6%)",
+  bgGrayLight: "hsl(200,42.9%,97.3%)",
+  bgBlueLight: "hsl(201.2,43.6%,92.4%)",
+  bgBlueLighter: "hsla(201, 44%, 92%, 0.1)",
+  primary: "hsl(349,68.9%,53.3%)",
+  orange: "hsl(39.5,99.2%,52.5%)",
+  blueLight: "hsl(201, 44%, 92%)",
+  white: "hsl(0,0%,100%)",
+  black: "hsl(0,0%,0%)",
+  border: "hsla(0, 0%, 0%, 0.05)",
+  redTransparent: "hsla(349, 69%, 53%, 0.15)",
+};
+
+/**
+ * Styles ======================================
+ */
 export const STYLES = {
   linearGradient: `linear-gradient(
     to bottom,
-    ${COLORS.bgBlueLight},
-    ${COLORS.bgBlueLighter} 85%
+    ${COLORS_LIGHT.bgBlueLight},
+    ${COLORS_LIGHT.bgBlueLighter} 85%
   )`,
   linearGradientPrimary: `linear-gradient(
     to bottom,
-    ${COLORS.orange},
-    ${COLORS.primary} 70%
+    ${COLORS_LIGHT.orange},
+    ${COLORS_LIGHT.primary} 70%
   )`,
   linearGradientBlur: `linear-gradient(317deg,rgba(148,142,154,0.35),rgba(239,235,243,0.49) 60%,rgba(94,78,97,0.77) 160%)`,
-  redShadow: `0 9px 60px 0 ${COLORS.redTransparent}`,
+  redShadow: `0 9px 60px 0 ${COLORS_LIGHT.redTransparent}`,
+  xlShadow: `0 -10px 50px -12px rgb(0 0 0 / 25%)`,
+  lgShadow: `0 0 25px 6px rgb(0 0 0 / 10%), 0 0 14px 10px rgb(0 0 0 / 4%)`,
+};
+
+export const STYLES_DARK = {
+  linearGradient: `linear-gradient(
+    to bottom,
+    ${COLORS_DARK.bgBlueLight},
+    ${COLORS_DARK.bgBlueLighter} 85%
+  )`,
+  linearGradientPrimary: `linear-gradient(
+    to bottom,
+    ${COLORS_DARK.orange},
+    ${COLORS_DARK.primary} 70%
+  )`,
+  linearGradientBlur: `linear-gradient(317deg,rgba(148,142,154,0.35),rgba(239,235,243,0.49) 60%,rgba(94,78,97,0.77) 160%)`,
+  redShadow: `0 9px 60px 0 ${COLORS_DARK.redTransparent}`,
   xlShadow: `0 -10px 50px -12px rgb(0 0 0 / 25%)`,
   lgShadow: `0 0 25px 6px rgb(0 0 0 / 10%), 0 0 14px 10px rgb(0 0 0 / 4%)`,
 };

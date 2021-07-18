@@ -6,8 +6,13 @@ import { ButtonLink } from "../Button";
 import { CardSquareTop } from "../Card";
 import { OneNTwoColumns, TwoColumns } from "../Grid";
 import { FlexStart } from "@/styles/shared";
+import { dataTypes } from "@/utils/types";
 
-const ClientsFrom = ({ blogs: posts }) => {
+interface clientsFromProps {
+  blogs: dataTypes[];
+}
+
+const ClientsFrom: React.FC<clientsFromProps> = ({ blogs: posts }) => {
   return (
     <Section>
       <OneNTwoColumns>

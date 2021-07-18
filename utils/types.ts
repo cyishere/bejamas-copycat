@@ -29,7 +29,7 @@ export interface cardProps {
 }
 
 export interface SectionProps {
-  readonly special?: boolean;
+  special?: boolean;
 }
 
 export interface headerProps {

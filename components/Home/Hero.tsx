@@ -10,10 +10,10 @@ import { BREAKPOINTS, FONTS } from "@/styles/constants";
 
 const Hero = () => {
   return (
-    <Section special>
+    <Section special={true}>
       <TwoColumns>
         <GridColumn>
-          <SectionHeader special>
+          <SectionHeader special={true}>
             <SubTitle>Jamstack developer for hire</SubTitle>
             <Title>
               We build
@@ -60,7 +60,7 @@ const Hero = () => {
           </LogoGroup>
         </GridColumn>
 
-        <GridColumn hidden>
+        <GridColumn hidden={true}>
           <Image
             src="/images/decorates/jar.jpg"
             alt="Bejamas"

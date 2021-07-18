@@ -23,7 +23,7 @@ const STYLES = {
 };
 
 interface buttonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: "text" | "normal" | "primary";
+  variant?: "text" | "normal" | "primary";
   href?: string;
 }
 

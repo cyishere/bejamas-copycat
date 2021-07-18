@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 import { BREAKPOINTS } from "@/styles/constants";
 
-const GridColumn: React.FC = ({ children, ...rest }) => {
+interface GridProps {
+  hidden?: boolean;
+}
+
+const GridColumn: React.FC<GridProps> = ({ children, ...rest }) => {
   return <Wrapper {...rest}>{children}</Wrapper>;
 };
-
-interface GridProps {
-  readonly hidden?: boolean;
-}
 
 export const Wrapper = styled.div<GridProps>`
   > *:not(:last-child) {

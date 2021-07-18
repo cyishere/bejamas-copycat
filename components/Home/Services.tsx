@@ -2,9 +2,13 @@ import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle } from "../Typography";
 import { CardRecTop } from "../Card";
 import { ThreeColumns } from "../Grid";
-// import services from "@/data/services";
+import { dataTypes } from "@/utils/types";
 
-const Services = ({ services }) => {
+interface servicesProps {
+  services: dataTypes[];
+}
+
+const Services: React.FC<servicesProps> = ({ services }) => {
   return (
     <Section>
       <SectionHeader>

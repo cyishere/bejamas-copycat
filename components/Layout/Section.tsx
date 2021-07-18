@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BREAKPOINTS } from "@/styles/constants";
 import { SectionProps } from "@/utils/types";
 
-const Section: React.FC = ({ children, ...rest }) => {
+const Section: React.FC<SectionProps> = ({ children, ...rest }) => {
   return <Wrapper {...rest}>{children}</Wrapper>;
 };
 

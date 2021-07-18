@@ -7,14 +7,14 @@ const THRESHOLD = {
   special: BREAKPOINTS.xmd,
 };
 
-const TwoColumns: React.FC = ({ children, ...props }) => {
-  return <Wrapper {...props}>{children}</Wrapper>;
-};
-
 interface ColumnProps {
   break?: "small" | "special";
-  readonly counter?: boolean;
+  counter?: boolean;
 }
+
+const TwoColumns: React.FC<ColumnProps> = ({ children, ...props }) => {
+  return <Wrapper {...props}>{children}</Wrapper>;
+};
 
 const Wrapper = styled.div<ColumnProps>`
   display: grid;

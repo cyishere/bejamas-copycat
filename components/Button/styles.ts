@@ -20,7 +20,7 @@ export const ButtonStyles = css<ButtonProps>`
       ? `currentColor`
       : props.variant === "primary"
       ? props.theme.colors.white
-      : props.theme.colors.black};
+      : props.theme.colors.textButtonNormal};
 
   @media (min-width: ${BREAKPOINTS.xl}) {
     font-size: 1.125rem;

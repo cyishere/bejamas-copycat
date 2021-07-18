@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
-import { COLORS, STYLES } from "@/styles/constants";
 import { SubTitle } from "../Typography";
 
 export const ToolsGroupWrapper = styled.div`
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px dashed ${COLORS.bgGrayLight};
-  background: linear-gradient(${COLORS.bgGrayLight}, ${COLORS.bgGrayLight})
+  border: 1px dashed ${({ theme }) => theme.colors.bgGrayLight};
+  background: linear-gradient(
+        ${({ theme }) => theme.colors.bgGrayLight},
+        ${({ theme }) => theme.colors.bgGrayLight}
+      )
       padding-box,
-    ${STYLES.linearGradientPrimary} border-box;
+    ${({ theme }) => theme.styles.linearGradientPrimary} border-box;
   text-align: center;
 
   & > *:not(:last-child) {
@@ -18,7 +20,7 @@ export const ToolsGroupWrapper = styled.div`
 `;
 
 export const ToolsGroupTitle = styled(SubTitle)`
-  background-image: ${STYLES.linearGradientPrimary};
+  background-image: ${({ theme }) => theme.styles.linearGradientPrimary};
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { STYLES } from "@/styles/constants";
-
 interface cardProps {
   href: string;
 }
@@ -22,7 +20,7 @@ const Wrapper = styled.a`
   margin-right: -1.5rem;
 
   &:hover {
-    box-shadow: ${STYLES.redShadow};
+    box-shadow: ${({ theme }) => theme.styles.redShadow};
   }
 `;
 

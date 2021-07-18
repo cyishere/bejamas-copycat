@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
+import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { Button } from "../Button";
 import { SearchIcon, ChevronDownIcon } from "../Icons";
 import Dropdown from "./Dropdown";
@@ -79,7 +79,7 @@ const ListItem = styled.li`
   position: relative;
 
   &:not(:last-child) {
-    border-bottom: 1px solid ${COLORS.border};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
     @media (min-width: ${BREAKPOINTS.xxmd}) {
       border: none;
@@ -87,10 +87,10 @@ const ListItem = styled.li`
   }
 
   > a {
-    color: ${COLORS.textDark};
+    color: ${({ theme }) => theme.colors.textDark};
 
     &:hover {
-      color: ${COLORS.primary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 
@@ -115,7 +115,7 @@ const TextIconWrapper = styled.span`
   }
 
   > a {
-    color: ${COLORS.textDark};
+    color: ${({ theme }) => theme.colors.textDark};
   }
 `;
 

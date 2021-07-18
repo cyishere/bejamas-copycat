@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { COLORS } from "@/styles/constants";
-
 const Marker: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
@@ -9,8 +7,8 @@ const Marker: React.FC = ({ children }) => {
 export const Wrapper = styled.mark`
   background-image: linear-gradient(
     to bottom,
-    ${COLORS.orange},
-    ${COLORS.primary} 70%
+    ${({ theme }) => theme.colors.orange},
+    ${({ theme }) => theme.colors.primary} 70%
   );
   background-clip: text;
   -webkit-background-clip: text;

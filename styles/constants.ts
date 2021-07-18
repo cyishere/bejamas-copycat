@@ -67,7 +67,7 @@ export const COLORS_DARK = {
 /**
  * Styles ======================================
  */
-export const STYLES = {
+export const STYLES_LIGHT = {
   linearGradient: `linear-gradient(
     to bottom,
     ${COLORS_LIGHT.bgBlueLight},

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { FlexBetween, FlexStart } from "@/styles/shared";
-import { BREAKPOINTS, STYLES } from "@/styles/constants";
+import { BREAKPOINTS } from "@/styles/constants";
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
 import GetInTouchButton from "./GetInTouchButton";
@@ -33,7 +33,7 @@ const Wrapper = styled.header<headerProps>`
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-image: ${STYLES.linearGradientBlur}; */
+  /* background-image: ${({ theme }) => theme.styles.linearGradientBlur}; */
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 10;
   transition: transform 0.5s ease;

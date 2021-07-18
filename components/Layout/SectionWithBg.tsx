@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS, COLORS } from "@/styles/constants";
+import { BREAKPOINTS } from "@/styles/constants";
 
 const SectionWithBg: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -9,7 +9,7 @@ const SectionWithBg: React.FC = ({ children }) => {
 export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
-  background-color: ${COLORS.bgGrayLight};
+  background-color: ${({ theme }) => theme.colors.bgGrayLight};
   margin-left: -3rem;
   margin-right: -3rem;
   padding: 3rem;

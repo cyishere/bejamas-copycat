@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS, COLORS, FONTS, STYLES } from "./constants";
+import { BREAKPOINTS, FONTS } from "./constants";
 
 /**
  * Flex Style Set
@@ -50,7 +50,7 @@ export const QuoteWrapper = styled.div`
 
 export const QuoteBlock = styled.blockquote`
   padding: 1.5rem 4.75rem 1.5rem 1.75rem;
-  background-image: ${STYLES.linearGradient};
+  background-image: ${({ theme }) => theme.styles.linearGradient};
   border-radius: 1rem;
   position: relative;
 
@@ -61,7 +61,7 @@ export const QuoteBlock = styled.blockquote`
     position: absolute;
     top: -13rem;
     right: 1rem;
-    color: ${COLORS.blueLight};
+    color: ${({ theme }) => theme.colors.blueLight};
   }
 
   @media (min-width: ${BREAKPOINTS.md}) {

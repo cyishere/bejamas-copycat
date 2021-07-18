@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { COLORS, FONTS } from "@/styles/constants";
+import { FONTS } from "@/styles/constants";
 
 interface PlaceholderProps {
   imageUrl: string;
@@ -36,7 +36,7 @@ const PlaceText = styled.div`
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.7);
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${FONTS.xl};
   font-weight: ${FONTS.bold};
   text-transform: uppercase;

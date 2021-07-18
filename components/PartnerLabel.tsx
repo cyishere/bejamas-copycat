@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import { PartnerIcon } from "./Icons";
-import { COLORS } from "@/styles/constants";
 
 const PartnerLabel = () => {
   return (
@@ -17,8 +16,8 @@ const Wrapper = styled.span`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: ${COLORS.primary};
-  color: ${COLORS.white};
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   position: absolute;
   top: 10%;
   right: 0;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import CardWrapper from "./CardWrapper";
-import { COLORS, FONTS } from "@/styles/constants";
+import { FONTS } from "@/styles/constants";
 import { urlFor } from "@/utils/sanity";
 import { cardProps } from "@/utils/types";
 
@@ -45,7 +45,7 @@ const DateZone = styled.time`
 
 const Text = styled.p`
   margin-bottom: 3rem;
-  color: ${COLORS.textMain};
+  color: ${({ theme }) => theme.colors.textMain};
   font-size: ${FONTS.base};
 `;
 

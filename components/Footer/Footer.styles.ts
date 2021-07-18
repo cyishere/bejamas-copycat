@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
+import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { FlexStart } from "@/styles/shared";
 import { Wrapper as TitleStyle } from "../Typography/Title";
 
@@ -12,7 +12,7 @@ interface StyleProps {
  * Main Wrapper
  ---------------------------------------------- */
 export const Wrapper = styled.footer`
-  background-color: ${COLORS.black};
+  background-color: ${({ theme }) => theme.colors.black};
   padding: 3rem;
 
   > *:not(:last-child) {
@@ -20,7 +20,7 @@ export const Wrapper = styled.footer`
   }
 
   ${TitleStyle} {
-    color: ${COLORS.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 
   @media (min-width: ${BREAKPOINTS.md}) {
@@ -79,7 +79,7 @@ export const IconsWrapper = styled.div`
   }
 
   a {
-    color: ${COLORS.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -98,24 +98,24 @@ export const Button = styled.button<StyleProps>`
   background: none;
   border: none;
   cursor: pointer;
-  color: ${COLORS.textMain};
+  color: ${({ theme }) => theme.colors.textMain};
   padding: 0;
 
   ${(props) =>
     props.isLight
       ? `
       .sun {
-        color: ${COLORS.white};
+        color: hsl(0,0%,100%);
       }
     `
       : `
       .moon {
-        color: ${COLORS.white};
+        color: hsl(0,0%,100%);
       }
     `}
 
   &:hover {
-    color: ${COLORS.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -123,7 +123,7 @@ export const ToggleButton = styled.div<StyleProps>`
   width: 50px;
   height: 30px;
   border-radius: 30px;
-  background-color: ${COLORS.primary};
+  background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
   position: relative;
   cursor: pointer;
@@ -134,7 +134,7 @@ export const ToggleButton = styled.div<StyleProps>`
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: ${COLORS.white};
+    background-color: ${({ theme }) => theme.colors.white};
     position: absolute;
     top: 3px;
     left: 3px;
@@ -178,14 +178,14 @@ export const FooterNav = styled.nav`
 
 export const LinkSet = styled.div`
   h3 {
-    color: ${COLORS.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 
   a {
-    color: ${COLORS.textMain};
+    color: ${({ theme }) => theme.colors.textMain};
 
     &:hover {
-      color: ${COLORS.white};
+      color: ${({ theme }) => theme.colors.white};
     }
   }
 
@@ -198,8 +198,8 @@ export const LinkSet = styled.div`
 export const Badge = styled.span`
   display: inline-block;
   margin-left: 0.25rem;
-  background-color: ${COLORS.textDark};
-  color: ${COLORS.white};
+  background-color: ${({ theme }) => theme.colors.textDark};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${FONTS.smaller};
   width: 1.4em;
   height: 1.4em;

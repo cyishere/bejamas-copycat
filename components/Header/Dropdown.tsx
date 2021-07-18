@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { BREAKPOINTS, COLORS, FONTS, STYLES } from "@/styles/constants";
+import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { ChevronRightIcon } from "../Icons";
 import { blogSubLinksType, linkType } from "@/utils/types";
 
@@ -37,9 +37,9 @@ const List = styled.li`
 const ListItemWrapper = styled.a`
   display: block;
   padding: 1.5rem;
-  background-color: ${COLORS.textMain};
-  color: ${COLORS.white};
-  border: 1px solid ${COLORS.white};
+  background-color: ${({ theme }) => theme.colors.textMain};
+  color: ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.white};
 
   p {
     display: none;
@@ -47,10 +47,10 @@ const ListItemWrapper = styled.a`
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     border-radius: 0.5rem;
-    box-shadow: ${STYLES.lgShadow};
+    box-shadow: ${({ theme }) => theme.styles.lgShadow};
     transition: all 0.5s ease;
-    color: ${COLORS.textMain};
-    background-color: ${COLORS.white};
+    color: ${({ theme }) => theme.colors.textMain};
+    background-color: ${({ theme }) => theme.colors.white};
     border: none;
 
     p {
@@ -59,10 +59,10 @@ const ListItemWrapper = styled.a`
   }
 
   &:hover {
-    background-color: ${COLORS.primary};
+    background-color: ${({ theme }) => theme.colors.primary};
 
     p {
-      color: ${COLORS.bgGrayLight};
+      color: ${({ theme }) => theme.colors.bgGrayLight};
     }
   }
 `;
@@ -71,7 +71,7 @@ const Title = styled.h3`
   font-family: ${FONTS.main};
   font-size: ${FONTS.base};
   font-weight: ${FONTS.regular};
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +80,7 @@ const Title = styled.h3`
     font-size: ${FONTS.md};
     font-weight: ${FONTS.bold};
     margin-bottom: 0.5rem;
-    color: ${COLORS.textDark};
+    color: ${({ theme }) => theme.colors.textDark};
     justify-content: flex-start;
 
     .icon {
@@ -89,7 +89,7 @@ const Title = styled.h3`
   }
 
   ${ListItemWrapper}:hover & {
-    color: ${COLORS.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -156,9 +156,9 @@ const DropdownWrapper = styled.div`
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     margin-top: 0;
-    background-color: ${COLORS.white};
+    background-color: ${({ theme }) => theme.colors.white};
     border-radius: 1rem;
-    box-shadow: ${STYLES.xlShadow};
+    box-shadow: ${({ theme }) => theme.styles.xlShadow};
     padding: 1.5rem;
     position: absolute;
     z-index: 11;
@@ -212,13 +212,13 @@ const Anchor = styled(ListItemWrapper)`
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     box-shadow: none;
-    color: ${COLORS.textMain};
+    color: ${({ theme }) => theme.colors.textMain};
     padding: 0 0 0 1rem;
     justify-content: flex-start;
 
     &:hover {
-      color: ${COLORS.black};
-      background-color: ${COLORS.white};
+      color: ${({ theme }) => theme.colors.black};
+      background-color: ${({ theme }) => theme.colors.white};
     }
   }
 `;

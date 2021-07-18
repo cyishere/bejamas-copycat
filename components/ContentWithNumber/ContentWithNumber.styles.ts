@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FONTS, STYLES, BREAKPOINTS } from "@/styles/constants";
+import { FONTS, BREAKPOINTS } from "@/styles/constants";
 import { Wrapper as SectionWithBg } from "../Layout/SectionWithBg";
 
 export const Wrapper = styled.div`
@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
     right: 0;
     font-size: 12rem;
     font-family: ${FONTS.heading};
-    background-image: ${STYLES.linearGradient};
+    background-image: ${({ theme }) => theme.styles.linearGradient};
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

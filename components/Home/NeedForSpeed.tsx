@@ -16,6 +16,7 @@ import { TwoColumns, GridColumn } from "../Grid";
 import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle, Marker } from "../Typography";
 import { ButtonLink } from "../Button";
+import Placeholder from "../Placeholder";
 
 const NeedForSpeed = () => {
   return (
@@ -31,7 +32,12 @@ const NeedForSpeed = () => {
 
       <TwoColumnsHelper>
         <GridColumn hidden>
-          <img src="/images/decorates/placeholder.jpg" alt="" />
+          <Placeholder
+            imageUrl="/images/decorates/placeholder.jpg"
+            altText="check web vitals"
+            width={554}
+            height={335}
+          />
         </GridColumn>
 
         <GridColumn>

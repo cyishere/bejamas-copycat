@@ -6,6 +6,7 @@ import { FlexStart } from "@/styles/shared";
 import { SubTitle, Marker } from "../Typography";
 import { Section, SectionHeader } from "../Layout";
 import { ButtonLink } from "../Button";
+import Placeholder from "../Placeholder";
 import { BREAKPOINTS, FONTS } from "@/styles/constants";
 
 const Hero = () => {
@@ -61,9 +62,9 @@ const Hero = () => {
         </GridColumn>
 
         <GridColumn hidden={true}>
-          <Image
-            src="/images/decorates/jar.jpg"
-            alt="Bejamas"
+          <Placeholder
+            imageUrl="/images/decorates/jar.jpg"
+            altText="Bejamas"
             width={668}
             height={620}
           />

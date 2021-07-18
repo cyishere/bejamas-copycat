@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { FlexBetween, FlexStart } from "@/styles/shared";
-import { STYLES } from "@/styles/constants";
+import { BREAKPOINTS, STYLES } from "@/styles/constants";
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
 import GetInTouchButton from "./GetInTouchButton";
@@ -46,6 +46,10 @@ const Wrapper = styled.header<headerProps>`
       : `
     transform: translateY(200%);
   `}
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    display: none;
+  }
 `;
 
 const FlexStartHelder = styled(FlexStart)`

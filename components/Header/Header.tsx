@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
 
 import { BREAKPOINTS } from "@/styles/constants";
 import Logo from "./Logo";
@@ -11,14 +10,12 @@ import SmallHeaderAtBottom from "./SmallHeaderAtBottom";
 import SmallHeaderAtTop from "./SmallHeaderAtTop";
 
 const Header = () => {
-  const isWideScreen = useMediaQuery({ minWidth: BREAKPOINTS.xxmd });
-  console.log("isWideScreen:", isWideScreen);
-
   const [isOpened, setIsOpened] = useState(false);
   const isVisible = useScrollVisible();
 
-  if (isWideScreen) {
-    return (
+  return (
+    <>
+      {/* For Large Screen */}
       <Wrapper>
         <Grid>
           <div>
@@ -32,11 +29,8 @@ const Header = () => {
           </StartRight>
         </Grid>
       </Wrapper>
-    );
-  }
 
-  return (
-    <>
+      {/* For Small Screen */}
       <SmallHeaderAtTop isOpened={isOpened} setIsOpened={setIsOpened} />
 
       <SmallHeaderAtBottom
@@ -53,13 +47,17 @@ const Header = () => {
 };
 
 const Wrapper = styled.header`
-  padding: 0 3rem;
-  width: calc(1400px - 6rem);
-  padding: 1rem 3rem;
-  margin-bottom: 5rem;
-  position: fixed;
-  z-index: 10;
-  background-color: rgba(255, 255, 255, 0.95);
+  display: none;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    display: block;
+    width: calc(1400px - 6rem);
+    padding: 1rem 3rem;
+    margin-bottom: 5rem;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
 `;
 
 const Grid = styled.div`

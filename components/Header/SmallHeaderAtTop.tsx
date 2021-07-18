@@ -4,6 +4,7 @@ import { FlexBetween } from "@/styles/shared";
 import MenuToggleButton from "./MenuToggleButton";
 import Logo from "./Logo";
 import { headerProps } from "@/utils/types";
+import { BREAKPOINTS } from "@/styles/constants";
 
 const SmallHeaderAtTop: React.FC<headerProps> = ({ isOpened, setIsOpened }) => {
   return (
@@ -21,6 +22,10 @@ const SmallHeaderAtTop: React.FC<headerProps> = ({ isOpened, setIsOpened }) => {
 
 const Wrapper = styled.header`
   padding: 1.5rem 3rem;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    display: none;
+  }
 `;
 
 export default SmallHeaderAtTop;

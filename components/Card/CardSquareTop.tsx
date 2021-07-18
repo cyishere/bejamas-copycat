@@ -3,9 +3,9 @@ import styled from "styled-components";
 import CardWrapper from "./CardWrapper";
 import { FONTS } from "@/styles/constants";
 import { urlFor } from "@/utils/sanity";
-import { cardProps } from "@/utils/types";
+import { CardProps } from "@/utils/types";
 
-const CardSquareTop: React.FC<cardProps> = ({ item }) => {
+const CardSquareTop: React.FC<CardProps> = ({ item }) => {
   const { link, image, title, excerpt, publishedAt } = item;
 
   return (

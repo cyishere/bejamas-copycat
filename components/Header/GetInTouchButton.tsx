@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 import { ButtonLink } from "../Button";
-import { headerProps } from "@/utils/types";
+import { HeaderProps } from "@/utils/types";
 
-const GetInTouchButton: React.FC<headerProps> = ({ isVisible }) => {
+const GetInTouchButton: React.FC<HeaderProps> = ({ isVisible }) => {
   return (
     <ButtonHelper
       variant="primary"
@@ -15,7 +15,7 @@ const GetInTouchButton: React.FC<headerProps> = ({ isVisible }) => {
   );
 };
 
-const ButtonHelper = styled(ButtonLink)<headerProps>`
+const ButtonHelper = styled(ButtonLink)<HeaderProps>`
   transition: transform 0.5s ease;
   transform: scale(0);
 

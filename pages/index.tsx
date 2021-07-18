@@ -13,14 +13,14 @@ import {
 } from "@/components/Home";
 import { sanityClient } from "@/utils/sanity";
 import { getBlogs, getServices } from "@/utils/queries";
-import { dataTypes } from "@/utils/types";
+import { DataTypes } from "@/utils/types";
 
-interface homeProps {
-  services: dataTypes[];
-  blogs: dataTypes[];
+interface HomeProps {
+  services: DataTypes[];
+  blogs: DataTypes[];
 }
 
-const Home: React.FC<homeProps> = ({ services, blogs }) => {
+const Home: React.FC<HomeProps> = ({ services, blogs }) => {
   return (
     <BasicLayout>
       <Hero />
@@ -38,7 +38,7 @@ const Home: React.FC<homeProps> = ({ services, blogs }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const services: dataTypes[] = await sanityClient.fetch(getServices);
+  const services: DataTypes[] = await sanityClient.fetch(getServices);
 
   const updatedServices = services.map((service) => {
     return {
@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-  const blogs: dataTypes[] = await sanityClient.fetch(getBlogs);
+  const blogs: DataTypes[] = await sanityClient.fetch(getBlogs);
 
   const updatedBlogs = blogs.map((blog) => {
     return {

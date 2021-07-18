@@ -4,9 +4,9 @@ import MenuToggleButton from "./MenuToggleButton";
 import NavList from "./NavList";
 import Logo from "./Logo";
 import { FlexBetween } from "@/styles/shared";
-import { headerProps } from "@/utils/types";
+import { HeaderProps } from "@/utils/types";
 
-export const NavbarSmallScreen: React.FC<headerProps> = ({
+export const NavbarSmallScreen: React.FC<HeaderProps> = ({
   isOpened,
   setIsOpened,
 }) => {

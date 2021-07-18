@@ -5,9 +5,9 @@ import { BREAKPOINTS } from "@/styles/constants";
 import Logo from "./Logo";
 import MenuToggleButton from "./MenuToggleButton";
 import GetInTouchButton from "./GetInTouchButton";
-import { headerProps } from "@/utils/types";
+import { HeaderProps } from "@/utils/types";
 
-const SmallHeaderAtBottom: React.FC<headerProps> = ({
+const SmallHeaderAtBottom: React.FC<HeaderProps> = ({
   isOpened,
   setIsOpened,
   isVisible,
@@ -27,7 +27,7 @@ const SmallHeaderAtBottom: React.FC<headerProps> = ({
   );
 };
 
-const Wrapper = styled.header<headerProps>`
+const Wrapper = styled.header<HeaderProps>`
   padding: 1rem 3rem;
   position: fixed;
   left: 0;

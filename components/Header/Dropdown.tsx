@@ -3,16 +3,16 @@ import Link from "next/link";
 
 import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { ChevronRightIcon } from "../Icons";
-import { blogSubLinksType, linkType } from "@/utils/types";
+import { BlogSubLinkTypes, LinkTypes } from "@/utils/types";
 
 /**
  * Sub Component
  */
-interface listItemProps {
-  item: linkType;
+interface ListItemProps {
+  item: LinkTypes;
 }
 
-const ListItem: React.FC<listItemProps> = ({ item }) => (
+const ListItem: React.FC<ListItemProps> = ({ item }) => (
   <List>
     <Link href={item.link} passHref>
       <ListItemWrapper>
@@ -96,14 +96,14 @@ const Title = styled.h3`
 /**
  * Main Component
  */
-interface dropdownProps {
-  menuLists: linkType[];
-  subLinks?: blogSubLinksType[];
+interface DropdownProps {
+  menuLists: LinkTypes[];
+  subLinks?: BlogSubLinkTypes[];
   servicesShow?: boolean;
   jamstackShow?: boolean;
 }
 
-const Dropdown: React.FC<dropdownProps> = ({
+const Dropdown: React.FC<DropdownProps> = ({
   menuLists,
   subLinks = [],
   servicesShow,

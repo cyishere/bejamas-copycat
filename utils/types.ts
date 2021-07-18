@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from "react";
 /**
  * types for data in ./data folder
  */
-export interface benefitTypes {
+export interface BenefitTypes {
   title: string;
   icons: {
     avif: string;
@@ -12,14 +12,14 @@ export interface benefitTypes {
   content: string;
 }
 
-export interface linkType {
+export interface LinkTypes {
   id: number;
   title: string;
   desc: string;
   link: string;
 }
 
-export interface blogSubLinksType {
+export interface BlogSubLinkTypes {
   category: string;
   links: { title: string; link: string }[];
 }
@@ -27,7 +27,7 @@ export interface blogSubLinksType {
 /**
  * types for data (services & blogs) from Sanity
  */
-export interface dataTypes {
+export interface DataTypes {
   _id: string;
   title: string;
   link: string;
@@ -46,15 +46,15 @@ export interface dataTypes {
 /**
  * types for components
  */
-export interface cardProps {
-  item: dataTypes;
+export interface CardProps {
+  item: DataTypes;
 }
 
-export interface sectionProps {
+export interface SectionProps {
   special?: boolean;
 }
 
-export interface headerProps {
+export interface HeaderProps {
   isOpened?: boolean;
   setIsOpened?: Dispatch<SetStateAction<boolean>>;
   isVisible?: boolean;

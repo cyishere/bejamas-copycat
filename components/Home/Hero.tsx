@@ -30,7 +30,9 @@ const Hero = () => {
             <ButtonLink variant="primary" href="/estimate-project">
               Get in touch
             </ButtonLink>
-            <ButtonLink href="/services">What we do</ButtonLink>
+            <ButtonLink variant="normal" href="/services">
+              What we do
+            </ButtonLink>
           </ButtonGroup>
           <SubTitle>Trusted by inovative companies</SubTitle>
           <LogoGroup>

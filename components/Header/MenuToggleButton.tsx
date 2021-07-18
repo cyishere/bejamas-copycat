@@ -1,8 +1,8 @@
 import { Button } from "../Button";
 import { MenuIcon, CloseIcon } from "../Icons";
-import { headerProps } from "@/utils/types";
+import { HeaderProps } from "@/utils/types";
 
-const MenuToggleButton: React.FC<headerProps> = ({ isOpened, setIsOpened }) => {
+const MenuToggleButton: React.FC<HeaderProps> = ({ isOpened, setIsOpened }) => {
   return (
     <span>
       <Button

@@ -1,8 +1,8 @@
-import { benefitTypes } from "@/utils/types";
+import { BenefitTypes } from "@/utils/types";
 import { Wrapper, ContentTitle, ContentIcon } from "./ContentWithNumber.styles";
 
 interface contentProps {
-  data: benefitTypes;
+  data: BenefitTypes;
 }
 
 const ContentWithNumber: React.FC<contentProps> = ({ data }) => {

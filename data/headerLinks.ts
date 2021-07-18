@@ -1,6 +1,6 @@
-import { blogSubLinksType, linkType } from "@/utils/types";
+import { BlogSubLinkTypes, LinkTypes } from "@/utils/types";
 
-export const serviceLinks: linkType[] = [
+export const serviceLinks: LinkTypes[] = [
   {
     id: 1,
     title: "Jamstack Website",
@@ -21,7 +21,7 @@ export const serviceLinks: linkType[] = [
   },
 ];
 
-export const blogLinks: linkType[] = [
+export const blogLinks: LinkTypes[] = [
   {
     id: 1,
     title: "Jamstack, explained.",
@@ -30,7 +30,7 @@ export const blogLinks: linkType[] = [
   },
 ];
 
-export const blogSubLinks: blogSubLinksType[] = [
+export const blogSubLinks: BlogSubLinkTypes[] = [
   {
     category: "Guide To",
     links: [

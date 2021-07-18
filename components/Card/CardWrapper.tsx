@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-interface cardProps {
+interface CardProps {
   href: string;
 }
 
-const CardWrapper: React.FC<cardProps> = ({ href, children }) => {
+const CardWrapper: React.FC<CardProps> = ({ href, children }) => {
   return (
     <Link href={href} passHref>
       <Wrapper>{children}</Wrapper>

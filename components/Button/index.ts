@@ -1,3 +1,2 @@
-import { Button, ButtonLink } from "./Button";
-
-export { Button, ButtonLink };
+export { default as Button } from "./Button";
+export { default as ButtonLink } from "./ButtonLink";

@@ -59,3 +59,8 @@ export interface HeaderProps {
   setIsOpened?: Dispatch<SetStateAction<boolean>>;
   isVisible?: boolean;
 }
+
+export interface StateProps {
+  isThemeLight: boolean;
+  setIsThemeLight?: Dispatch<SetStateAction<boolean>>;
+}

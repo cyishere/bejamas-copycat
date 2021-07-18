@@ -13,16 +13,21 @@ import {
 } from "@/components/Home";
 import { sanityClient } from "@/utils/sanity";
 import { getBlogs, getServices } from "@/utils/queries";
-import { DataTypes } from "@/utils/types";
+import { DataTypes, StateProps } from "@/utils/types";
 
-interface HomeProps {
+interface HomeProps extends StateProps {
   services: DataTypes[];
   blogs: DataTypes[];
 }
 
-const Home: React.FC<HomeProps> = ({ services, blogs }) => {
+const Home: React.FC<HomeProps> = ({
+  services,
+  blogs,
+  isThemeLight,
+  setIsThemeLight,
+}) => {
   return (
-    <BasicLayout>
+    <BasicLayout isThemeLight={isThemeLight} setIsThemeLight={setIsThemeLight}>
       <Hero />
       <NeedForSpeed />
       <SupportsBusiness />

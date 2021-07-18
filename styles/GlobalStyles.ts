@@ -58,13 +58,14 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${FONTS.main};
     line-height: 1.8;
-    color: ${({ theme }) => theme.colors.textMain};
     font-weight: ${FONTS.regular};
+    color: ${({ theme }) => theme.colors.textMain};
+    background-color: ${({ theme }) => theme.colors.bgPrimary};
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${FONTS.heading};
-    color: ${({ theme }) => theme.colors.textDark};
+    color: ${({ theme }) => theme.colors.textEmphasis};
     line-height: 1.2;
   }
 

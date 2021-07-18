@@ -36,7 +36,8 @@ export const BREAKPOINTS = {
  */
 export const COLORS_LIGHT = {
   textMain: "hsl(211.6,8.2%,45.7%)",
-  textDark: "hsl(212.3,17.8%,28.6%)",
+  textEmphasis: "hsl(212.3,17.8%,28.6%)",
+  bgPrimary: "hsl(0,0%,100%)",
   bgGrayLight: "hsl(200,42.9%,97.3%)",
   bgBlueLight: "hsl(201.2,43.6%,92.4%)",
   bgBlueLighter: "hsla(201, 44%, 92%, 0.1)",
@@ -51,7 +52,8 @@ export const COLORS_LIGHT = {
 
 export const COLORS_DARK = {
   textMain: "hsl(211.6,8.2%,45.7%)",
-  textDark: "hsl(212.3,17.8%,28.6%)",
+  textEmphasis: "hsl(212.3,17.8%,28.6%)",
+  bgPrimary: "hsl(273,52%,6%)",
   bgGrayLight: "hsl(200,42.9%,97.3%)",
   bgBlueLight: "hsl(201.2,43.6%,92.4%)",
   bgBlueLighter: "hsla(201, 44%, 92%, 0.1)",

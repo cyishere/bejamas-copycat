@@ -87,7 +87,7 @@ const ListItem = styled.li`
   }
 
   > a {
-    color: ${({ theme }) => theme.colors.textDark};
+    color: ${({ theme }) => theme.colors.textEmphasis};
 
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
@@ -115,7 +115,7 @@ const TextIconWrapper = styled.span`
   }
 
   > a {
-    color: ${({ theme }) => theme.colors.textDark};
+    color: ${({ theme }) => theme.colors.textEmphasis};
   }
 `;
 

@@ -80,7 +80,7 @@ const Title = styled.h3`
     font-size: ${FONTS.md};
     font-weight: ${FONTS.bold};
     margin-bottom: 0.5rem;
-    color: ${({ theme }) => theme.colors.textDark};
+    color: ${({ theme }) => theme.colors.textEmphasis};
     justify-content: flex-start;
 
     .icon {

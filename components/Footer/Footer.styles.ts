@@ -3,10 +3,7 @@ import styled from "styled-components";
 import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { FlexStart } from "@/styles/shared";
 import { Wrapper as TitleStyle } from "../Typography/Title";
-
-interface StyleProps {
-  readonly isLight: boolean;
-}
+import { StateProps } from "@/utils/types";
 
 /**
  * Main Wrapper
@@ -94,7 +91,7 @@ export const FooterLogo = styled(FlexStart)`
   }
 `;
 
-export const Button = styled.button<StyleProps>`
+export const Button = styled.button<StateProps>`
   background: none;
   border: none;
   cursor: pointer;
@@ -102,7 +99,7 @@ export const Button = styled.button<StyleProps>`
   padding: 0;
 
   ${(props) =>
-    props.isLight
+    props.isThemeLight
       ? `
       .sun {
         color: hsl(0,0%,100%);
@@ -119,7 +116,7 @@ export const Button = styled.button<StyleProps>`
   }
 `;
 
-export const ToggleButton = styled.div<StyleProps>`
+export const ToggleButton = styled.div<StateProps>`
   width: 50px;
   height: 30px;
   border-radius: 30px;
@@ -142,7 +139,7 @@ export const ToggleButton = styled.div<StyleProps>`
   }
 
   ${(props) =>
-    !props.isLight
+    !props.isThemeLight
       ? `
     &::before {
       transform: translateX(20px);
@@ -198,7 +195,7 @@ export const LinkSet = styled.div`
 export const Badge = styled.span`
   display: inline-block;
   margin-left: 0.25rem;
-  background-color: ${({ theme }) => theme.colors.textDark};
+  background-color: ${({ theme }) => theme.colors.textEmphasis};
   color: ${({ theme }) => theme.colors.white};
   font-size: ${FONTS.smaller};
   width: 1.4em;

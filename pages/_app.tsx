@@ -6,14 +6,16 @@ import { lightTheme, darkTheme } from "@/styles/themes";
 import GlobalStyles from "@/styles/GlobalStyles";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState("light");
-
-  console.log("lightTheme:", lightTheme);
+  const [isThemeLight, setIsThemeLight] = useState(true);
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={isThemeLight ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <Component
+        {...pageProps}
+        setIsThemeLight={setIsThemeLight}
+        isThemeLight={isThemeLight}
+      />
     </ThemeProvider>
   );
 }

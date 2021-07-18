@@ -4,15 +4,20 @@ import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BREAKPOINTS } from "@/styles/constants";
+import { StateProps } from "@/utils/types";
 
-const BasicLayout: React.FC = ({ children }) => {
+const BasicLayout: React.FC<StateProps> = ({
+  children,
+  isThemeLight,
+  setIsThemeLight,
+}) => {
   return (
     <>
       <SEO />
       <Wrapper>
         <Header />
         <Main>{children}</Main>
-        <Footer />
+        <Footer isThemeLight={isThemeLight} setIsThemeLight={setIsThemeLight} />
       </Wrapper>
     </>
   );

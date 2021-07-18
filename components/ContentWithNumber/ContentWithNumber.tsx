@@ -1,6 +1,11 @@
+import { benefitTypes } from "@/utils/types";
 import { Wrapper, ContentTitle, ContentIcon } from "./ContentWithNumber.styles";
 
-const ContentWithNumber = ({ data }) => {
+interface contentProps {
+  data: benefitTypes;
+}
+
+const ContentWithNumber: React.FC<contentProps> = ({ data }) => {
   return (
     <Wrapper>
       <ContentTitle>{data.title}</ContentTitle>

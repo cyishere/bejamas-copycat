@@ -1,3 +1,12 @@
+export interface benefitTypes {
+  title: string;
+  icons: {
+    avif: string;
+    img: string;
+  };
+  content: string;
+}
+
 export interface dataTypes {
   _id: string;
   title: string;

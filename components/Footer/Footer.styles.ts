@@ -4,6 +4,10 @@ import { BREAKPOINTS, COLORS, FONTS } from "@/styles/constants";
 import { FlexStart } from "@/styles/shared";
 import { Wrapper as TitleStyle } from "../Typography/Title";
 
+interface StyleProps {
+  readonly isLight: boolean;
+}
+
 /**
  * Main Wrapper
  ---------------------------------------------- */
@@ -90,7 +94,7 @@ export const FooterLogo = styled(FlexStart)`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<StyleProps>`
   background: none;
   border: none;
   cursor: pointer;
@@ -115,7 +119,7 @@ export const Button = styled.button`
   }
 `;
 
-export const ToggleButton = styled.div`
+export const ToggleButton = styled.div<StyleProps>`
   width: 50px;
   height: 30px;
   border-radius: 30px;

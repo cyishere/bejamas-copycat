@@ -25,13 +25,16 @@ export const ToolsGroupTitle = styled(SubTitle)`
 `;
 
 export const ToolsGroup = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 3rem;
 `;
 
 export const ToolBox = styled.div`
   position: relative;
+  padding: 0.5em 2em;
   transition: transform 0.75s ease;
 
   &:hover {

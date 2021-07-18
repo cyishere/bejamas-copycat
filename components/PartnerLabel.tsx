@@ -20,7 +20,7 @@ const Wrapper = styled.span`
   background-color: ${COLORS.primary};
   color: ${COLORS.white};
   position: absolute;
-  top: -12px;
+  top: 10%;
   right: 0;
   height: 1.5rem;
   border-radius: 50%;

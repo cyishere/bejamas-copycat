@@ -3,10 +3,10 @@ import Head from "next/head";
 const SEO = () => {
   return (
     <Head>
-      <title>Copycat of Bejamas</title>
+      <title>Clone of Bejamas</title>
       <meta
         name="description"
-        content="A copycat of bejamas.io for demonstrating frontend dev."
+        content="A clone of bejamas.io for demonstrating frontend dev."
       />
       <link rel="icon" href="/favicon.png" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />

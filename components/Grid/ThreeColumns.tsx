@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ThreeColumns = ({ children }) => {
+const ThreeColumns: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

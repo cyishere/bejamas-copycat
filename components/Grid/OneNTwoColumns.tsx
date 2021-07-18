@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@/styles/constants";
 
-const OneNTwoColumns = ({ children }) => {
+const OneNTwoColumns: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

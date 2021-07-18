@@ -7,11 +7,16 @@ const THRESHOLD = {
   special: BREAKPOINTS.xmd,
 };
 
-const TwoColumns = ({ children, ...props }) => {
+const TwoColumns: React.FC = ({ children, ...props }) => {
   return <Wrapper {...props}>{children}</Wrapper>;
 };
 
-const Wrapper = styled.div`
+interface ColumnProps {
+  break?: "small" | "special";
+  readonly counter?: boolean;
+}
+
+const Wrapper = styled.div<ColumnProps>`
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;

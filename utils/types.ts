@@ -25,3 +25,7 @@ export interface dataTypes {
 export interface cardProps {
   item: dataTypes;
 }
+
+export interface SectionProps {
+  readonly special?: boolean;
+}

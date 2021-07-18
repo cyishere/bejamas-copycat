@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { BREAKPOINTS, COLORS } from "@/styles/constants";
 
-const SectionWithBg = ({ children }) => {
+const SectionWithBg: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 

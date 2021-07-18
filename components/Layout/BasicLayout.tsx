@@ -1,11 +1,11 @@
-import { BREAKPOINTS } from "@/styles/constants";
 import styled from "styled-components";
 
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { BREAKPOINTS } from "@/styles/constants";
 
-const BasicLayout = ({ children }) => {
+const BasicLayout: React.FC = ({ children }) => {
   return (
     <>
       <SEO />

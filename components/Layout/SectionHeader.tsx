@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 import { BREAKPOINTS } from "@/styles/constants";
+import { SectionProps } from "@/utils/types";
 
-const SectionHeader = ({ children, ...rest }) => {
+const SectionHeader: React.FC = ({ children, ...rest }) => {
   return <Wrapper {...rest}>{children}</Wrapper>;
 };
 
-const Wrapper = styled.header`
+const Wrapper = styled.header<SectionProps>`
   display: flex;
   flex-direction: column;
   max-width: 40rem;

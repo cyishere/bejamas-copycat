@@ -1,19 +1,19 @@
 import { AppProps } from "next/app";
-import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { lightTheme, darkTheme } from "@/styles/themes";
 import GlobalStyles from "@/styles/GlobalStyles";
+import { useDarkTheme } from "@/utils/useDarkTheme";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isThemeLight, setIsThemeLight] = useState(true);
+  const [isThemeLight, toggleTheme] = useDarkTheme();
 
   return (
     <ThemeProvider theme={isThemeLight ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Component
         {...pageProps}
-        setIsThemeLight={setIsThemeLight}
+        toggleTheme={toggleTheme}
         isThemeLight={isThemeLight}
       />
     </ThemeProvider>

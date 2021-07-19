@@ -62,7 +62,7 @@ export interface HeaderProps {
 
 export interface StateProps {
   isThemeLight: boolean;
-  setIsThemeLight?: Dispatch<SetStateAction<boolean>>;
+  toggleTheme?: () => void;
 }
 
 export interface LogoProps {

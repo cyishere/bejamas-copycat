@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction, useState } from "react";
 import Link from "next/link";
 
 import { FlexStart } from "@/styles/shared";
@@ -32,11 +31,7 @@ import {
 } from "./Footer.styles";
 import { StateProps } from "@/utils/types";
 
-const Footer: React.FC<StateProps> = ({ isThemeLight, setIsThemeLight }) => {
-  const handleToggle = () => {
-    setIsThemeLight!(!isThemeLight);
-  };
-
+const Footer: React.FC<StateProps> = ({ isThemeLight, toggleTheme }) => {
   return (
     <Wrapper>
       {/* Footer Header */}
@@ -70,17 +65,17 @@ const Footer: React.FC<StateProps> = ({ isThemeLight, setIsThemeLight }) => {
             <Button
               type="button"
               isThemeLight={isThemeLight}
-              onClick={handleToggle}
+              onClick={toggleTheme}
             >
               <SunIcon />
             </Button>
 
-            <ToggleButton isThemeLight={isThemeLight} onClick={handleToggle} />
+            <ToggleButton isThemeLight={isThemeLight} onClick={toggleTheme} />
 
             <Button
               type="button"
               isThemeLight={isThemeLight}
-              onClick={handleToggle}
+              onClick={toggleTheme}
             >
               <MoonIcon />
             </Button>

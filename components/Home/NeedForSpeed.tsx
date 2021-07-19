@@ -17,8 +17,11 @@ import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle, Marker } from "../Typography";
 import { ButtonLink } from "../Button";
 import Placeholder from "../Placeholder";
+import { StateProps } from "@/utils/types";
 
-const NeedForSpeed = () => {
+const NeedForSpeed: React.FC<StateProps> = ({ isThemeLight }) => {
+  const image = isThemeLight ? "web-check_light" : "web-check_dark";
+
   return (
     <Section>
       <SectionHeader>
@@ -33,7 +36,7 @@ const NeedForSpeed = () => {
       <TwoColumnsHelper>
         <GridColumn hidden>
           <Placeholder
-            imageUrl="/images/decorates/placeholder.jpg"
+            imageUrl={`/images/decorates/${image}.jpg`}
             altText="check web vitals"
             width={554}
             height={335}

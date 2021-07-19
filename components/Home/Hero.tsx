@@ -9,8 +9,11 @@ import { ButtonLink } from "../Button";
 import Placeholder from "../Placeholder";
 import { BREAKPOINTS, FONTS } from "@/styles/constants";
 import { Armorblox, Backlinko, Mambu, Newfront } from "../Logos";
+import { StateProps } from "@/utils/types";
 
-const Hero = () => {
+const Hero: React.FC<StateProps> = ({ isThemeLight }) => {
+  const image = isThemeLight ? "jar_light" : "jar_dark";
+
   return (
     <Section special={true}>
       <TwoColumns>
@@ -46,7 +49,7 @@ const Hero = () => {
 
         <GridColumn hidden={true}>
           <Placeholder
-            imageUrl="/images/decorates/jar.jpg"
+            imageUrl={`/images/decorates/${image}.jpg`}
             altText="Bejamas"
             width={668}
             height={620}

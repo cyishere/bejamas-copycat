@@ -28,8 +28,8 @@ const Home: React.FC<HomeProps> = ({
 }) => {
   return (
     <BasicLayout isThemeLight={isThemeLight} setIsThemeLight={setIsThemeLight}>
-      <Hero />
-      <NeedForSpeed />
+      <Hero isThemeLight={isThemeLight} />
+      <NeedForSpeed isThemeLight={isThemeLight} />
       <SupportsBusiness />
       <Covid />
       <BuildWeb />

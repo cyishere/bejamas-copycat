@@ -55,6 +55,10 @@ const StickyContainer = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 120px;
+
+  > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export default ClientsFrom;

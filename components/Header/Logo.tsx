@@ -2,10 +2,10 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import { BREAKPOINTS } from "@/styles/constants";
-import { StateProps } from "@/utils/types";
+import { HeaderProps } from "@/utils/types";
 import { Bejamas } from "../Logos";
 
-const Logo: React.FC<StateProps> = ({ isThemeLight }) => {
+const Logo: React.FC<HeaderProps> = ({ isThemeLight }) => {
   return (
     <Link href="/" passHref>
       <Anchor isThemeLight={isThemeLight}>
@@ -15,7 +15,7 @@ const Logo: React.FC<StateProps> = ({ isThemeLight }) => {
   );
 };
 
-const Anchor = styled.a<StateProps>`
+const Anchor = styled.a<HeaderProps>`
   display: inline-block;
   color: ${(props) =>
     props.isThemeLight ? props.theme.colors.black : props.theme.colors.white};

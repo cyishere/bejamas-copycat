@@ -8,9 +8,9 @@ import useScrollVisible from "@/utils/useScrollVisible";
 import GetInTouchButton from "./GetInTouchButton";
 import SmallHeaderAtBottom from "./SmallHeaderAtBottom";
 import SmallHeaderAtTop from "./SmallHeaderAtTop";
-import { StateProps } from "@/utils/types";
+import { HeaderProps } from "@/utils/types";
 
-const Header: React.FC<StateProps> = ({ isThemeLight }) => {
+const Header: React.FC<HeaderProps> = ({ isThemeLight }) => {
   const [isOpened, setIsOpened] = useState(false);
   const isVisible = useScrollVisible();
 
@@ -41,7 +41,11 @@ const Header: React.FC<StateProps> = ({ isThemeLight }) => {
       />
 
       {isOpened ? (
-        <NavbarSmallScreen isOpened={isOpened} setIsOpened={setIsOpened} />
+        <NavbarSmallScreen
+          isOpened={isOpened}
+          setIsOpened={setIsOpened}
+          isThemeLight={isThemeLight}
+        />
       ) : null}
     </>
   );

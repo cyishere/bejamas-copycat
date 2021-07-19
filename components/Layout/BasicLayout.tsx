@@ -15,7 +15,7 @@ const BasicLayout: React.FC<StateProps> = ({
     <>
       <SEO />
       <Wrapper>
-        <Header />
+        <Header isThemeLight={isThemeLight} />
         <Main>{children}</Main>
         <Footer isThemeLight={isThemeLight} toggleTheme={toggleTheme} />
       </Wrapper>

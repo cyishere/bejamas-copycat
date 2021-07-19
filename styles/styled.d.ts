@@ -31,6 +31,7 @@ declare module "styled-components" {
       dropdownLinkBg: string;
       dropdownTitle: string;
       dropdownSubLinkHover: string;
+      navBottomBg: string;
       linearGradient: string;
       linearGradientPrimary: string;
       linearGradientBlur: string;

@@ -82,6 +82,7 @@ export const STYLES_LIGHT = {
   dropdownLinkBg: COLORS_LIGHT.white,
   dropdownTitle: COLORS_LIGHT.textEmphasis,
   dropdownSubLinkHover: COLORS_LIGHT.black,
+  navBottomBg: `rgba(255, 255, 255, 0.95)`,
   linearGradient: `linear-gradient(
     to bottom,
     ${COLORS_LIGHT.bgBlueLight},
@@ -107,6 +108,7 @@ export const STYLES_DARK = {
   dropdownLinkBg: `hsla(270, 50%, 81%, 0.08)`,
   dropdownTitle: `hsla(0, 0%, 100%, 0.9)`,
   dropdownSubLinkHover: `hsla(0, 0%, 100%, 0.9)`,
+  navBottomBg: `rgba(15, 8, 24, 0.8)`,
   linearGradient: `linear-gradient(
     to bottom,
     ${COLORS_DARK.bgGradientDark},

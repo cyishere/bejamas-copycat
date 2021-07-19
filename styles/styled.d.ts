@@ -8,10 +8,10 @@ declare module "styled-components" {
       textButtonNormal: string;
       bgPrimary: string;
       bgGrayLight: string;
-      bgBlueLight: string;
-      bgBlueLighter: string;
-      bgGradientDark: string;
-      bgGradientDarker: string;
+      bgBlueLight?: string;
+      bgBlueLighter?: string;
+      bgGradientDark?: string;
+      bgGradientDarker?: string;
       bgHeader: string;
       primary: string;
       orange: string;

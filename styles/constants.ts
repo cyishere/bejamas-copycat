@@ -78,6 +78,10 @@ export const STYLES_LIGHT = {
   navLink: COLORS_LIGHT.textEmphasis,
   title: COLORS_LIGHT.textEmphasis,
   quoteMark: COLORS_LIGHT.bgBlueLight,
+  dropdownBg: COLORS_LIGHT.white,
+  dropdownLinkBg: COLORS_LIGHT.white,
+  dropdownTitle: COLORS_LIGHT.textEmphasis,
+  dropdownSubLinkHover: COLORS_LIGHT.black,
   linearGradient: `linear-gradient(
     to bottom,
     ${COLORS_LIGHT.bgBlueLight},
@@ -99,6 +103,10 @@ export const STYLES_DARK = {
   navLink: `hsla(0, 0%, 100%, 0.9)`,
   title: `hsla(0, 0%, 100%, 0.9)`,
   quoteMark: COLORS_DARK.bgGradientDark,
+  dropdownBg: COLORS_DARK.bgGradientDark,
+  dropdownLinkBg: `hsla(270, 50%, 81%, 0.08)`,
+  dropdownTitle: `hsla(0, 0%, 100%, 0.9)`,
+  dropdownSubLinkHover: `hsla(0, 0%, 100%, 0.9)`,
   linearGradient: `linear-gradient(
     to bottom,
     ${COLORS_DARK.bgGradientDark},

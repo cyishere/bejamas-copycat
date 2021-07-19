@@ -5,17 +5,15 @@ import { HeaderProps } from "@/utils/types";
 
 const GetInTouchButton: React.FC<HeaderProps> = ({ isVisible }) => {
   return (
-    <ButtonHelper
-      variant="primary"
-      href="/estimate-project"
-      isVisible={isVisible}
-    >
-      Get in touch
-    </ButtonHelper>
+    <Wrapper isVisible={isVisible}>
+      <ButtonLink variant="primary" href="/estimate-project">
+        Get in touch
+      </ButtonLink>
+    </Wrapper>
   );
 };
 
-const ButtonHelper = styled(ButtonLink)<HeaderProps>`
+const Wrapper = styled.div<HeaderProps>`
   transition: transform 0.5s ease;
   transform: scale(0);
 

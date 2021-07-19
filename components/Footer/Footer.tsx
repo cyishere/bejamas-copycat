@@ -33,8 +33,6 @@ import {
 import { StateProps } from "@/utils/types";
 
 const Footer: React.FC<StateProps> = ({ isThemeLight, setIsThemeLight }) => {
-  console.log("isThemeLight:", isThemeLight);
-
   const handleToggle = () => {
     setIsThemeLight!(!isThemeLight);
   };

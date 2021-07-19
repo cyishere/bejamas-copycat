@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link, { LinkProps } from "next/link";
 
-import { ButtonStyles } from "./styles";
+import { ButtonStyles } from "./Button.styles";
 
 interface ButtonLinkProps extends LinkProps {
   variant: "text" | "normal" | "primary";

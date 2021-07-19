@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import {
@@ -6,7 +5,7 @@ import {
   ToolsGroupTitle,
   ToolsGroup,
   ToolBox,
-} from "./styles";
+} from "./ToolsLogosGroup.styles";
 import PartnerLabel from "../PartnerLabel";
 import { headlessLogos as data } from "@/data/logos";
 import { icon } from "./helper";

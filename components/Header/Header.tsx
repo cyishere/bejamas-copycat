@@ -56,7 +56,7 @@ const Wrapper = styled.header`
     margin-bottom: 5rem;
     position: fixed;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: ${({ theme }) => theme.colors.bgHeader};
   }
 `;
 

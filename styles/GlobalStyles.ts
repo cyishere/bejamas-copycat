@@ -65,7 +65,7 @@ const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${FONTS.heading};
-    color: ${({ theme }) => theme.colors.textEmphasis};
+    color: ${({ theme }) => theme.styles.title};
     line-height: 1.2;
   }
 

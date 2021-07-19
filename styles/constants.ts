@@ -42,6 +42,7 @@ export const COLORS_LIGHT = {
   bgGrayLight: "hsl(200,42.9%,97.3%)",
   bgBlueLight: "hsl(201.2,43.6%,92.4%)",
   bgBlueLighter: "hsla(201, 44%, 92%, 0.1)",
+  bgHeader: "rgba(255, 255, 255, 0.95)",
   primary: "hsl(349,68.9%,53.3%)",
   orange: "hsl(39.5,99.2%,52.5%)",
   blueLight: "hsl(201, 44%, 92%)",
@@ -52,13 +53,14 @@ export const COLORS_LIGHT = {
 };
 
 export const COLORS_DARK = {
-  textMain: "hsl(211.6,8.2%,45.7%)",
+  textMain: "hsla(0, 0%, 100%, 0.65)",
   textEmphasis: "hsl(212.3,17.8%,28.6%)",
   textButtonNormal: "hsl(0,0%,100%)",
   bgPrimary: "hsl(273,52%,6%)",
   bgGrayLight: "hsl(265,29%,12%)",
-  bgBlueLight: "hsl(201.2,43.6%,92.4%)",
-  bgBlueLighter: "hsla(201, 44%, 92%, 0.1)",
+  bgGradientDark: "hsl(268.4,31.1%,12%)",
+  bgGradientDarker: "hsl(261.4,43.8%,6.3%)",
+  bgHeader: "rgba(15, 8, 24, 0.8)",
   primary: "hsl(349,68.9%,53.3%)",
   orange: "hsl(39.5,99.2%,52.5%)",
   blueLight: "hsl(201, 44%, 92%)",
@@ -72,6 +74,10 @@ export const COLORS_DARK = {
  * Styles ======================================
  */
 export const STYLES_LIGHT = {
+  logo: COLORS_LIGHT.black,
+  navLink: COLORS_LIGHT.textEmphasis,
+  title: COLORS_LIGHT.textEmphasis,
+  quoteMark: COLORS_LIGHT.bgBlueLight,
   linearGradient: `linear-gradient(
     to bottom,
     ${COLORS_LIGHT.bgBlueLight},
@@ -89,10 +95,14 @@ export const STYLES_LIGHT = {
 };
 
 export const STYLES_DARK = {
+  logo: COLORS_DARK.white,
+  navLink: `hsla(0, 0%, 100%, 0.9)`,
+  title: `hsla(0, 0%, 100%, 0.9)`,
+  quoteMark: COLORS_DARK.bgGradientDark,
   linearGradient: `linear-gradient(
     to bottom,
-    ${COLORS_DARK.bgBlueLight},
-    ${COLORS_DARK.bgBlueLighter} 85%
+    ${COLORS_DARK.bgGradientDark},
+    ${COLORS_DARK.bgGradientDarker} 85%
   )`,
   linearGradientPrimary: `linear-gradient(
     to bottom,

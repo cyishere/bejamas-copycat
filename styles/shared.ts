@@ -61,7 +61,7 @@ export const QuoteBlock = styled.blockquote`
     position: absolute;
     top: -13rem;
     right: 1rem;
-    color: ${({ theme }) => theme.colors.blueLight};
+    color: ${({ theme }) => theme.styles.quoteMark};
   }
 
   @media (min-width: ${BREAKPOINTS.md}) {

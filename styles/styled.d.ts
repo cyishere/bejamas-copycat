@@ -10,6 +10,9 @@ declare module "styled-components" {
       bgGrayLight: string;
       bgBlueLight: string;
       bgBlueLighter: string;
+      bgGradientDark: string;
+      bgGradientDarker: string;
+      bgHeader: string;
       primary: string;
       orange: string;
       blueLight: string;
@@ -20,6 +23,10 @@ declare module "styled-components" {
     };
 
     styles: {
+      logo: string;
+      navLink: string;
+      title: string;
+      quoteMark: string;
       linearGradient: string;
       linearGradientPrimary: string;
       linearGradientBlur: string;

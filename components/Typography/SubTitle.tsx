@@ -7,6 +7,7 @@ const SubTitle: React.FC = ({ children }) => {
 };
 
 export const Wrapper = styled.h3`
+  color: ${({ theme }) => theme.colors.textMain};
   font-family: ${FONTS.main};
   font-size: ${FONTS.smaller};
   font-weight: ${FONTS.bold};

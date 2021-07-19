@@ -64,3 +64,12 @@ export interface StateProps {
   isThemeLight: boolean;
   setIsThemeLight?: Dispatch<SetStateAction<boolean>>;
 }
+
+export interface LogoProps {
+  name?: string;
+  width: number;
+  height: number;
+  img?: string;
+  link?: string;
+  partner?: boolean;
+}

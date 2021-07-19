@@ -42,4 +42,8 @@ export const ToolBox = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+
+  a {
+    color: ${({ theme }) => theme.styles.logo};
+  }
 `;

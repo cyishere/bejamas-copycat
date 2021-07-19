@@ -9,27 +9,27 @@ import {
 } from "./styles";
 import PartnerLabel from "../PartnerLabel";
 import { staticLogos as data } from "@/data/logos";
+import { icon } from "./helper";
 
 const StaticGenerator = () => {
   return (
     <ToolsGroupWrapper>
       <ToolsGroupTitle>Headless CMS</ToolsGroupTitle>
       <ToolsGroup>
-        {data.map((item) => (
-          <ToolBox key={item.name}>
-            <Link href={item.link}>
-              <a>
-                <Image
-                  src={item.img}
-                  alt={item.name}
-                  width={item.width}
-                  height={item.height}
-                />
-                {item.partner ? <PartnerLabel /> : null}
-              </a>
-            </Link>
-          </ToolBox>
-        ))}
+        {data.map((item) => {
+          const { name, link, width, height, partner } = item;
+
+          return (
+            <ToolBox key={name}>
+              <Link href={link}>
+                <a>
+                  {icon({ name, width, height })}
+                  {partner ? <PartnerLabel /> : null}
+                </a>
+              </Link>
+            </ToolBox>
+          );
+        })}
       </ToolsGroup>
     </ToolsGroupWrapper>
   );

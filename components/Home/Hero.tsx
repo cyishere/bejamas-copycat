@@ -8,6 +8,7 @@ import { Section, SectionHeader } from "../Layout";
 import { ButtonLink } from "../Button";
 import Placeholder from "../Placeholder";
 import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { Armorblox, Backlinko, Mambu, Newfront } from "../Logos";
 
 const Hero = () => {
   return (
@@ -36,30 +37,10 @@ const Hero = () => {
           </ButtonGroup>
           <SubTitle>Trusted by inovative companies</SubTitle>
           <LogoGroup>
-            <Image
-              src="/images/logos/backlinko.svg"
-              alt="Backlinko"
-              width={114}
-              height={28}
-            />
-            <Image
-              src="/images/logos/newfront.svg"
-              alt="Newfront"
-              width={100}
-              height={21}
-            />
-            <Image
-              src="/images/logos/mambu.svg"
-              alt="MAMBU"
-              width={100}
-              height={20}
-            />
-            <Image
-              src="/images/logos/armorblox.svg"
-              alt="Armorblox"
-              width={100}
-              height={20}
-            />
+            <Backlinko />
+            <Newfront />
+            <Mambu />
+            <Armorblox />
           </LogoGroup>
         </GridColumn>
 
@@ -93,7 +74,7 @@ const ButtonGroup = styled(FlexStart)`
     margin-right: 1rem;
   }
 
-  ${GridColumnWrapper} & {
+  a {
     margin-bottom: 3rem;
   }
 `;
@@ -102,6 +83,12 @@ const LogoGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
+  color: ${({ theme }) => theme.styles.logo};
+
+  svg {
+    max-height: 28px;
+    max-width: 120px;
+  }
 `;
 
 export default Hero;

@@ -1,4 +1,6 @@
-export const headlessLogos = [
+import { LogoProps } from "@/utils/types";
+
+export const headlessLogos: LogoProps[] = [
   {
     name: "Contentful",
     img: "/images/logos/contentful.svg",

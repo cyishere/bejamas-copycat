@@ -1,8 +1,7 @@
-A copycat of [Bejamas](https://bejamas.io) for demostration about frontend development.
+A clone of [Bejamas](https://bejamas.io)' home page for demostration about frontend development.
 
-## Resources
+## Tech Stacks
 
-**Sticky sidebar**:
-
-- https://abouolia.github.io/sticky-sidebar/
-- https://mastery.games/post/position-sticky/
+- [Next.js](https://nextjs.org/) with TypeScript
+- [styled components](https://styled-components.com/)
+- [Sanity](https://www.sanity.io/): store some data

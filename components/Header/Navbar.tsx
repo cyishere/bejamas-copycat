@@ -9,13 +9,14 @@ import { HeaderProps } from "@/utils/types";
 export const NavbarSmallScreen: React.FC<HeaderProps> = ({
   isOpened,
   setIsOpened,
+  isThemeLight,
 }) => {
   return (
     <SmallWrapper>
       <NavList />
       <Footer>
         <MenuToggleButton isOpened={isOpened} setIsOpened={setIsOpened} />
-        <Logo />
+        <Logo isThemeLight={isThemeLight} />
       </Footer>
     </SmallWrapper>
   );
@@ -32,7 +33,7 @@ export const NavbarWideScreen = () => {
 const SmallWrapper = styled.nav`
   position: fixed;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: ${({ theme }) => theme.styles.navBottomBg};
   z-index: 10;
   display: flex;
   flex-direction: column;

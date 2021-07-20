@@ -8,10 +8,10 @@ declare module "styled-components" {
       textButtonNormal: string;
       bgPrimary: string;
       bgGrayLight: string;
-      bgBlueLight: string;
-      bgBlueLighter: string;
-      bgGradientDark: string;
-      bgGradientDarker: string;
+      bgBlueLight?: string;
+      bgBlueLighter?: string;
+      bgGradientDark?: string;
+      bgGradientDarker?: string;
       bgHeader: string;
       primary: string;
       orange: string;
@@ -27,6 +27,11 @@ declare module "styled-components" {
       navLink: string;
       title: string;
       quoteMark: string;
+      dropdownBg: string;
+      dropdownLinkBg: string;
+      dropdownTitle: string;
+      dropdownSubLinkHover: string;
+      navBottomBg: string;
       linearGradient: string;
       linearGradientPrimary: string;
       linearGradientBlur: string;

@@ -9,15 +9,15 @@ import { StateProps } from "@/utils/types";
 const BasicLayout: React.FC<StateProps> = ({
   children,
   isThemeLight,
-  setIsThemeLight,
+  toggleTheme,
 }) => {
   return (
     <>
       <SEO />
       <Wrapper>
-        <Header />
+        <Header isThemeLight={isThemeLight} />
         <Main>{children}</Main>
-        <Footer isThemeLight={isThemeLight} setIsThemeLight={setIsThemeLight} />
+        <Footer isThemeLight={isThemeLight} toggleTheme={toggleTheme} />
       </Wrapper>
     </>
   );

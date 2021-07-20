@@ -34,7 +34,7 @@ const Wrapper = styled.header<HeaderProps>`
   right: 0;
   bottom: 0;
   /* background-image: ${({ theme }) => theme.styles.linearGradientBlur}; */
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: ${({ theme }) => theme.styles.navBottomBg};
   z-index: 10;
   transition: transform 0.5s ease;
 

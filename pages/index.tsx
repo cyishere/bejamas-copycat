@@ -24,10 +24,10 @@ const Home: React.FC<HomeProps> = ({
   services,
   blogs,
   isThemeLight,
-  setIsThemeLight,
+  toggleTheme,
 }) => {
   return (
-    <BasicLayout isThemeLight={isThemeLight} setIsThemeLight={setIsThemeLight}>
+    <BasicLayout isThemeLight={isThemeLight} toggleTheme={toggleTheme}>
       <Hero isThemeLight={isThemeLight} />
       <NeedForSpeed isThemeLight={isThemeLight} />
       <SupportsBusiness />

@@ -50,7 +50,7 @@ const ListItemWrapper = styled.a`
     box-shadow: ${({ theme }) => theme.styles.lgShadow};
     transition: all 0.5s ease;
     color: ${({ theme }) => theme.colors.textMain};
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.styles.dropdownLinkBg};
     border: none;
 
     p {
@@ -60,6 +60,7 @@ const ListItemWrapper = styled.a`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.styles.dropdownSubLinkHover};
 
     p {
       color: ${({ theme }) => theme.colors.bgGrayLight};
@@ -80,7 +81,7 @@ const Title = styled.h3`
     font-size: ${FONTS.md};
     font-weight: ${FONTS.bold};
     margin-bottom: 0.5rem;
-    color: ${({ theme }) => theme.colors.textEmphasis};
+    color: ${({ theme }) => theme.styles.dropdownTitle};
     justify-content: flex-start;
 
     .icon {
@@ -156,7 +157,7 @@ const DropdownWrapper = styled.div`
 
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     margin-top: 0;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.styles.dropdownBg};
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.styles.xlShadow};
     padding: 1.5rem;
@@ -213,12 +214,13 @@ const Anchor = styled(ListItemWrapper)`
   @media (min-width: ${BREAKPOINTS.xxmd}) {
     box-shadow: none;
     color: ${({ theme }) => theme.colors.textMain};
+    background-color: ${({ theme }) => theme.styles.dropdownBg};
     padding: 0 0 0 1rem;
     justify-content: flex-start;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.black};
-      background-color: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.styles.dropdownSubLinkHover};
+      background-color: ${({ theme }) => theme.styles.dropdownBg};
     }
   }
 `;

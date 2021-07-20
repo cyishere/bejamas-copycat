@@ -8,8 +8,9 @@ import useScrollVisible from "@/utils/useScrollVisible";
 import GetInTouchButton from "./GetInTouchButton";
 import SmallHeaderAtBottom from "./SmallHeaderAtBottom";
 import SmallHeaderAtTop from "./SmallHeaderAtTop";
+import { HeaderProps } from "@/utils/types";
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({ isThemeLight }) => {
   const [isOpened, setIsOpened] = useState(false);
   const isVisible = useScrollVisible();
 
@@ -19,7 +20,7 @@ const Header = () => {
       <Wrapper>
         <Grid>
           <div>
-            <Logo />
+            <Logo isThemeLight={isThemeLight} />
           </div>
 
           <NavbarWideScreen />
@@ -40,7 +41,11 @@ const Header = () => {
       />
 
       {isOpened ? (
-        <NavbarSmallScreen isOpened={isOpened} setIsOpened={setIsOpened} />
+        <NavbarSmallScreen
+          isOpened={isOpened}
+          setIsOpened={setIsOpened}
+          isThemeLight={isThemeLight}
+        />
       ) : null}
     </>
   );

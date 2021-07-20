@@ -58,11 +58,12 @@ export interface HeaderProps {
   isOpened?: boolean;
   setIsOpened?: Dispatch<SetStateAction<boolean>>;
   isVisible?: boolean;
+  isThemeLight?: boolean;
 }
 
 export interface StateProps {
   isThemeLight: boolean;
-  setIsThemeLight?: Dispatch<SetStateAction<boolean>>;
+  toggleTheme?: () => void;
 }
 
 export interface LogoProps {

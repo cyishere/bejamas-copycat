@@ -1,4 +1,4 @@
-A clone of [Bejamas](https://bejamas.io)' home page for demostration about frontend development.
+A clone of [Bejamas](https://bejamas.io)' home page for demonstration about frontend development.
 
 ## Tech Stacks
 

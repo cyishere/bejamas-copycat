@@ -1,28 +1,47 @@
 import styled, { keyframes } from "styled-components";
 
+import { BREAKPOINTS } from "@/styles/constants";
+
 const Lego = () => {
   return (
     <Wrapper>
-      <LegoImg src="/images/decorates/block-blue.svg" alt="Blue Block" />
+      <LegoImg
+        src="/images/decorates/block-blue.svg"
+        alt="Blue Block"
+        loading="lazy"
+        decoding="async"
+      />
       <OrangeBlock
         src="/images/decorates/block-orange.svg"
         alt="Orange Block"
+        loading="lazy"
+        decoding="async"
       />
       <PurpleBlock
         src="/images/decorates/block-purple.svg"
         alt="Purple Block"
+        loading="lazy"
+        decoding="async"
       />
       <FillBlock
         src="/images/decorates/blue-fill.svg"
         alt="Fill Block for the blue one"
+        loading="lazy"
+        decoding="async"
       />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  height: 150px;
-  position: relative;
+  display: none;
+
+  @media (min-width: ${BREAKPOINTS.xxmd}) {
+    display: block;
+    height: 150px;
+    position: relative;
+    opacity: 0.6;
+  }
 `;
 
 const slideDown = keyframes`
@@ -49,15 +68,14 @@ const LegoImg = styled.img`
   left: 50%;
   transform: translate(-50%, 0);
   opacity: 0;
-  /* width: 54px; */
   animation: ${slideDown} 4s ease-in-out infinite;
 `;
 
 const OrangeBlock = styled(LegoImg)`
-  animation-delay: 1.33s;
+  animation-delay: calc(4s / 3);
 `;
 const PurpleBlock = styled(LegoImg)`
-  animation-delay: 2.66s;
+  animation-delay: calc(4s / 3 * 2);
 `;
 const FillBlock = styled(LegoImg)`
   animation-delay: 4s;

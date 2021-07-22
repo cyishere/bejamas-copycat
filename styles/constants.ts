@@ -34,6 +34,11 @@ export const BREAKPOINTS = {
 /**
  * Colors ===================================
  */
+export const COLORS = {
+  yellowLight: "hsl(50,90%,95%)",
+  yellowDark: "hsl(37.7,92.1%,50.2%)",
+};
+
 export const COLORS_LIGHT = {
   textMain: "hsl(211.6,8.2%,45.7%)",
   textEmphasis: "hsl(212.3,17.8%,28.6%)",

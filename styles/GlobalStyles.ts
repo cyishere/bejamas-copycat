@@ -2,6 +2,16 @@ import { createGlobalStyle } from "styled-components";
 import { BREAKPOINTS, FONTS } from "./constants";
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: "Recoleta";
+    src: local("Recoleta Bold"), local("Recoleta-Bold"),
+      url("/fonts/Recoleta-Bold.woff2") format("woff2"),
+      url("/fonts/Recoleta-Bold.woff") format("woff"),
+      url("/fonts/Recoleta-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
   /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)

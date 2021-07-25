@@ -16,7 +16,7 @@ const SEO = () => {
         crossOrigin="true"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Volkhov:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
         rel="stylesheet"
       />
     </Head>

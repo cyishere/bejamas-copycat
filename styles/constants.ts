@@ -1,7 +1,6 @@
 export const FONTS = {
-  // Recoleta, sans-serif
   main: "'Poppins', sans-serif",
-  heading: "'Volkhov', sans-serif",
+  heading: "Recoleta, sans-serif",
 
   // 13px, 14px, 16px, 20px, 24.8px, 33.1958px, 36px, 44.3px, 71.2px
   smaller: "0.8125rem",

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import Image from "next/image";
 
-import { TwoColumns, GridColumn, GridColumnWrapper } from "../Grid";
+import { TwoColumns, GridColumn } from "../Grid";
 import { FlexStart } from "@/styles/shared";
 import { SubTitle, Marker } from "../Typography";
 import { Section, SectionHeader } from "../Layout";

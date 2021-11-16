@@ -33,8 +33,9 @@ const Wrapper = styled.header<HeaderProps>`
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-image: ${({ theme }) => theme.styles.linearGradientBlur}; */
   background-color: ${({ theme }) => theme.styles.navBottomBg};
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 10;
   transition: transform 0.5s ease;
 

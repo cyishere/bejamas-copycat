@@ -14,16 +14,19 @@ const GetInTouchButton: React.FC<HeaderProps> = ({ isVisible }) => {
 };
 
 const Wrapper = styled.div<HeaderProps>`
-  transition: transform 0.5s ease;
+  transition: transform 500ms ease, filter 300ms ease;
   transform: scale(0);
+  filter: blur(12px);
 
   ${(props) =>
     props.isVisible
       ? `
     transform: scale(1);
+    filter: blur(0px);
   `
       : `
     transform: scale(0);
+    filter: blur(12px);
   `}
 `;
 

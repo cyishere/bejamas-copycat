@@ -33,6 +33,8 @@ const SmallWrapper = styled.nav`
   position: fixed;
   inset: 0;
   background-color: ${({ theme }) => theme.styles.navBottomBg};
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 10;
   display: flex;
   flex-direction: column;

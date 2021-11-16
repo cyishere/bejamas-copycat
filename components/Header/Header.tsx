@@ -58,6 +58,8 @@ const Wrapper = styled.header`
     position: fixed;
     z-index: 10;
     background-color: ${({ theme }) => theme.colors.bgHeader};
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 `;
 

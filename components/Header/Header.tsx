@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { BREAKPOINTS } from "@/styles/constants";
 import Logo from "./Logo";
 import { NavbarSmallScreen, NavbarWideScreen } from "./Navbar";
-import useScrollVisible from "@/utils/useScrollVisible";
+import useScrollVisible from "@/hooks/use-scroll-visible";
 import GetInTouchButton from "./GetInTouchButton";
 import SmallHeaderAtBottom from "./SmallHeaderAtBottom";
 import SmallHeaderAtTop from "./SmallHeaderAtTop";

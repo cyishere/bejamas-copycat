@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
+import { FONTS } from "@/styles/constants";
 import { PartnerIcon } from "./Icons";
 
 const PartnerLabel = () => {
   return (
     <Wrapper>
       <PartnerIcon />
-      <span className="text">Partner</span>
+      <Text>Partner</Text>
     </Wrapper>
   );
 };
+
+const Text = styled.span`
+  font-size: ${FONTS.smaller};
+  display: none;
+`;
 
 const Wrapper = styled.span`
   display: flex;
@@ -30,15 +36,11 @@ const Wrapper = styled.span`
     height: 11px;
   }
 
-  .text {
-    display: none;
-  }
-
   &:hover {
     border-radius: 24px;
     right: -36px;
 
-    .text {
+    ${Text} {
       display: inline-block;
     }
   }

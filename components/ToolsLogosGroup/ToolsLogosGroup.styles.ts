@@ -37,7 +37,7 @@ export const ToolsGroup = styled.div`
 export const ToolBox = styled.div`
   position: relative;
   padding: 0.5em 2em;
-  transition: transform 0.75s ease;
+  transition: transform 300ms ease;
 
   &:hover {
     transform: scale(1.1);

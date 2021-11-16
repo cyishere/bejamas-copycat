@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 import { StateProps } from "@/utils/types";
 import Explanation from "../Explanation";
 
@@ -34,7 +34,7 @@ const Main = styled.main`
   padding-left: 3rem;
   padding-right: 3rem;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     padding-top: 185px;
   }
 `;

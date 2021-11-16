@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 import { SectionProps } from "@/utils/types";
 
 const SectionHeader: React.FC<SectionProps> = ({ children, ...rest }) => {
@@ -26,7 +26,7 @@ const Wrapper = styled.header<SectionProps>`
   ${(props) =>
     !props.special
       ? `
-    @media (min-width: ${BREAKPOINTS.md}) {
+    @media ${QUERIES.mdScreenAndLarger} {
       text-align: center;
     }
   `

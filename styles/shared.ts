@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS, FONTS } from "./constants";
+import { QUERIES, FONTS } from "./constants";
 
 /**
  * Flex Style Set
@@ -64,7 +64,7 @@ export const QuoteBlock = styled.blockquote`
     color: ${({ theme }) => theme.styles.quoteMark};
   }
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     padding: 3rem 6rem 3rem 5rem;
 
     &::before {
@@ -130,7 +130,7 @@ export const TwoColumnsWithPic = styled.div`
     "pic" / 1fr;
   gap: 3rem;
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     grid-template:
       "pic content"
       "pic content" / 1fr 1fr;

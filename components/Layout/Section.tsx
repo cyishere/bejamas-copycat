@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 import { SectionProps } from "@/utils/types";
 
 const Section: React.FC<SectionProps> = ({ children, ...rest }) => {
@@ -23,7 +23,7 @@ export const Wrapper = styled.section<SectionProps>`
   ${(props) =>
     !props.special
       ? `
-    @media (min-width: ${BREAKPOINTS.md}) {
+    @media ${QUERIES.mdScreenAndLarger} {
       padding: 6rem;
     }
   `

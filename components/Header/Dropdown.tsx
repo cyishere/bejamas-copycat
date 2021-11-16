@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 import { ChevronRightIcon } from "../Icons";
 import { BlogSubLinkTypes, LinkTypes } from "@/utils/types";
 
@@ -27,7 +27,7 @@ const ListItem: React.FC<ListItemProps> = ({ item }) => (
 );
 
 const List = styled.li`
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
@@ -45,7 +45,7 @@ const ListItemWrapper = styled.a`
     display: none;
   }
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     border-radius: 0.5rem;
     box-shadow: ${({ theme }) => theme.styles.lgShadow};
     transition: all 0.5s ease;
@@ -77,7 +77,7 @@ const Title = styled.h3`
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     font-size: ${FONTS.md};
     font-weight: ${FONTS.bold};
     margin-bottom: 0.5rem;
@@ -155,7 +155,7 @@ const DropdownWrapper = styled.div`
     display: block;
   }
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     margin-top: 0;
     background-color: ${({ theme }) => theme.styles.dropdownBg};
     border-radius: 1rem;
@@ -182,7 +182,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -195,13 +195,13 @@ const SubTitle = styled.h4`
   text-transform: uppercase;
   padding: 1rem;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     font-size: ${FONTS.base};
   }
 `;
 
 const SubListItem = styled.li`
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     padding: 0.5rem 0;
   }
 `;
@@ -211,7 +211,7 @@ const Anchor = styled(ListItemWrapper)`
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     box-shadow: none;
     color: ${({ theme }) => theme.colors.textMain};
     background-color: ${({ theme }) => theme.styles.dropdownBg};

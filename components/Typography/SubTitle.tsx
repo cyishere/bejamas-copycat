@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 
 const SubTitle: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -14,7 +14,7 @@ export const Wrapper = styled.h3`
   text-transform: uppercase;
   letter-spacing: 2px;
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     font-size: ${FONTS.small};
   }
 `;

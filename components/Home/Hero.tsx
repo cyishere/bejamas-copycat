@@ -6,7 +6,7 @@ import { SubTitle, Marker } from "../Typography";
 import { Section, SectionHeader } from "../Layout";
 import { ButtonLink } from "../Button";
 import Placeholder from "../Placeholder";
-import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 import { Armorblox, Backlinko, Mambu, Newfront } from "../Logos";
 import { StateProps } from "@/utils/types";
 
@@ -62,7 +62,7 @@ const Hero: React.FC<StateProps> = ({ isThemeLight }) => {
 const Title = styled.h1`
   font-size: ${FONTS.mbBig};
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     font-size: ${FONTS.big};
   }
 `;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 import Logo from "./Logo";
 import { NavbarSmallScreen, NavbarWideScreen } from "./Navbar";
 import useScrollVisible from "@/hooks/use-scroll-visible";
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ isThemeLight }) => {
 const Wrapper = styled.header`
   display: none;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     display: block;
     width: calc(1400px - 6rem);
     padding: 1rem 3rem;

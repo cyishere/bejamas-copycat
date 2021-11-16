@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 import { FlexStart } from "@/styles/shared";
 import { Wrapper as TitleStyle } from "../Typography/Title";
 import { StateProps } from "@/utils/types";
@@ -20,7 +20,7 @@ export const Wrapper = styled.footer`
     color: ${({ theme }) => theme.colors.white};
   }
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     border-radius: 1rem;
     margin-left: 3rem;
     margin-right: 3rem;
@@ -37,7 +37,7 @@ export const HeaderWrapper = styled.div`
     margin-bottom: 1.5rem;
   }
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     text-align: center;
 
     ${FlexStart} {
@@ -54,12 +54,12 @@ export const LinksGroup = styled.div`
   grid-template-columns: 1fr;
   gap: 6rem;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     grid-template-columns: 1fr 5fr;
     gap: 3rem;
   }
 
-  @media (min-width: ${BREAKPOINTS.xl}) {
+  @media ${QUERIES.xlScreenAndLarger} {
     grid-template-columns: 2fr 6fr;
     gap: 3rem;
   }
@@ -163,12 +163,12 @@ export const FooterNav = styled.nav`
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     grid-template-columns: repeat(3, 1fr);
     font-size: ${FONTS.base};
   }
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     grid-template-columns: repeat(4, 1fr);
   }
 `;

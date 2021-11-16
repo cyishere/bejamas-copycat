@@ -2,18 +2,17 @@ export const FONTS = {
   main: "'Poppins', sans-serif",
   heading: "Recoleta, sans-serif",
 
-  // 13px, 14px, 16px, 20px, 24.8px, 33.1958px, 36px, 44.3px, 71.2px
-  smaller: "0.8125rem",
-  small: "0.875rem",
-  base: "1rem",
-  md: "1.25rem",
-  lg: "1.55rem",
-  xl: "2rem",
-  xxl: "2.25rem",
-  big: "4.45rem",
+  smaller: `${13 / 16}rem`,
+  small: `${14 / 16}rem`,
+  base: `${16 / 16}rem`,
+  md: `${20 / 16}rem`,
+  lg: `${24.8 / 16}rem`,
+  xl: `${32 / 16}rem`,
+  xxl: `${36 / 16}rem`,
+  big: `${71.2 / 16}rem`,
 
   // font sizes in small screen
-  mbSmaller: "0.625rem",
+  mbSmaller: `${10 / 16}rem`,
   mbBig: "2.77rem",
 
   regular: "300",
@@ -22,12 +21,21 @@ export const FONTS = {
 
 // max-width: 1520px, 990px, 768px, 640px
 export const BREAKPOINTS = {
-  sm: "550px",
-  md: "768px",
-  xmd: "846px",
-  xxmd: "990px",
-  lg: "1024px",
-  xl: "1200px",
+  sm: 550,
+  md: 768,
+  xmd: 846,
+  xxmd: 990,
+  lg: 1024,
+  xl: 1200,
+};
+
+export const QUERIES = {
+  smScreenAndLarger: `(min-width: ${BREAKPOINTS.sm / 16}rem)`,
+  mdScreenAndLarger: `(min-width: ${BREAKPOINTS.md / 16}rem)`,
+  xmdScreenAndLarger: `(min-width: ${BREAKPOINTS.xmd / 16}rem)`,
+  xxmdScreenAndLarger: `(min-width: ${BREAKPOINTS.xxmd / 16}rem)`,
+  lgScreenAndLarger: `(min-width: ${BREAKPOINTS.lg / 16}rem)`,
+  xlScreenAndLarger: `(min-width: ${BREAKPOINTS.xl / 16}rem)`,
 };
 
 /**

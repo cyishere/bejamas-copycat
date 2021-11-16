@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 
 const SectionWithBg: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -20,7 +20,7 @@ export const Wrapper = styled.section`
     margin-bottom: 1.5rem;
   }
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     border-radius: 1rem;
     margin-left: 0rem;
     margin-right: 0rem;

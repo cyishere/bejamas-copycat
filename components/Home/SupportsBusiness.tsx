@@ -7,7 +7,7 @@ import { ButtonLink } from "../Button";
 import ContentWithNumber from "../ContentWithNumber";
 import { TwoColumns } from "../Grid";
 import benefits from "@/data/benefits";
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 
 const SupportsBusiness = () => {
   return (
@@ -42,7 +42,7 @@ const Text = styled.p`
 `;
 
 const ThisTwoColumns = styled(TwoColumns)`
-  @media (min-width: ${BREAKPOINTS.xmd}) {
+  @media ${QUERIES.xmdScreenAndLarger} {
     column-gap: 6rem;
   }
 `;

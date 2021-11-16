@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { BREAKPOINTS } from "@/styles/constants";
 
 const THRESHOLD = {
-  small: BREAKPOINTS.sm,
-  normal: BREAKPOINTS.md,
-  special: BREAKPOINTS.xmd,
+  small: `${BREAKPOINTS.sm / 16}rem`,
+  normal: `${BREAKPOINTS.md / 16}rem`,
+  special: `${BREAKPOINTS.xmd / 16}rem`,
 };
 
 interface ColumnProps {

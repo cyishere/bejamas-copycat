@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 
 const Lego = () => {
   return (
@@ -36,7 +36,7 @@ const Lego = () => {
 const Wrapper = styled.div`
   display: none;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     display: block;
     height: 150px;
     position: relative;

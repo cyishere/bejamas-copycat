@@ -17,7 +17,7 @@ import {
 } from "@/styles/shared";
 import { Section, SectionHeader } from "../Layout";
 import { SubTitle, Title, Marker } from "../Typography";
-import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 import { ButtonLink } from "../Button";
 
 const Covid = () => {
@@ -97,7 +97,7 @@ const ThisTwoColumns = styled(TwoColumnsWithPic)`
 const Text = styled.p`
   font-size: ${FONTS.md};
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     font-size: ${FONTS.lg};
   }
 `;

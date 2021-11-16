@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 
 const OneNTwoColumns: React.FC = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   grid-template-columns: 1fr;
   gap: 3rem;
 
-  @media (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     grid-template-columns: 1fr 2fr;
   }
 `;

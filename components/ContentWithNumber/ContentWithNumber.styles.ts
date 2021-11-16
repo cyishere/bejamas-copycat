@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FONTS, BREAKPOINTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 import { Wrapper as SectionWithBg } from "../Layout/SectionWithBg";
 
 export const Wrapper = styled.div`
@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
     -webkit-background-clip: text;
     color: transparent;
 
-    @media (min-width: ${BREAKPOINTS.md}) {
+    @media ${QUERIES.mdScreenAndLarger} {
       font-size: 16rem;
       top: -9rem;
     }

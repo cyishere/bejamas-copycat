@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 import { HeaderProps } from "@/utils/types";
 import { Bejamas } from "../Logos";
 
@@ -22,7 +22,7 @@ const Anchor = styled.a<HeaderProps>`
   width: 100px;
   height: 30px;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     width: 170px;
     height: 52px;
   }

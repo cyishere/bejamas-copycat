@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { BREAKPOINTS, FONTS } from "./constants";
+import { FONTS, QUERIES } from "./constants";
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -88,7 +88,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: ${FONTS.bold}
   }
 
-  @media screen and (min-width: ${BREAKPOINTS.md}) {
+  @media ${QUERIES.mdScreenAndLarger} {
     body {
       font-size: ${FONTS.md}
     }

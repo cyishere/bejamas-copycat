@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { BREAKPOINTS, FONTS } from "@/styles/constants";
+import { FONTS, QUERIES } from "@/styles/constants";
 import { Button } from "../Button";
 import { SearchIcon, ChevronDownIcon } from "../Icons";
 import Dropdown from "./Dropdown";
@@ -67,7 +67,7 @@ const Wrapper = styled.ul`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     flex-direction: row;
     font-size: ${FONTS.base};
   }
@@ -81,7 +81,7 @@ const ListItem = styled.li`
   &:not(:last-child) {
     border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 
-    @media (min-width: ${BREAKPOINTS.xxmd}) {
+    @media ${QUERIES.xxmdScreenAndLarger} {
       border: none;
     }
   }
@@ -94,7 +94,7 @@ const ListItem = styled.li`
     }
   }
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     &:hover {
       .dropdown {
         display: block;
@@ -109,7 +109,7 @@ const TextIconWrapper = styled.span`
   align-items: center;
   column-gap: 0.75rem;
 
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     justify-content: center;
     margin-bottom: 0;
   }
@@ -120,7 +120,7 @@ const TextIconWrapper = styled.span`
 `;
 
 const ButtonHelper = styled(Button)`
-  @media (min-width: ${BREAKPOINTS.xxmd}) {
+  @media ${QUERIES.xxmdScreenAndLarger} {
     font-size: ${FONTS.base};
 
     span {

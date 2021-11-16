@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 import { ButtonProps } from "./Button";
 
 export const ButtonStyles = css<ButtonProps>`
@@ -22,7 +22,7 @@ export const ButtonStyles = css<ButtonProps>`
       ? props.theme.colors.white
       : props.theme.colors.textButtonNormal};
 
-  @media (min-width: ${BREAKPOINTS.xl}) {
+  @media ${QUERIES.xlScreenAndLarger} {
     font-size: 1.125rem;
     border-radius: 3.125rem;
   }

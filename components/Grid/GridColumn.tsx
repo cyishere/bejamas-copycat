@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BREAKPOINTS } from "@/styles/constants";
+import { QUERIES } from "@/styles/constants";
 
 interface GridProps {
   hidden?: boolean;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div<GridProps>`
       ? `
     display: none;
 
-    @media (min-width: ${BREAKPOINTS.md}) {
+    @media ${QUERIES.mdScreenAndLarger} {
       display: block;
     }
   `

@@ -9,14 +9,13 @@ import { HeaderProps } from "@/utils/types";
 export const NavbarSmallScreen: React.FC<HeaderProps> = ({
   isOpened,
   setIsOpened,
-  isThemeLight,
 }) => {
   return (
     <SmallWrapper>
       <NavList />
       <Footer>
         <MenuToggleButton isOpened={isOpened} setIsOpened={setIsOpened} />
-        <Logo isThemeLight={isThemeLight} />
+        <Logo />
       </Footer>
     </SmallWrapper>
   );

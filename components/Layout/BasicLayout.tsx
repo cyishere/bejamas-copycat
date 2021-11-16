@@ -1,24 +1,19 @@
 import styled from "styled-components";
 
+import { QUERIES } from "@/styles/constants";
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { QUERIES } from "@/styles/constants";
-import { StateProps } from "@/utils/types";
 import Explanation from "../Explanation";
 
-const BasicLayout: React.FC<StateProps> = ({
-  children,
-  isThemeLight,
-  toggleTheme,
-}) => {
+const BasicLayout: React.FC = ({ children }) => {
   return (
     <>
       <SEO />
       <Wrapper>
-        <Header isThemeLight={isThemeLight} />
+        <Header />
         <Main>{children}</Main>
-        <Footer isThemeLight={isThemeLight} toggleTheme={toggleTheme} />
+        <Footer />
       </Wrapper>
       <Explanation />
     </>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { FONTS, QUERIES } from "@/styles/constants";
 import { FlexStart } from "@/styles/shared";
-import { Wrapper as TitleStyle } from "../Typography/Title";
+import { default as TitleStyle } from "../Typography/Title";
 import { StateProps } from "@/utils/types";
 
 /**

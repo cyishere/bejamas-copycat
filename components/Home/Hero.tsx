@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import styled from "styled-components";
 
+import { ThemeContext } from "@/utils/theme-context";
 import { TwoColumns, GridColumn } from "../Grid";
 import { FlexStart } from "@/styles/shared";
 import { SubTitle, Marker } from "../Typography";
@@ -8,10 +10,10 @@ import { ButtonLink } from "../Button";
 import Placeholder from "../Placeholder";
 import { FONTS, QUERIES } from "@/styles/constants";
 import { Armorblox, Backlinko, Mambu, Newfront } from "../Logos";
-import { StateProps } from "@/utils/types";
 
-const Hero: React.FC<StateProps> = ({ isThemeLight }) => {
-  const image = isThemeLight ? "jar_light" : "jar_dark";
+const Hero: React.FC = () => {
+  const themeContext = useContext(ThemeContext);
+  const image = themeContext?.isThemeLight ? "jar_light" : "jar_dark";
 
   return (
     <Section special={true}>

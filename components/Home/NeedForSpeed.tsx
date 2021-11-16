@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import styled from "styled-components";
 
+import { ThemeContext } from "@/utils/theme-context";
 import {
   QuoteWrapper,
   QuoteBlock,
@@ -17,10 +19,12 @@ import { Section, SectionHeader } from "../Layout";
 import { Title, SubTitle, Marker } from "../Typography";
 import { ButtonLink } from "../Button";
 import Placeholder from "../Placeholder";
-import { StateProps } from "@/utils/types";
 
-const NeedForSpeed: React.FC<StateProps> = ({ isThemeLight }) => {
-  const image = isThemeLight ? "web-check_light" : "web-check_dark";
+const NeedForSpeed: React.FC = () => {
+  const themeContext = useContext(ThemeContext);
+  const image = themeContext?.isThemeLight
+    ? "web-check_light"
+    : "web-check_dark";
 
   return (
     <Section>

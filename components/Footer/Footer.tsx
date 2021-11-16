@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import Link from "next/link";
 
+import footerLinks from "@/data/footerLinks";
+import { ThemeContext } from "@/utils/theme-context";
 import { FlexStart } from "@/styles/shared";
 import { SectionHeader } from "../Layout";
 import { Title, SubTitle, Marker } from "../Typography";
@@ -14,7 +17,6 @@ import {
   LinkedInIcon,
   GithubIcon,
 } from "../Icons";
-import footerLinks from "@/data/footerLinks";
 import {
   Wrapper,
   HeaderWrapper,
@@ -29,9 +31,10 @@ import {
   LinkSet,
   Badge,
 } from "./Footer.styles";
-import { StateProps } from "@/utils/types";
 
-const Footer: React.FC<StateProps> = ({ isThemeLight, toggleTheme }) => {
+const Footer: React.FC = () => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <Wrapper>
       {/* Footer Header */}
@@ -64,18 +67,21 @@ const Footer: React.FC<StateProps> = ({ isThemeLight, toggleTheme }) => {
           <FlexWithGap>
             <Button
               type="button"
-              isThemeLight={isThemeLight}
-              onClick={toggleTheme}
+              isThemeLight={themeContext?.isThemeLight}
+              onClick={themeContext?.toggleTheme}
             >
               <SunIcon />
             </Button>
 
-            <ToggleButton isThemeLight={isThemeLight} onClick={toggleTheme} />
+            <ToggleButton
+              isThemeLight={themeContext?.isThemeLight}
+              onClick={themeContext?.toggleTheme}
+            />
 
             <Button
               type="button"
-              isThemeLight={isThemeLight}
-              onClick={toggleTheme}
+              isThemeLight={themeContext?.isThemeLight}
+              onClick={themeContext?.toggleTheme}
             >
               <MoonIcon />
             </Button>

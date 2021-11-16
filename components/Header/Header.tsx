@@ -10,7 +10,7 @@ import SmallHeaderAtBottom from "./SmallHeaderAtBottom";
 import SmallHeaderAtTop from "./SmallHeaderAtTop";
 import { HeaderProps } from "@/utils/types";
 
-const Header: React.FC<HeaderProps> = ({ isThemeLight }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isOpened, setIsOpened] = useState(false);
   const isVisible = useScrollVisible();
 
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ isThemeLight }) => {
       <Wrapper>
         <Grid>
           <div>
-            <Logo isThemeLight={isThemeLight} />
+            <Logo />
           </div>
 
           <NavbarWideScreen />
@@ -41,11 +41,7 @@ const Header: React.FC<HeaderProps> = ({ isThemeLight }) => {
       />
 
       {isOpened ? (
-        <NavbarSmallScreen
-          isOpened={isOpened}
-          setIsOpened={setIsOpened}
-          isThemeLight={isThemeLight}
-        />
+        <NavbarSmallScreen isOpened={isOpened} setIsOpened={setIsOpened} />
       ) : null}
     </>
   );

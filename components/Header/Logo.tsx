@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+import { ThemeContext } from "@/utils/theme-context";
 import { QUERIES } from "@/styles/constants";
 import { HeaderProps } from "@/utils/types";
 import { Bejamas } from "../Logos";
 
-const Logo: React.FC<HeaderProps> = ({ isThemeLight }) => {
+const Logo: React.FC<HeaderProps> = () => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <Link href="/" passHref>
-      <Anchor isThemeLight={isThemeLight}>
+      <Anchor isThemeLight={themeContext?.isThemeLight}>
         <Bejamas />
       </Anchor>
     </Link>

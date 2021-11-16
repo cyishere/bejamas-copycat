@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-const Marker: React.FC = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
-};
-
-export const Wrapper = styled.mark`
+const Marker = styled.mark`
   background-image: linear-gradient(
     to bottom,
     ${({ theme }) => theme.colors.orange},

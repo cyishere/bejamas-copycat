@@ -2,11 +2,7 @@ import styled from "styled-components";
 
 import { FONTS } from "@/styles/constants";
 
-const Title: React.FC = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
-};
-
-export const Wrapper = styled.h2`
+const Title = styled.h2`
   font-size: ${FONTS.xxl};
 `;
 
